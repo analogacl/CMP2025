@@ -56,7 +56,7 @@ export default function Services() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#262626] mb-6">Nuestros Servicios</h2>
           <p className="text-lg text-[#262626] mb-6 leading-relaxed">
             Accede a un equipo de <span className="font-semibold">Psicólogos y Psiquiatras</span> experimentados
-            dedicados a mejorar tu calidad de vida a través de terapias basadas en evidencia y efectivas.
+            dedicados a mejorar tu calidad de vida a través de terapias basadas en evidencia y efectivas. 
           </p>
           <p className="text-lg text-[#262626] mb-8 leading-relaxed">
             Ayudamos a las personas a navegar y superar situaciones complejas de la vida. Nuestras áreas de enfoque
