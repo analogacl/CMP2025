@@ -9,7 +9,7 @@ export default function Team() {
     {
       name: "LEONOR IRARRÁZAVAL",
       role: "PSICÓLOGA",
-      image: "/images/team/leonor-irarrazaval.jpeg",
+      image: "/images/team/leonor-irarrazaval-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f1.png",
       description:
         "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
@@ -18,7 +18,7 @@ export default function Team() {
     {
       name: "SUSANA ROMERO A.",
       role: "PSICÓLOGA",
-      image: "/images/avatars/susana-romero-professional.jpg",
+      image: "/images/avatars/susana-romero-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f2.png",
       description:
         "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
@@ -36,7 +36,7 @@ export default function Team() {
     {
       name: "MARGARITA LOUBAT OYARCE",
       role: "PSICÓLOGA",
-      image: "/images/team/margarita-loubat.jpeg",
+      image: "/images/team/margarita-loubat-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f7.png",
       description:
         "Doctora en Educación y Psicología, con formación avanzada en psicología clínica en universidades de Francia y España.",
@@ -45,7 +45,7 @@ export default function Team() {
     {
       name: "JOCELYN CALDERÓN CÁCERES",
       role: "PSICÓLOGA",
-      image: "/images/team/jocelyn-calderon.jpeg",
+      image: "/images/team/jocelyn-calderon-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f5.png",
       description:
         "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
@@ -63,7 +63,7 @@ export default function Team() {
     {
       name: "MAKARENA MORRIS",
       role: "PSICÓLOGA",
-      image: "/images/avatars/avatar-f6.png",
+      image: "/images/team/makarena-morris-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f6.png",
       description:
         "Psicóloga especializada en psicoterapia, neuropsicología y evaluación de personalidad, con experiencia en trastornos emocionales, crisis vitales, familiares y parentales.",
@@ -72,7 +72,7 @@ export default function Team() {
     {
       name: "DENISE GERBER",
       role: "PSICÓLOGA",
-      image: "/images/avatars/avatar-f8.png",
+      image: "/images/team/denise-gerber-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f8.png",
       description:
         "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
@@ -100,7 +100,7 @@ export default function Team() {
     {
       name: "DR. EDUARD HEBERLEIN",
       role: "PSIQUIATRA",
-      image: "/images/avatars/avatar-m1.png",
+      image: "/images/team/dr-eduardo-heberlein.webp",
       fallbackImage: "/images/avatars/avatar-m1.png",
       description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
       slug: "dr-eduard-heberlein",
