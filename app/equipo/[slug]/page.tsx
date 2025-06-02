@@ -10,7 +10,7 @@ const teamMembers = [
   {
     slug: "leonor-irarrazaval",
     name: "LEONOR IRARRÁZAVAL",
-    role: "PSICÓLOGA",
+    role: "Psicóloga",
     image: "/images/team/leonor-irarrazaval.jpeg",
     fallbackImage: "/images/avatars/avatar-f1.png",
     description:
@@ -50,7 +50,7 @@ const teamMembers = [
     slug: "susana-romero-a",
     name: "SUSANA ROMERO A.",
     role: "PSICÓLOGA",
-    image: "/images/team/susana-romero-professional.jpg",
+    image: "/images/avatars/susana-romero-professional.jpg",
     fallbackImage: "/images/avatars/avatar-f2.png",
     description:
       "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
@@ -58,7 +58,7 @@ const teamMembers = [
       "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo y se aproxima a la psicología desde más de un modelo teórico. Puede ayudarle a revisar qué aspectos de su forma de vida le generan ansiedad, crisis de pánico, estrés, desánimo y/o relaciones humanas conflictivas. Le puede ayudar a superar sus problemas de autoestima o el dolor que experimenta frente a una pérdida o facilitar su reincorporación laboral luego de su postnatal o de su licencia prolongada. Susana Romero tiene formación en recursos humanos de modo que puede ayudarle a enfrentar sus problemas en su lugar de trabajo.",
     specialties: ["Terapia Integrativa", "Ansiedad", "Crisis de Pánico", "Autoestima", "Duelo", "Conflictos Laborales"],
     education: ["Magister en Psicología Clínica", "Formación en Recursos Humanos"],
-    schedule: "MARTES 9:00 y 12:00 a 18:00",
+    schedule: "Martes 9:00 y 12:00 a 18:00",
     modality: "Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/F0SihxL0b02pX4145n21dOs9t8l3Df",
     fees: {
@@ -122,8 +122,9 @@ const teamMembers = [
     slug: "margarita-loubat-oyarce",
     name: "MARGARITA LOUBAT OYARCE",
     role: "PSICÓLOGA",
-    image: "/images/team/margarita-loubat.jpeg",
+    image: "/images/avatars/margarita-loubat.jpeg",
     fallbackImage: "/images/avatars/avatar-f7.png",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/Z07Oo320M0p1wP2l5D91HjL987O3kt",
     description:
       "Doctora en Educación y Psicología, con formación avanzada en psicología clínica en universidades de Francia y España.",
     fullBio:
@@ -177,7 +178,7 @@ const teamMembers = [
     education: ["Postítulo en Psicoanálisis Relacional", "Licenciatura en Psicología"],
     schedule: "Lunes 11:00 a 12:30 y 15:00 a 18:30, Martes 16:00 a 20:30",
     modality: "Online y Presencial (Escuela Militar)",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/r0Kcl600g0hyNs9Y5F31zZ69i2T3FJ",
     fees: {
       initial: {
         private: "$40.000",
@@ -210,21 +211,21 @@ const teamMembers = [
     education: ["Licenciatura en Psicología", "Formación en Psicología Organizacional"],
     schedule: "MARTES 13:00 a 17:00",
     modality: "Presencial PH (Bono Fonasa) y Online",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/B0qdh2u0s0Snmf7H5K21xrT93103SD",
     fees: {
       initial: {
         private: "$40.000",
-        fonasa: "Si, $14.170",
+        fonasa: "Si, copago $14.170",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$40.000",
-        fonasa: "Si, $14.170",
+        fonasa: "Si, copago $14.170",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$40.000",
-        fonasa: "Si, $14.170",
+        fonasa: "Si, copago $14.170",
         isapres: "Reembolso tarifa particular.",
       },
     },
@@ -249,7 +250,7 @@ const teamMembers = [
     education: ["Licenciatura en Psicología", "Especialización en Neuropsicología"],
     schedule: "MIÉRCOLES 15:00 a 19:30",
     modality: "Presencial en Kennedy y Online",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/S0RbM2S0F0WeME5e50515hh9X3e302",
     fees: {
       initial: {
         private: "$45.000",
@@ -287,7 +288,7 @@ const teamMembers = [
     ],
     schedule: "Jueves 16:00",
     modality: "Online",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/k0JQq280402GUV7K5y51Fmu9K5c3nz",
     fees: {
       initial: {
         private: "$40.000",
@@ -320,7 +321,7 @@ const teamMembers = [
     education: ["Licenciatura en Psicología", "30 años de experiencia clínica"],
     schedule: "Miércoles 15:00 a 20:00, Jueves 9:00 a 13:00",
     modality: "Presencial Providencia / Online",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
     fees: {
       initial: {
         private: "$40.000",
@@ -399,7 +400,7 @@ const teamMembers = [
     education: ["Especialista en Psiquiatría Adultos (Universidad de Chile)", "Médico Cirujano (Universidad de Chile)"],
     schedule: "Martes 16:30, Viernes 10:40",
     modality: "Online",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/8015Xjh0P064oJ385R81GON9R623Ay",
     fees: {
       initial: {
         private: "$80.000",
