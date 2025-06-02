@@ -11,7 +11,7 @@ const teamMembers = [
     slug: "leonor-irarrazaval",
     name: "LEONOR IRARRÁZAVAL",
     role: "Psicóloga",
-    image: "/images/team/leonor-irarrazaval-psicologa.webp",
+    image: "./images/team/leonor-irarrazaval-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f1.png",
     description:
       "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
