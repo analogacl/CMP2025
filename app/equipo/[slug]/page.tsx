@@ -50,7 +50,7 @@ const teamMembers = [
     slug: "susana-romero-a",
     name: "SUSANA ROMERO A.",
     role: "PSICÓLOGA",
-    image: "/images/avatars/susana-romero-professional.jpg",
+    image: "/images/team/susana-romero-professional.jpg",
     fallbackImage: "/images/avatars/avatar-f2.png",
     description:
       "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
