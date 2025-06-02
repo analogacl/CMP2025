@@ -11,7 +11,8 @@ export default function Team() {
       role: "PSICÓLOGA",
       image: "/images/team/leonor-irarrazaval.jpeg",
       fallbackImage: "/images/avatars/avatar-f1.png",
-      description: "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta.",
+      description:
+        "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
       slug: "leonor-irarrazaval",
     },
     {
@@ -19,7 +20,8 @@ export default function Team() {
       role: "PSICÓLOGA",
       image: "/images/avatars/susana-romero-professional.jpg",
       fallbackImage: "/images/avatars/avatar-f2.png",
-      description: "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo.",
+      description:
+        "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
       slug: "susana-romero-a",
     },
     {
@@ -28,25 +30,17 @@ export default function Team() {
       image: "/images/team/wilsa-szabo.jpeg",
       fallbackImage: "/images/avatars/avatar-f3.png",
       description:
-        "Magister en psicóloga clínica, doctora en psicoterapia y una psicoterapeuta experimentada. Su enfoque es constructivista cognitivo.",
+        "Magíster y doctora en psicoterapia, experta en enfoque constructivista cognitivo para tratar trastornos emocionales y promover bienestar en adultos y adolescentes.",
       slug: "wilsa-szabo-lagos",
     },
     {
-      name: "MARÍA JESUS RIADE",
+      name: "MARGARITA LOUBAT OYARCE",
       role: "PSICÓLOGA",
-      image: "/images/team/maria-jesus-riade.jpeg",
-      fallbackImage: "/images/avatars/avatar-f4.png",
-      description: "Magister en psicología clínica. Es una psicoterapeuta experimentada con un enfoque sistémico.",
-      slug: "maria-jesus-riade",
-    },
-    {
-      name: "MAXIMILIANO LUCAS ARANGUIZ",
-      role: "PSICÓLOGO",
-      image: "/images/team/maximiliano-aranguiz.jpeg",
-      fallbackImage: "/images/avatars/avatar-m1.png",
+      image: "/images/team/margarita-loubat.jpeg",
+      fallbackImage: "/images/avatars/avatar-f7.png",
       description:
-        "Psicólogo, diplomado en clínica con enfoque integral. Atiendo a personas desde los 5 años hasta adulto mayor.",
-      slug: "maximiliano-lucas-aranguiz",
+        "Doctora en Educación y Psicología, con formación avanzada en psicología clínica en universidades de Francia y España.",
+      slug: "margarita-loubat-oyarce",
     },
     {
       name: "JOCELYN CALDERÓN CÁCERES",
@@ -54,25 +48,44 @@ export default function Team() {
       image: "/images/team/jocelyn-calderon.jpeg",
       fallbackImage: "/images/avatars/avatar-f5.png",
       description:
-        "Psicóloga clínica con postítulo en psicoanálisis relacional. Me especializo en la atención de adolescentes y adultos.",
+        "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
       slug: "jocelyn-calderon-caceres",
     },
     {
-      name: "PILAR OLMOS GARCÍA",
-      role: "PSICÓLOGA",
-      image: "/images/team/pilar-olmos.jpeg",
-      fallbackImage: "/images/avatars/avatar-f6.png",
+      name: "CRISTIÁN UGARTE",
+      role: "PSICÓLOGO",
+      image: "/images/avatars/avatar-m1.png",
+      fallbackImage: "/images/avatars/avatar-m1.png",
       description:
-        "Psicóloga con más 20 años de experiencia en el área educacional, investigativa y clínica adultos, cuenta además con más de 3 años de experiencia en el área clínica de las adiciones.",
-      slug: "pilar-olmos-garcia",
+        "Psicólogo clínico con enfoque psicoanalítico y experiencia en psicoterapia y temas laborales, especializado en conflictos personales, familiares y de pareja.",
+      slug: "cristian-ugarte",
     },
     {
-      name: "MARGARITA LOUBAT OYARCE",
+      name: "MAKARENA MORRIS",
       role: "PSICÓLOGA",
-      image: "/images/team/margarita-loubat.jpeg",
-      fallbackImage: "/images/avatars/avatar-f7.png",
-      description: "Doctora en Educación y Psicología. Universidad Central Universidad Paris V. (La Sorbonne)",
-      slug: "margarita-loubat-oyarce",
+      image: "/images/avatars/avatar-f6.png",
+      fallbackImage: "/images/avatars/avatar-f6.png",
+      description:
+        "Psicóloga especializada en psicoterapia, neuropsicología y evaluación de personalidad, con experiencia en trastornos emocionales, crisis vitales, familiares y parentales.",
+      slug: "makarena-morris",
+    },
+    {
+      name: "DENISE GERBER",
+      role: "PSICÓLOGA",
+      image: "/images/avatars/avatar-f8.png",
+      fallbackImage: "/images/avatars/avatar-f8.png",
+      description:
+        "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
+      slug: "denise-gerber",
+    },
+    {
+      name: "JOSÉ MANUEL GONZÁLEZ",
+      role: "PSICÓLOGO",
+      image: "/images/avatars/avatar-m1.png",
+      fallbackImage: "/images/avatars/avatar-m1.png",
+      description:
+        "Psicólogo clínico con 30 años de experiencia, especializado en duelo, trauma y evaluaciones de personalidad desde un enfoque relacional.",
+      slug: "jose-manuel-gonzalez",
     },
     // Psiquiatras
     {
@@ -81,24 +94,16 @@ export default function Team() {
       image: "/images/team/graciela-rojas.jpeg",
       fallbackImage: "/images/avatars/avatar-f8.png",
       description:
-        "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Su enfoque es cognitivo-social.",
+        "Psiquiatra y doctora en psicoterapia, con enfoque cognitivo-social, especializada en el tratamiento de trastornos psiquiátricos en adultos.",
       slug: "dra-graciela-rojas",
     },
     {
-      name: "DRA. ALICIA FIGUEROA",
+      name: "DR. EDUARD HEBERLEIN",
       role: "PSIQUIATRA",
-      image: "/images/team/alicia-figueroa.jpeg",
-      fallbackImage: "/images/avatars/avatar-f9.png",
-      description: "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo.",
-      slug: "dra-alicia-figueroa",
-    },
-    {
-      name: "DRA. MARIANA NUÑO",
-      role: "PSIQUIATRA",
-      image: "/images/team/dra-mariana-nuno.webp",
-      fallbackImage: "/images/avatars/avatar-f10.png",
-      description: "Magister en psicología clínica. Es una psicoterapeuta experimentada con un enfoque sistémicos.",
-      slug: "dra-mariana-nuno",
+      image: "/images/avatars/avatar-m1.png",
+      fallbackImage: "/images/avatars/avatar-m1.png",
+      description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
+      slug: "dr-eduard-heberlein",
     },
   ]
 

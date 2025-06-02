@@ -13,27 +13,37 @@ const teamMembers = [
     role: "PSICÓLOGA",
     image: "/images/team/leonor-irarrazaval.jpeg",
     fallbackImage: "/images/avatars/avatar-f1.png",
-    description: "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta.",
+    description:
+      "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
     fullBio:
-      "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Especializada en terapia cognitivo-conductual y mindfulness. Ha trabajado con pacientes de todas las edades, con especial énfasis en adultos y adultos mayores. Su enfoque terapéutico se centra en ayudar a las personas a desarrollar habilidades para manejar el estrés, la ansiedad y la depresión, promoviendo el bienestar emocional y la calidad de vida.",
-    specialties: ["Terapia Cognitivo-Conductual", "Mindfulness", "Manejo del Estrés", "Ansiedad", "Depresión"],
+      "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Su enfoque es cognitivo-social y se enfoca en el trabajo de las cogniciones. Atiende individualmente a personas adultas con problemas psicológicos —como problemas de la vida cotidiana, incapacidad para resolver problemas, pérdida de seres queridos, problemas de comunicación, estrés, conflictos en las relaciones interpersonales, problemas de autoestima, entre otros— y/o psiquiátricos —trastornos de personalidad, crisis de angustia, agorafobia, duelo patológico, trastorno de pánico, trastorno obsesivo-compulsivo, depresión, bipolaridad, esquizofrenia.",
+    specialties: [
+      "Enfoque Cognitivo-Social",
+      "Trastornos de Personalidad",
+      "Crisis de Angustia",
+      "Trastorno de Pánico",
+      "Depresión",
+      "Bipolaridad",
+    ],
     education: ["Doctorado en Psicoterapia", "Licenciatura en Psicología"],
-    iframeSrc: "", // To be populated when available
+    schedule: "LUNES 19:30 a 20:30",
+    modality: "Online",
+    iframeSrc: "",
     fees: {
       initial: {
         private: "$45.000",
-        fonasa: "$35.000",
-        isapres: "$40.000",
+        fonasa: "$45.000",
+        isapres: "$45.000",
       },
       followUp: {
-        private: "$40.000",
-        fonasa: "$30.000",
-        isapres: "$35.000",
+        private: "$45.000",
+        fonasa: "$45.000",
+        isapres: "$45.000",
       },
       online: {
-        private: "$35.000",
-        fonasa: "$28.000",
-        isapres: "$32.000",
+        private: "$45.000",
+        fonasa: "$45.000",
+        isapres: "$45.000",
       },
     },
   },
@@ -43,26 +53,29 @@ const teamMembers = [
     role: "PSICÓLOGA",
     image: "/images/avatars/susana-romero-professional.jpg",
     fallbackImage: "/images/avatars/avatar-f2.png",
-    description: "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo.",
+    description:
+      "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
     fullBio:
-      "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo, combinando elementos de diferentes corrientes terapéuticas para adaptarse a las necesidades específicas de cada paciente. Cuenta con amplia experiencia en el tratamiento de trastornos del estado de ánimo, problemas de autoestima y dificultades en las relaciones interpersonales. Su objetivo es acompañar a las personas en su proceso de autoconocimiento y crecimiento personal.",
-    specialties: ["Terapia Integrativa", "Trastornos del Estado de Ánimo", "Autoestima", "Relaciones Interpersonales"],
-    education: ["Magister en Psicología Clínica", "Licenciatura en Psicología"],
+      "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo y se aproxima a la psicología desde más de un modelo teórico. Puede ayudarle a revisar qué aspectos de su forma de vida le generan ansiedad, crisis de pánico, estrés, desánimo y/o relaciones humanas conflictivas. Le puede ayudar a superar sus problemas de autoestima o el dolor que experimenta frente a una pérdida o facilitar su reincorporación laboral luego de su postnatal o de su licencia prolongada. Susana Romero tiene formación en recursos humanos de modo que puede ayudarle a enfrentar sus problemas en su lugar de trabajo.",
+    specialties: ["Terapia Integrativa", "Ansiedad", "Crisis de Pánico", "Autoestima", "Duelo", "Conflictos Laborales"],
+    education: ["Magister en Psicología Clínica", "Formación en Recursos Humanos"],
+    schedule: "MARTES 9:00 y 12:00 a 18:00",
+    modality: "Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/F0SihxL0b02pX4145n21dOs9t8l3Df",
     fees: {
       initial: {
-        private: "$48.000",
-        fonasa: "$38.000",
-        isapres: "$42.000",
+        private: "$35.000",
+        fonasa: "$25.000",
+        isapres: "$35.000",
       },
       followUp: {
-        private: "$42.000",
-        fonasa: "$32.000",
-        isapres: "$38.000",
+        private: "$35.000",
+        fonasa: "$25.000",
+        isapres: "$35.000",
       },
       online: {
-        private: "$38.000",
-        fonasa: "$30.000",
+        private: "$35.000",
+        fonasa: "$25.000",
         isapres: "$35.000",
       },
     },
@@ -74,101 +87,74 @@ const teamMembers = [
     image: "/images/team/wilsa-szabo.jpeg",
     fallbackImage: "/images/avatars/avatar-f3.png",
     description:
-      "Magister en psicóloga clínica, doctora en psicoterapia y una psicoterapeuta experimentada. Su enfoque es constructivista cognitivo.",
+      "Magíster y doctora en psicoterapia, experta en enfoque constructivista cognitivo para tratar trastornos emocionales y promover bienestar en adultos y adolescentes.",
     fullBio:
-      "Magister en psicóloga clínica, doctora en psicoterapia y una psicoterapeuta experimentada. Su enfoque es constructivista cognitivo, centrándose en cómo las personas construyen su realidad a través de sus experiencias y percepciones. Ha trabajado extensamente con adolescentes y adultos, abordando temas como la identidad, el sentido de vida y las transiciones vitales. Su práctica se caracteriza por un profundo respeto por la autonomía y la capacidad de cambio de cada individuo.",
+      "Magíster en psicología clínica, doctora en psicoterapia y una psicoterapeuta experimentada. Su enfoque es constructivista cognitivo y se centra en lograr un reordenamiento psicológico frente a situaciones que afectan el curso normal de la existencia. Atiende adultos y adolescentes con síntomas depresivos y/o ansiosos, con trastornos psiquiátricos, con conflictos familiares y de pareja, con trastornos sexuales, dificultades laborales o interpersonales. Acuerda con las personas las metas a alcanzar como revitalización de la esperanza dejando atrás la desmoralización, mejoramiento del funcionamiento cotidiano.",
     specialties: [
       "Enfoque Constructivista Cognitivo",
-      "Identidad",
-      "Sentido de Vida",
-      "Transiciones Vitales",
-      "Adolescentes y Adultos",
+      "Trastornos Depresivos",
+      "Trastornos Ansiosos",
+      "Conflictos Familiares",
+      "Trastornos Sexuales",
     ],
-    education: ["Doctorado en Psicoterapia", "Magister en Psicología Clínica", "Licenciatura en Psicología"],
-    iframeSrc: "", // To be populated when available
+    education: ["Doctorado en Psicoterapia", "Magister en Psicología Clínica"],
+    schedule: "Consultar disponibilidad",
+    modality: "Consultar modalidad",
+    iframeSrc: "",
     fees: {
       initial: {
-        private: "$50.000",
-        fonasa: "$40.000",
-        isapres: "$45.000",
+        private: "$55.000",
+        fonasa: "$55.000",
+        isapres: "$55.000",
       },
       followUp: {
-        private: "$45.000",
-        fonasa: "$35.000",
-        isapres: "$40.000",
+        private: "$55.000",
+        fonasa: "$55.000",
+        isapres: "$55.000",
       },
       online: {
-        private: "$40.000",
-        fonasa: "$32.000",
-        isapres: "$36.000",
+        private: "$55.000",
+        fonasa: "$55.000",
+        isapres: "$55.000",
       },
     },
   },
   {
-    slug: "maria-jesus-riade",
-    name: "MARÍA JESUS RIADE",
+    slug: "margarita-loubat-oyarce",
+    name: "MARGARITA LOUBAT OYARCE",
     role: "PSICÓLOGA",
-    image: "/images/team/maria-jesus-riade.jpeg",
-    fallbackImage: "/images/avatars/avatar-f4.png",
-    description: "Magister en psicología clínica. Es una psicoterapeuta experimentada con un enfoque sistémico.",
-    fullBio:
-      "Magister en psicología clínica. Es una psicoterapeuta experimentada con un enfoque sistémico, que considera a la persona en el contexto de sus relaciones familiares y sociales. Especializada en terapia familiar y de pareja, ayuda a mejorar la comunicación y resolver conflictos en el entorno familiar. También trabaja con individuos que enfrentan dificultades en sus relaciones interpersonales, ofreciendo herramientas para desarrollar vínculos más saludables y satisfactorios.",
-    specialties: ["Enfoque Sistémico", "Terapia Familiar", "Terapia de Pareja", "Relaciones Interpersonales"],
-    education: ["Magister en Psicología Clínica", "Especialización en Terapia Familiar", "Licenciatura en Psicología"],
-    iframeSrc: "", // To be populated when available
-    fees: {
-      initial: {
-        private: "$47.000",
-        fonasa: "$37.000",
-        isapres: "$42.000",
-      },
-      followUp: {
-        private: "$42.000",
-        fonasa: "$32.000",
-        isapres: "$37.000",
-      },
-      online: {
-        private: "$38.000",
-        fonasa: "$30.000",
-        isapres: "$34.000",
-      },
-    },
-  },
-  {
-    slug: "maximiliano-lucas-aranguiz",
-    name: "MAXIMILIANO LUCAS ARANGUIZ",
-    role: "PSICÓLOGO",
-    image: "/images/team/maximiliano-aranguiz.jpeg",
-    fallbackImage: "/images/avatars/avatar-m1.png",
+    image: "/images/team/margarita-loubat.jpeg",
+    fallbackImage: "/images/avatars/avatar-f7.png",
     description:
-      "Psicólogo, diplomado en clínica con enfoque integral. Atiendo a personas desde los 5 años hasta adulto mayor.",
+      "Doctora en Educación y Psicología, con formación avanzada en psicología clínica en universidades de Francia y España.",
     fullBio:
-      "Psicólogo, diplomado en clínica con enfoque integral. Atiendo a personas desde los 5 años hasta adulto mayor. Mi práctica se caracteriza por una visión holística que integra aspectos cognitivos, emocionales, conductuales y relacionales. Tengo experiencia en el trabajo con niños, adolescentes y adultos, abordando diversas problemáticas como dificultades de aprendizaje, problemas conductuales, ansiedad, depresión y crisis vitales. Mi objetivo es acompañar a las personas en su proceso de desarrollo y bienestar.",
-    specialties: [
-      "Enfoque Integral",
-      "Psicología Infantil",
-      "Adolescentes",
-      "Adultos",
-      "Adultos Mayores",
-      "Dificultades de Aprendizaje",
+      "Doctora en Educación y Psicología. Universidad Central; Diploma de Estudios en Profundidad (DEA) en Psicología y Educación. Universidad de Granada; DESS en Psicología Clínica y Patológica. Universidad Paris V.; Maestría en Psicología Clínica. Universidad Paris V.; Licenciatura en Psicología. Universidad Paris V. (La Sorbonne).",
+    specialties: ["Psicología Educativa", "Psicología Clínica", "Formación Internacional"],
+    education: [
+      "Doctorado en Educación y Psicología (Universidad Central)",
+      "DEA en Psicología y Educación (Universidad de Granada)",
+      "DESS en Psicología Clínica (Universidad Paris V)",
+      "Maestría en Psicología Clínica (Universidad Paris V)",
+      "Licenciatura en Psicología (Universidad Paris V - La Sorbonne)",
     ],
-    education: ["Diplomado en Clínica", "Licenciatura en Psicología"],
-    iframeSrc: "", // To be populated when available
+    schedule: "LUNES 18:00 a 20:00, JUEVES 18:00 a 20:00",
+    modality: "Presencial PH (Bono Fonasa) / Online",
+    iframeSrc: "",
     fees: {
       initial: {
-        private: "$45.000",
-        fonasa: "$35.000",
-        isapres: "$40.000",
+        private: "$35.000",
+        fonasa: "$25.000",
+        isapres: "$35.000",
       },
       followUp: {
-        private: "$40.000",
-        fonasa: "$30.000",
+        private: "$35.000",
+        fonasa: "$25.000",
         isapres: "$35.000",
       },
       online: {
         private: "$35.000",
-        fonasa: "$28.000",
-        isapres: "$32.000",
+        fonasa: "$25.000",
+        isapres: "$35.000",
       },
     },
   },
@@ -179,98 +165,178 @@ const teamMembers = [
     image: "/images/team/jocelyn-calderon.jpeg",
     fallbackImage: "/images/avatars/avatar-f5.png",
     description:
-      "Psicóloga clínica con postítulo en psicoanálisis relacional. Me especializo en la atención de adolescentes y adultos.",
+      "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
     fullBio:
-      "Psicóloga clínica con postítulo en psicoanálisis relacional. Me especializo en la atención de adolescentes y adultos. Mi enfoque terapéutico se basa en la importancia de las relaciones interpersonales en el desarrollo psicológico y emocional. Trabajo con personas que enfrentan dificultades en sus vínculos, problemas de identidad, trastornos del estado de ánimo y situaciones de crisis. Mi objetivo es crear un espacio seguro donde explorar y comprender las experiencias emocionales para promover el cambio y el crecimiento personal.",
+      "Psicóloga clínica con postítulo en psicoanálisis relacional. Se especializa en la atención de adolescentes y adultos con abordaje de diagnósticos de trastornos del ánimo, trastornos mixtos de ansiedad y depresión, trastornos ansiosos, trastornos adaptativos, crisis de pánico y trastornos de la personalidad. Realiza intervenciones que devuelven el funcionamiento integral de quien consulta.",
     specialties: [
       "Psicoanálisis Relacional",
-      "Adolescentes",
-      "Adultos",
-      "Vínculos Interpersonales",
-      "Identidad",
-      "Crisis",
+      "Trastornos del Ánimo",
+      "Trastornos de Ansiedad",
+      "Crisis de Pánico",
+      "Trastornos de Personalidad",
     ],
     education: ["Postítulo en Psicoanálisis Relacional", "Licenciatura en Psicología"],
-    iframeSrc: "", // To be populated when available
+    schedule: "LUNES 11:00 a 12:30 y 15:00 a 18:30, MARTES 16:00 a 20:30",
+    modality: "Online y Presencial (Escuela Militar)",
+    iframeSrc: "",
     fees: {
       initial: {
-        private: "$46.000",
-        fonasa: "$36.000",
-        isapres: "$41.000",
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
       },
       followUp: {
-        private: "$41.000",
-        fonasa: "$31.000",
-        isapres: "$36.000",
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
       },
       online: {
-        private: "$37.000",
-        fonasa: "$29.000",
-        isapres: "$33.000",
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
       },
     },
   },
   {
-    slug: "pilar-olmos-garcia",
-    name: "PILAR OLMOS GARCÍA",
+    slug: "cristian-ugarte",
+    name: "CRISTIÁN UGARTE",
+    role: "PSICÓLOGO",
+    image: "/images/avatars/avatar-m1.png",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Psicólogo clínico con enfoque psicoanalítico y experiencia en psicoterapia y temas laborales, especializado en conflictos personales, familiares y de pareja.",
+    fullBio:
+      "Psicólogo Clínico con amplia experiencia como psicoterapeuta, además cuenta con formación y experiencia en el mundo Laboral/Organizacional y en áreas de RRHH. Trabaja bajo un enfoque Psicoanalítico y atiende principalmente diferentes tipos de problemáticas de la vida cotidiana, conflictos de pareja o familiares, autoestima entre otros, además de temáticas de interacción laboral.",
+    specialties: ["Enfoque Psicoanalítico", "Psicología Laboral", "Conflictos de Pareja", "Autoestima", "RRHH"],
+    education: ["Licenciatura en Psicología", "Formación en Psicología Organizacional"],
+    schedule: "MARTES 13:00 a 17:00",
+    modality: "Presencial PH (Bono Fonasa) y Online",
+    iframeSrc: "",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "$14.170",
+        isapres: "$40.000",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "$14.170",
+        isapres: "$40.000",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "$14.170",
+        isapres: "$40.000",
+      },
+    },
+  },
+  {
+    slug: "makarena-morris",
+    name: "MAKARENA MORRIS",
     role: "PSICÓLOGA",
-    image: "/images/team/pilar-olmos.jpeg",
+    image: "/images/avatars/avatar-f6.png",
     fallbackImage: "/images/avatars/avatar-f6.png",
     description:
-      "Psicóloga con más 20 años de experiencia en el área educacional, investigativa y clínica adultos, cuenta además con más de 3 años de experiencia en el área clínica de las adiciones.",
+      "Psicóloga especializada en psicoterapia, neuropsicología y evaluación de personalidad, con experiencia en trastornos emocionales, crisis vitales, familiares y parentales.",
     fullBio:
-      "Psicóloga con más 20 años de experiencia en el área educacional, investigativa y clínica adultos, cuenta además con más de 3 años de experiencia en el área clínica de las adiciones. Su amplia trayectoria le ha permitido desarrollar un enfoque integral que aborda las necesidades educativas, psicológicas y sociales de las personas. En el ámbito de las adicciones, trabaja con un modelo de reducción de daños y fortalecimiento de recursos personales. Su objetivo es acompañar a las personas en su proceso de recuperación y reinserción social.",
-    specialties: ["Psicología Educacional", "Investigación", "Clínica Adultos", "Adicciones", "Reducción de Daños"],
-    education: ["Especialización en Adicciones", "Licenciatura en Psicología"],
-    iframeSrc: "", // To be populated when available
+      "Sus servicios principales abarcan el tratamiento psicoterapéutico y la evaluación de la personalidad y las funciones cognitivas (Neuropsicología). Aborda trastornos del ánimo, ansiedad, estrés, trastornos de personalidad, diversidad funcional psíquica, trastorno de déficit atencional con y sin hiperactividad, violencia intrafamiliar, trastornos alimenticios, procesos de duelo, relaciones y sexualidad. Además, se especializa en abordar crisis del ciclo vital y familiar, así como conflictos y crisis parentales.",
+    specialties: [
+      "Neuropsicología",
+      "Evaluación de Personalidad",
+      "Trastornos del Ánimo",
+      "TDAH",
+      "Trastornos Alimenticios",
+    ],
+    education: ["Licenciatura en Psicología", "Especialización en Neuropsicología"],
+    schedule: "MIÉRCOLES 15:00 a 19:30",
+    modality: "Presencial en Kennedy y Online",
+    iframeSrc: "",
     fees: {
       initial: {
-        private: "$48.000",
-        fonasa: "$38.000",
-        isapres: "$43.000",
+        private: "$45.000",
+        fonasa: "$45.000",
+        isapres: "$45.000",
       },
       followUp: {
-        private: "$43.000",
-        fonasa: "$33.000",
-        isapres: "$38.000",
+        private: "$45.000",
+        fonasa: "$45.000",
+        isapres: "$45.000",
       },
       online: {
-        private: "$38.000",
-        fonasa: "$30.000",
-        isapres: "$35.000",
+        private: "$45.000",
+        fonasa: "$45.000",
+        isapres: "$45.000",
+      },
+      evaluations: "$150.000",
+    },
+  },
+  {
+    slug: "denise-gerber",
+    name: "DENISE GERBER",
+    role: "PSICÓLOGA",
+    image: "/images/avatars/avatar-f8.png",
+    fallbackImage: "/images/avatars/avatar-f8.png",
+    description:
+      "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
+    fullBio:
+      "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
+    specialties: ["Psicoterapia", "Neurociencias Cognitivas"],
+    education: [
+      "Doctorado en Psicoterapia",
+      "Máster en Neurociencias Cognitivas (University College London)",
+      "Licenciatura en Psicología (Universidad de Chile)",
+    ],
+    schedule: "JUEVES 16:00",
+    modality: "Online",
+    iframeSrc: "",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
       },
     },
   },
   {
-    slug: "margarita-loubat-oyarce",
-    name: "MARGARITA LOUBAT OYARCE",
-    role: "PSICÓLOGA",
-    image: "/images/team/margarita-loubat.jpeg",
-    fallbackImage: "/images/avatars/avatar-f7.png",
-    description: "Doctora en Educación y Psicología. Universidad Central Universidad Paris V. (La Sorbonne)",
+    slug: "jose-manuel-gonzalez",
+    name: "JOSÉ MANUEL GONZÁLEZ",
+    role: "PSICÓLOGO",
+    image: "/images/avatars/avatar-m1.png",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Psicólogo clínico con 30 años de experiencia, especializado en duelo, trauma y evaluaciones de personalidad desde un enfoque relacional.",
     fullBio:
-      "Doctora en Educación y Psicología por la Universidad Central y la Universidad Paris V (La Sorbonne). Su formación académica internacional le ha permitido desarrollar un enfoque que integra perspectivas educativas y psicológicas. Cuenta con amplia experiencia en investigación, docencia y práctica clínica. Su trabajo se centra en el desarrollo de potencialidades y recursos personales, con especial énfasis en el ámbito educativo y el bienestar psicológico. Su objetivo es promover el aprendizaje significativo y el crecimiento personal.",
-    specialties: ["Psicología Educativa", "Desarrollo Personal", "Bienestar Psicológico", "Aprendizaje Significativo"],
-    education: [
-      "Doctorado en Educación y Psicología (Universidad Central y Universidad Paris V)",
-      "Licenciatura en Psicología",
-    ],
-    iframeSrc: "", // To be populated when available
+      "Psicólogo Clínico con 30 años de experiencia. Se ha enfocado, desde un enfoque relacional, en atender adolescentes, adultos y familias que han sufrido pérdidas, duelos y que han vivido situaciones traumáticas, donde las señales de alarma y malestar pueden ser cuadros ansiosos, depresivos o físicos. Además, realiza evaluaciones de personalidad a través de test proyectivos, especialmente el test de Rorschach.",
+    specialties: ["Enfoque Relacional", "Duelo", "Trauma", "Test de Rorschach", "Evaluaciones de Personalidad"],
+    education: ["Licenciatura en Psicología", "30 años de experiencia clínica"],
+    schedule: "MIÉRCOLES 15:00 a 20:00, JUEVES 9:00 a 13:00",
+    modality: "Presencial Providencia / Online",
+    iframeSrc: "",
     fees: {
       initial: {
-        private: "$52.000",
-        fonasa: "$42.000",
-        isapres: "$47.000",
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
       },
       followUp: {
-        private: "$47.000",
-        fonasa: "$37.000",
-        isapres: "$42.000",
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
       },
       online: {
-        private: "$42.000",
-        fonasa: "$34.000",
-        isapres: "$38.000",
+        private: "$40.000",
+        fonasa: "$40.000",
+        isapres: "$40.000",
       },
     },
   },
@@ -282,99 +348,74 @@ const teamMembers = [
     image: "/images/team/graciela-rojas.jpeg",
     fallbackImage: "/images/avatars/avatar-f8.png",
     description:
-      "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Su enfoque es cognitivo-social.",
+      "Psiquiatra y doctora en psicoterapia, con enfoque cognitivo-social, especializada en el tratamiento de trastornos psiquiátricos en adultos.",
     fullBio:
-      "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Su enfoque es cognitivo-social, integrando aspectos biológicos, psicológicos y sociales en el tratamiento de trastornos mentales. Especializada en trastornos del estado de ánimo, ansiedad y trastornos de personalidad. Combina intervenciones farmacológicas con psicoterapia para ofrecer un tratamiento integral. Su objetivo es ayudar a las personas a recuperar su equilibrio emocional y mejorar su calidad de vida.",
+      "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Su enfoque es cognitivo-social y se centra en el trabajo de las cogniciones. Atiende individualmente a personas adultas con problemas psicológicos —como problemas de la vida cotidiana, incapacidad para resolver problemas, pérdida de seres queridos, problemas de comunicación, estrés, conflictos en las relaciones interpersonales, problemas de autoestima, entre otros— y/o psiquiátricos —trastornos de personalidad, crisis de angustia, agorafobia, duelo patológico, trastorno de pánico, trastorno obsesivo-compulsivo, depresión, bipolaridad, esquizofrenia.",
     specialties: [
       "Enfoque Cognitivo-Social",
-      "Trastornos del Estado de Ánimo",
-      "Ansiedad",
       "Trastornos de Personalidad",
-      "Tratamiento Farmacológico",
+      "Trastorno de Pánico",
+      "Depresión",
+      "Bipolaridad",
+      "Esquizofrenia",
     ],
     education: ["Doctorado en Psicoterapia", "Especialidad en Psiquiatría", "Medicina"],
-    iframeSrc: "", // To be populated when available
+    schedule: "LUNES 8:30 a 12:40, JUEVES 9:30 a 12:20 y 15:00 a 18:40, VIERNES 15:00 a 16:40",
+    modality: "Presencial PH (Bono Fonasa) / Online",
+    iframeSrc: "",
     fees: {
       initial: {
-        private: "$65.000",
-        fonasa: "$50.000",
-        isapres: "$58.000",
+        private: "$100.000",
+        fonasa: "$45.870",
+        isapres: "$100.000",
       },
       followUp: {
-        private: "$55.000",
-        fonasa: "$45.000",
-        isapres: "$50.000",
+        private: "$100.000",
+        fonasa: "$45.870",
+        isapres: "$100.000",
       },
       online: {
-        private: "$50.000",
-        fonasa: "$40.000",
-        isapres: "$45.000",
+        private: "$100.000",
+        fonasa: "$45.870",
+        isapres: "$100.000",
       },
     },
   },
   {
-    slug: "dra-alicia-figueroa",
-    name: "DRA. ALICIA FIGUEROA",
+    slug: "dr-eduard-heberlein",
+    name: "DR. EDUARD HEBERLEIN",
     role: "PSIQUIATRA",
-    image: "/images/team/alicia-figueroa.jpeg",
-    fallbackImage: "/images/avatars/avatar-f9.png",
-    description: "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo.",
+    image: "/images/avatars/avatar-m1.png",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
     fullBio:
-      "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo, combinando diferentes modelos terapéuticos según las necesidades de cada paciente. Como psiquiatra, integra el tratamiento farmacológico con intervenciones psicoterapéuticas para abordar trastornos mentales de manera integral. Especializada en trastornos del ánimo, ansiedad y trauma. Su objetivo es acompañar a las personas en su proceso de recuperación, promoviendo el bienestar emocional y la salud mental.",
-    specialties: ["Enfoque Integrativo", "Trastornos del Ánimo", "Ansiedad", "Trauma", "Tratamiento Farmacológico"],
-    education: ["Magister en Psicología Clínica", "Especialidad en Psiquiatría", "Medicina"],
-    iframeSrc: "", // To be populated when available
-    fees: {
-      initial: {
-        private: "$68.000",
-        fonasa: "$52.000",
-        isapres: "$60.000",
-      },
-      followUp: {
-        private: "$58.000",
-        fonasa: "$46.000",
-        isapres: "$52.000",
-      },
-      online: {
-        private: "$52.000",
-        fonasa: "$42.000",
-        isapres: "$48.000",
-      },
-    },
-  },
-  {
-    slug: "dra-mariana-nuno",
-    name: "DRA. MARIANA NUÑO",
-    role: "PSIQUIATRA",
-    image: "/images/team/dra-mariana-nuno.webp",
-    fallbackImage: "/images/avatars/avatar-f10.png",
-    description: "Magister en psicología clínica. Es una psicoterapeuta experimentada con un enfoque sistémicos.",
-    fullBio:
-      "Magister en psicología clínica. Es una psicoterapeuta experimentada con un enfoque sistémico, que considera a la persona en el contexto de sus relaciones familiares y sociales. Como psiquiatra, integra el tratamiento farmacológico con intervenciones psicoterapéuticas, considerando el entorno familiar y social del paciente. Especializada en trastornos mentales graves, psicosis y trastornos del neurodesarrollo. Su objetivo es promover la recuperación y la inclusión social de las personas con trastornos mentales.",
+      "Médico Cirujano y Psiquiatra de la Universidad de Chile, donde ha ejercido su profesión en distintos centros de las regiones Metropolitana y Los Lagos, donde actualmente reside. Atiende a personas adultas con problemas como depresión, crisis de pánico, ansiedad, trastorno afectivo bipolar, trastornos adaptativos, estrés, trastorno de estrés postraumático.",
     specialties: [
-      "Enfoque Sistémico",
-      "Trastornos Mentales Graves",
-      "Psicosis",
-      "Trastornos del Neurodesarrollo",
-      "Tratamiento Farmacológico",
+      "Depresión",
+      "Crisis de Pánico",
+      "Ansiedad",
+      "Trastorno Bipolar",
+      "Trastorno de Estrés Postraumático",
     ],
-    education: ["Magister en Psicología Clínica", "Especialidad en Psiquiatría", "Medicina"],
-    iframeSrc: "", // To be populated when available
+    education: ["Especialista en Psiquiatría Adultos (Universidad de Chile)", "Médico Cirujano (Universidad de Chile)"],
+    schedule: "MARTES 16:30, VIERNES 10:40",
+    modality: "Online",
+    iframeSrc: "",
     fees: {
       initial: {
-        private: "$70.000",
-        fonasa: "$55.000",
-        isapres: "$62.000",
+        private: "$80.000",
+        fonasa: "$80.000",
+        isapres: "$80.000",
       },
       followUp: {
-        private: "$60.000",
-        fonasa: "$48.000",
-        isapres: "$55.000",
+        private: "$80.000",
+        fonasa: "$80.000",
+        isapres: "$80.000",
       },
       online: {
-        private: "$55.000",
-        fonasa: "$45.000",
-        isapres: "$50.000",
+        private: "$80.000",
+        fonasa: "$80.000",
+        isapres: "$80.000",
       },
     },
   },
@@ -448,14 +489,14 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                     <Clock className="h-5 w-5 text-[#015233] mr-3 mt-0.5" />
                     <div>
                       <p className="text-sm font-medium">Horario de atención</p>
-                      <p className="text-sm text-gray-600">Lunes a Viernes: 9:00 - 18:00</p>
+                      <p className="text-sm text-gray-600">{member.schedule}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <MapPin className="h-5 w-5 text-[#015233] mr-3 mt-0.5" />
                     <div>
                       <p className="text-sm font-medium">Modalidad</p>
-                      <p className="text-sm text-gray-600">Presencial y Online</p>
+                      <p className="text-sm text-gray-600">{member.modality}</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -464,7 +505,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                       <p className="text-sm font-medium">Tarifas</p>
                       <div className="mt-2 space-y-3">
                         <div className="bg-gray-50 p-3 rounded-md">
-                          <p className="text-xs font-semibold text-[#015233] mb-1">Primera consulta</p>
+                          <p className="text-xs font-semibold text-[#015233] mb-1">Consulta</p>
                           <div className="grid grid-cols-2 gap-1 text-xs">
                             <span className="text-gray-600">Particular:</span>
                             <span className="font-medium">{member.fees.initial.private}</span>
@@ -474,28 +515,12 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                             <span className="font-medium">{member.fees.initial.isapres}</span>
                           </div>
                         </div>
-                        <div className="bg-gray-50 p-3 rounded-md">
-                          <p className="text-xs font-semibold text-[#015233] mb-1">Consulta de seguimiento</p>
-                          <div className="grid grid-cols-2 gap-1 text-xs">
-                            <span className="text-gray-600">Particular:</span>
-                            <span className="font-medium">{member.fees.followUp.private}</span>
-                            <span className="text-gray-600">FONASA:</span>
-                            <span className="font-medium">{member.fees.followUp.fonasa}</span>
-                            <span className="text-gray-600">ISAPRES:</span>
-                            <span className="font-medium">{member.fees.followUp.isapres}</span>
+                        {member.fees.evaluations && (
+                          <div className="bg-gray-50 p-3 rounded-md">
+                            <p className="text-xs font-semibold text-[#015233] mb-1">Evaluaciones</p>
+                            <span className="font-medium text-sm">{member.fees.evaluations}</span>
                           </div>
-                        </div>
-                        <div className="bg-gray-50 p-3 rounded-md">
-                          <p className="text-xs font-semibold text-[#015233] mb-1">Consulta online</p>
-                          <div className="grid grid-cols-2 gap-1 text-xs">
-                            <span className="text-gray-600">Particular:</span>
-                            <span className="font-medium">{member.fees.online.private}</span>
-                            <span className="text-gray-600">FONASA:</span>
-                            <span className="font-medium">{member.fees.online.fonasa}</span>
-                            <span className="text-gray-600">ISAPRES:</span>
-                            <span className="font-medium">{member.fees.online.isapres}</span>
-                          </div>
-                        </div>
+                        )}
                       </div>
                       <p className="text-xs text-gray-500 mt-2">* Los precios pueden variar según el caso específico</p>
                     </div>
