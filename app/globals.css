@@ -1,0 +1,313 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 15%;
+  --primary: 153 97% 16%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 101 60% 75%;
+  --secondary-foreground: 0 0% 15%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 101 60% 75%;
+  --accent-foreground: 153 97% 16%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 153 97% 16%;
+  --radius: 0.5rem;
+
+  /* Custom CTA button colors */
+  --cta-primary: #015233;
+  --cta-primary-hover: #0a6b42;
+  --cta-accent: #b8e399;
+  --cta-text: #ffffff;
+  --cta-shadow: rgba(1, 82, 51, 0.3);
+  --cta-shadow-hover: rgba(1, 82, 51, 0.5);
+
+  /* Header height for scroll padding */
+  --header-height: 6rem; /* Accounts for the notification bar + navbar */
+}
+
+/* Improved scrolling behavior */
+html {
+  scroll-padding-top: var(--header-height);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+/* Improved mobile tap targets */
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+/* Improved focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--cta-primary);
+  outline-offset: 2px;
+}
+
+.dark {
+  --background: 0 0% 15%;
+  --foreground: 210 40% 98%;
+  --card: 0 0% 15%;
+  --card-foreground: 210 40% 98%;
+  --popover: 0 0% 15%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 153 97% 16%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 101 60% 75%;
+  --secondary-foreground: 0 0% 15%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 101 60% 75%;
+  --accent-foreground: 153 97% 16%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 153 97% 16%;
+}
+
+body {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section targets for navigation */
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+/* Carousel specific styles */
+.carousel-container {
+  height: 40px; /* Explicit height */
+  contain: content; /* Improve performance */
+}
+
+.carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  will-change: opacity; /* Hint for browser optimization */
+}
+
+.carousel-item p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+/* High-priority CTA button styles */
+.cta-button {
+  background-color: var(--cta-primary) !important;
+  color: var(--cta-text) !important;
+  border: 2px solid transparent !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 6px -1px var(--cta-shadow), 0 2px 4px -1px var(--cta-shadow) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  touch-action: manipulation !important;
+}
+
+.cta-button:hover {
+  background-color: var(--cta-primary-hover) !important;
+  color: var(--cta-text) !important;
+  border-color: var(--cta-accent) !important;
+  box-shadow: 0 10px 15px -3px var(--cta-shadow-hover), 0 4px 6px -2px var(--cta-shadow-hover) !important;
+  transform: translateY(-1px) !important;
+}
+
+.cta-button:focus-visible {
+  outline: 2px solid var(--cta-primary) !important;
+  outline-offset: 2px !important;
+}
+
+.cta-button:active {
+  transform: translateY(0) !important;
+}
+
+/* Secondary CTA button styles */
+.cta-button-secondary {
+  background-color: transparent !important;
+  color: var(--cta-primary) !important;
+  border: 1px solid var(--cta-primary) !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.5rem 1.25rem !important;
+  letter-spacing: 0.025em !important;
+  touch-action: manipulation !important;
+}
+
+.cta-button-secondary:hover {
+  background-color: rgba(1, 82, 51, 0.05) !important;
+  color: var(--cta-primary-hover) !important;
+  border-color: var(--cta-primary-hover) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  transform: translateY(-1px) !important;
+}
+
+.cta-button-secondary:focus-visible {
+  outline: 2px solid var(--cta-primary) !important;
+  outline-offset: 2px !important;
+}
+
+.cta-button-secondary:active {
+  transform: translateY(0) !important;
+}
+
+/* Improved animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Improved tap targets for mobile */
+@media (max-width: 640px) {
+  button,
+  a[role="button"],
+  .cta-button,
+  .cta-button-secondary {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  nav a {
+    padding: 0.5rem 0;
+  }
+}
+
+/* Base typography styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add animation utilities */
+@layer utilities {
+  .animate-in {
+    animation: animate-in 0.3s ease-in-out;
+  }
+
+  .slide-in-from-top {
+    animation: slide-in-from-top 0.3s ease-in-out;
+  }
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-from-top {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
