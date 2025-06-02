@@ -45,7 +45,7 @@ export default function Team() {
     {
       name: "JOCELYN CALDERÓN CÁCERES",
       role: "PSICÓLOGA",
-      image: "/images/team/jocelyn-calderon-psicologa.webp",
+      image: "/images/team/jocelyn-calderon-caceres-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f5.png",
       description:
         "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
@@ -100,7 +100,7 @@ export default function Team() {
     {
       name: "DR. EDUARD HEBERLEIN",
       role: "PSIQUIATRA",
-      image: "/images/team/dr-eduardo-heberlein.webp",
+      image: "/images/team/dr-eduard-heberlein.webp",
       fallbackImage: "/images/avatars/avatar-m1.png",
       description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
       slug: "dr-eduard-heberlein",
