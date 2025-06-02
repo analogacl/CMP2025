@@ -26,24 +26,23 @@ const teamMembers = [
       "Bipolaridad",
     ],
     education: ["Doctorado en Psicoterapia", "Licenciatura en Psicología"],
-    schedule: "LUNES 19:30 a 20:30",
+    schedule: "Lunes 19:30 a 20:30",
     modality: "Online",
     iframeSrc: "",
     fees: {
       initial: {
         private: "$45.000",
-        fonasa: "$45.000",
-        isapres: "$45.000",
+        fonasa: "No atiende",
+       
       },
       followUp: {
         private: "$45.000",
-        fonasa: "$45.000",
-        isapres: "$45.000",
+        fonasa: "No atiende",
+       
       },
       online: {
         private: "$45.000",
-        fonasa: "$45.000",
-        isapres: "$45.000",
+        fonasa: "No atiende",
       },
     },
   },
