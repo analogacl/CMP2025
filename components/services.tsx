@@ -6,28 +6,46 @@ import Image from "next/image"
 export default function Services() {
   const services = [
     {
-      title: "STRESS",
-      description: "Técnicas especializadas para el manejo efectivo del estrés y la ansiedad en la vida cotidiana.",
-      image: "/images/services/stress-illustration.png",
-      fallback: "/images/services/stress-illustration.png",
+      title: "PSICOTERAPIA INDIVIDUAL",
+      description:
+        "Terapia personalizada que te ayuda a comprender, enfrentar y superar dificultades emocionales, promoviendo el autoconocimiento y el bienestar integral.",
+      image: "/images/services/individual-therapy.png",
+      fallback: "/therapy-session.png",
     },
     {
-      title: "DEPRESIÓN POSPARTO",
-      description: "Apoyo especializado para madres que enfrentan desafíos emocionales después del parto.",
-      image: "/images/services/postpartum-illustration.png",
-      fallback: "/images/services/postpartum-illustration.png",
+      title: "TERAPIA FAMILIAR",
+      description:
+        "Un espacio para mejorar la comunicación, resolver conflictos y fortalecer los vínculos entre los miembros de tu familia, con apoyo profesional y un enfoque sistémico.",
+      image: "/images/services/family-therapy.png",
+      fallback: "/family-therapy-group.png",
     },
     {
-      title: "TERCERA EDAD",
-      description: "Atención integral para adultos mayores, abordando sus necesidades emocionales específicas.",
-      image: "/images/services/elderly-illustration.png",
-      fallback: "/images/services/elderly-illustration.png",
+      title: "TERAPIA DE PAREJA",
+      description:
+        "Terapia enfocada en la resolución de conflictos y el fortalecimiento del vínculo afectivo, mediante el desarrollo de habilidades comunicacionales y estrategias relacionales.",
+      image: "/images/services/couple-therapy.png",
+      fallback: "/couple-therapy-session.png",
     },
     {
-      title: "DEPRESIÓN BIPOLAR",
-      description: "Tratamiento especializado para trastorno bipolar con enfoque integral y personalizado.",
-      image: "/images/services/bipolar-illustration.png",
-      fallback: "/images/services/bipolar-illustration.png",
+      title: "DIAGNÓSTICO Y TRATAMIENTO PSIQUIÁTRICO",
+      description:
+        "Evaluación clínica especializada para identificar trastornos mentales y establecer un plan terapéutico basado en evidencia, que puede incluir intervención farmacológica y psicoterapia.",
+      image: "/images/services/psychiatric-treatment.png",
+      fallback: "/placeholder.svg?height=300&width=300",
+    },
+    {
+      title: "TEST PSICOLÓGICOS",
+      description:
+        "Evaluaciones estandarizadas que permiten identificar perfiles cognitivos, emocionales y conductuales, apoyando el diagnóstico clínico y la planificación del tratamiento.",
+      image: "/images/services/psychological-testing.png",
+      fallback: "/placeholder.svg?height=300&width=300",
+    },
+    {
+      title: "TERAPIA OCUPACIONAL",
+      description:
+        "Intervención centrada en el desarrollo, mantenimiento o recuperación de funciones físicas, cognitivas y sociales, facilitando la participación activa en actividades significativas.",
+      image: "/images/services/occupational-therapy.png",
+      fallback: "/placeholder.svg?height=300&width=300",
     },
   ]
 
@@ -46,7 +64,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -58,12 +76,21 @@ export default function Services() {
                   alt={`Ilustración de ${service.title}`}
                   fill
                   className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  loading={index < 2 ? "eager" : "lazy"}
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 33vw"
+                  loading={index < 3 ? "eager" : "lazy"}
+                  quality={90}
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement
+                    if (target.src !== service.fallback) {
+                      target.src = service.fallback
+                    }
+                  }}
                 />
               </div>
               <CardHeader className="pb-3">
-                <CardTitle className="text-xl font-bold text-[#262626] text-center leading-tight">
+                <CardTitle className="text-lg font-bold text-[#262626] text-center leading-tight">
                   {service.title}
                 </CardTitle>
               </CardHeader>

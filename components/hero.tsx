@@ -36,7 +36,15 @@ export default function Hero() {
         <div className="max-w-4xl">
           <div className="text-white">
             {/* Main heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">BIENESTAR Y FELICIDAD</h1>
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg"
+              style={{
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(184, 227, 153, 0.3)",
+                filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))",
+              }}
+            >
+              BIENESTAR Y FELICIDAD
+            </h1>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed font-medium max-w-3xl">

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import { Clock, MapPin } from "lucide-react"
+import { Clock, MapPin, CreditCard } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -19,6 +19,23 @@ const teamMembers = [
     specialties: ["Terapia Cognitivo-Conductual", "Mindfulness", "Manejo del Estrés", "Ansiedad", "Depresión"],
     education: ["Doctorado en Psicoterapia", "Licenciatura en Psicología"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$45.000",
+        fonasa: "$35.000",
+        isapres: "$40.000",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "$30.000",
+        isapres: "$35.000",
+      },
+      online: {
+        private: "$35.000",
+        fonasa: "$28.000",
+        isapres: "$32.000",
+      },
+    },
   },
   {
     slug: "susana-romero-a",
@@ -32,6 +49,23 @@ const teamMembers = [
     specialties: ["Terapia Integrativa", "Trastornos del Estado de Ánimo", "Autoestima", "Relaciones Interpersonales"],
     education: ["Magister en Psicología Clínica", "Licenciatura en Psicología"],
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/F0SihxL0b02pX4145n21dOs9t8l3Df",
+    fees: {
+      initial: {
+        private: "$48.000",
+        fonasa: "$38.000",
+        isapres: "$42.000",
+      },
+      followUp: {
+        private: "$42.000",
+        fonasa: "$32.000",
+        isapres: "$38.000",
+      },
+      online: {
+        private: "$38.000",
+        fonasa: "$30.000",
+        isapres: "$35.000",
+      },
+    },
   },
   {
     slug: "wilsa-szabo-lagos",
@@ -52,6 +86,23 @@ const teamMembers = [
     ],
     education: ["Doctorado en Psicoterapia", "Magister en Psicología Clínica", "Licenciatura en Psicología"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$50.000",
+        fonasa: "$40.000",
+        isapres: "$45.000",
+      },
+      followUp: {
+        private: "$45.000",
+        fonasa: "$35.000",
+        isapres: "$40.000",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "$32.000",
+        isapres: "$36.000",
+      },
+    },
   },
   {
     slug: "maria-jesus-riade",
@@ -65,6 +116,23 @@ const teamMembers = [
     specialties: ["Enfoque Sistémico", "Terapia Familiar", "Terapia de Pareja", "Relaciones Interpersonales"],
     education: ["Magister en Psicología Clínica", "Especialización en Terapia Familiar", "Licenciatura en Psicología"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$47.000",
+        fonasa: "$37.000",
+        isapres: "$42.000",
+      },
+      followUp: {
+        private: "$42.000",
+        fonasa: "$32.000",
+        isapres: "$37.000",
+      },
+      online: {
+        private: "$38.000",
+        fonasa: "$30.000",
+        isapres: "$34.000",
+      },
+    },
   },
   {
     slug: "maximiliano-lucas-aranguiz",
@@ -86,6 +154,23 @@ const teamMembers = [
     ],
     education: ["Diplomado en Clínica", "Licenciatura en Psicología"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$45.000",
+        fonasa: "$35.000",
+        isapres: "$40.000",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "$30.000",
+        isapres: "$35.000",
+      },
+      online: {
+        private: "$35.000",
+        fonasa: "$28.000",
+        isapres: "$32.000",
+      },
+    },
   },
   {
     slug: "jocelyn-calderon-caceres",
@@ -107,6 +192,23 @@ const teamMembers = [
     ],
     education: ["Postítulo en Psicoanálisis Relacional", "Licenciatura en Psicología"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$46.000",
+        fonasa: "$36.000",
+        isapres: "$41.000",
+      },
+      followUp: {
+        private: "$41.000",
+        fonasa: "$31.000",
+        isapres: "$36.000",
+      },
+      online: {
+        private: "$37.000",
+        fonasa: "$29.000",
+        isapres: "$33.000",
+      },
+    },
   },
   {
     slug: "pilar-olmos-garcia",
@@ -121,6 +223,23 @@ const teamMembers = [
     specialties: ["Psicología Educacional", "Investigación", "Clínica Adultos", "Adicciones", "Reducción de Daños"],
     education: ["Especialización en Adicciones", "Licenciatura en Psicología"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$48.000",
+        fonasa: "$38.000",
+        isapres: "$43.000",
+      },
+      followUp: {
+        private: "$43.000",
+        fonasa: "$33.000",
+        isapres: "$38.000",
+      },
+      online: {
+        private: "$38.000",
+        fonasa: "$30.000",
+        isapres: "$35.000",
+      },
+    },
   },
   {
     slug: "margarita-loubat-oyarce",
@@ -137,6 +256,23 @@ const teamMembers = [
       "Licenciatura en Psicología",
     ],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$52.000",
+        fonasa: "$42.000",
+        isapres: "$47.000",
+      },
+      followUp: {
+        private: "$47.000",
+        fonasa: "$37.000",
+        isapres: "$42.000",
+      },
+      online: {
+        private: "$42.000",
+        fonasa: "$34.000",
+        isapres: "$38.000",
+      },
+    },
   },
   // Psiquiatras
   {
@@ -158,6 +294,23 @@ const teamMembers = [
     ],
     education: ["Doctorado en Psicoterapia", "Especialidad en Psiquiatría", "Medicina"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$65.000",
+        fonasa: "$50.000",
+        isapres: "$58.000",
+      },
+      followUp: {
+        private: "$55.000",
+        fonasa: "$45.000",
+        isapres: "$50.000",
+      },
+      online: {
+        private: "$50.000",
+        fonasa: "$40.000",
+        isapres: "$45.000",
+      },
+    },
   },
   {
     slug: "dra-alicia-figueroa",
@@ -171,6 +324,23 @@ const teamMembers = [
     specialties: ["Enfoque Integrativo", "Trastornos del Ánimo", "Ansiedad", "Trauma", "Tratamiento Farmacológico"],
     education: ["Magister en Psicología Clínica", "Especialidad en Psiquiatría", "Medicina"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$68.000",
+        fonasa: "$52.000",
+        isapres: "$60.000",
+      },
+      followUp: {
+        private: "$58.000",
+        fonasa: "$46.000",
+        isapres: "$52.000",
+      },
+      online: {
+        private: "$52.000",
+        fonasa: "$42.000",
+        isapres: "$48.000",
+      },
+    },
   },
   {
     slug: "dra-mariana-nuno",
@@ -190,6 +360,23 @@ const teamMembers = [
     ],
     education: ["Magister en Psicología Clínica", "Especialidad en Psiquiatría", "Medicina"],
     iframeSrc: "", // To be populated when available
+    fees: {
+      initial: {
+        private: "$70.000",
+        fonasa: "$55.000",
+        isapres: "$62.000",
+      },
+      followUp: {
+        private: "$60.000",
+        fonasa: "$48.000",
+        isapres: "$55.000",
+      },
+      online: {
+        private: "$55.000",
+        fonasa: "$45.000",
+        isapres: "$50.000",
+      },
+    },
   },
 ]
 
@@ -271,6 +458,48 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                       <p className="text-sm text-gray-600">Presencial y Online</p>
                     </div>
                   </div>
+                  <div className="flex items-start">
+                    <CreditCard className="h-5 w-5 text-[#015233] mr-3 mt-0.5" />
+                    <div>
+                      <p className="text-sm font-medium">Tarifas</p>
+                      <div className="mt-2 space-y-3">
+                        <div className="bg-gray-50 p-3 rounded-md">
+                          <p className="text-xs font-semibold text-[#015233] mb-1">Primera consulta</p>
+                          <div className="grid grid-cols-2 gap-1 text-xs">
+                            <span className="text-gray-600">Particular:</span>
+                            <span className="font-medium">{member.fees.initial.private}</span>
+                            <span className="text-gray-600">FONASA:</span>
+                            <span className="font-medium">{member.fees.initial.fonasa}</span>
+                            <span className="text-gray-600">ISAPRES:</span>
+                            <span className="font-medium">{member.fees.initial.isapres}</span>
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 p-3 rounded-md">
+                          <p className="text-xs font-semibold text-[#015233] mb-1">Consulta de seguimiento</p>
+                          <div className="grid grid-cols-2 gap-1 text-xs">
+                            <span className="text-gray-600">Particular:</span>
+                            <span className="font-medium">{member.fees.followUp.private}</span>
+                            <span className="text-gray-600">FONASA:</span>
+                            <span className="font-medium">{member.fees.followUp.fonasa}</span>
+                            <span className="text-gray-600">ISAPRES:</span>
+                            <span className="font-medium">{member.fees.followUp.isapres}</span>
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 p-3 rounded-md">
+                          <p className="text-xs font-semibold text-[#015233] mb-1">Consulta online</p>
+                          <div className="grid grid-cols-2 gap-1 text-xs">
+                            <span className="text-gray-600">Particular:</span>
+                            <span className="font-medium">{member.fees.online.private}</span>
+                            <span className="text-gray-600">FONASA:</span>
+                            <span className="font-medium">{member.fees.online.fonasa}</span>
+                            <span className="text-gray-600">ISAPRES:</span>
+                            <span className="font-medium">{member.fees.online.isapres}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-2">* Los precios pueden variar según el caso específico</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -322,7 +551,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                 <div className="bg-gray-100 rounded-lg p-4 mb-8">
                   <div className="aspect-video relative">
                     <Image
-                      src="/placeholder.svg?height=400&width=600&query=agenda+calendar"
+                      src="/placeholder.svg?height=400&width=600"
                       alt="Agenda"
                       className="rounded-md"
                       fill
