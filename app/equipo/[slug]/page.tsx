@@ -11,7 +11,7 @@ const teamMembers = [
     slug: "leonor-irarrazaval",
     name: "LEONOR IRARRÁZAVAL",
     role: "Psicóloga",
-    image: "/images/team/leonor-irarrazaval.jpeg",
+    image: "/images/team/leonor-irarrazaval-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f1.png",
     description:
       "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
@@ -50,7 +50,7 @@ const teamMembers = [
     slug: "susana-romero-a",
     name: "SUSANA ROMERO A.",
     role: "PSICÓLOGA",
-    image: "/images/avatars/susana-romero-professional.jpg",
+    image: "/images/team/susana-romero-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f2.png",
     description:
       "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
@@ -122,7 +122,7 @@ const teamMembers = [
     slug: "margarita-loubat-oyarce",
     name: "MARGARITA LOUBAT OYARCE",
     role: "PSICÓLOGA",
-    image: "/images/avatars/margarita-loubat.jpeg",
+    image: "/images/avatars/margarita-loubat-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f7.png",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/Z07Oo320M0p1wP2l5D91HjL987O3kt",
     description:
@@ -162,7 +162,7 @@ const teamMembers = [
     slug: "jocelyn-calderon-caceres",
     name: "JOCELYN CALDERÓN CÁCERES",
     role: "Psicóloga",
-    image: "/images/team/jocelyn-calderon.jpeg",
+    image: "/images/team/jocelyn-calderon-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f5.png",
     description:
       "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
@@ -234,7 +234,7 @@ const teamMembers = [
     slug: "makarena-morris",
     name: "MAKARENA MORRIS",
     role: "PSICÓLOGA",
-    image: "/images/avatars/avatar-f6.png",
+    image: "/images/team/makarena-morris-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f6.png",
     description:
       "Psicóloga especializada en psicoterapia, neuropsicología y evaluación de personalidad, con experiencia en trastornos emocionales, crisis vitales, familiares y parentales.",
@@ -274,7 +274,7 @@ const teamMembers = [
     slug: "denise-gerber",
     name: "DENISE GERBER",
     role: "PSICÓLOGA",
-    image: "/images/avatars/avatar-f8.png",
+    image: "/images/team/denise-gerber-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f8.png",
     description:
       "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
@@ -385,7 +385,7 @@ const teamMembers = [
     slug: "dr-eduard-heberlein",
     name: "DR. EDUARD HEBERLEIN",
     role: "PSIQUIATRA",
-    image: "/images/avatars/avatar-m1.png",
+    image: "/images/team/dr-eduar-heberlein.webp",
     fallbackImage: "/images/avatars/avatar-m1.png",
     description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
     fullBio:
