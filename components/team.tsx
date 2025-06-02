@@ -18,7 +18,7 @@ export default function Team() {
     {
       name: "SUSANA ROMERO A.",
       role: "PSICÓLOGA",
-      image: "/images/avatars/susana-romero-psicologa.webp",
+      image: "/images/team/susana-romero-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f2.png",
       description:
         "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
