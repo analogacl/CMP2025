@@ -8,42 +8,42 @@ export default function Services() {
     {
       title: "PSICOTERAPIA INDIVIDUAL",
       description:
-        "Terapia personalizada que te ayuda a comprender, enfrentar y superar dificultades emocionales, promoviendo el autoconocimiento y el bienestar integral.",
+        "Apoyo personalizado para superar dificultades emocionales y fomentar el autoconocimiento y bienestar.",
       image: "/images/services/individual-therapy.png",
       fallback: "/therapy-session.png",
     },
     {
       title: "TERAPIA FAMILIAR",
       description:
-        "Un espacio para mejorar la comunicación, resolver conflictos y fortalecer los vínculos entre los miembros de tu familia, con apoyo profesional y un enfoque sistémico.",
+        "Mejora la comunicación y los vínculos familiares con apoyo profesional y enfoque sistémico.",
       image: "/images/services/family-therapy.png",
       fallback: "/family-therapy-group.png",
     },
     {
       title: "TERAPIA DE PAREJA",
       description:
-        "Terapia enfocada en la resolución de conflictos y el fortalecimiento del vínculo afectivo, mediante el desarrollo de habilidades comunicacionales y estrategias relacionales.",
+        "Fortalece el vínculo afectivo y resuelve conflictos a través de herramientas comunicacionales.",
       image: "/images/services/couple-therapy.png",
       fallback: "/couple-therapy-session.png",
     },
     {
       title: "DIAGNÓSTICO Y TRATAMIENTO PSIQUIÁTRICO",
       description:
-        "Evaluación clínica especializada para identificar trastornos mentales y establecer un plan terapéutico basado en evidencia, que puede incluir intervención farmacológica y psicoterapia.",
+        "Evaluación clínica para detectar trastornos mentales y definir un plan terapéutico con o sin fármacos.",
       image: "/images/services/psychiatric-treatment.png",
       fallback: "/placeholder.svg?height=300&width=300",
     },
     {
       title: "TEST PSICOLÓGICOS",
       description:
-        "Evaluaciones estandarizadas que permiten identificar perfiles cognitivos, emocionales y conductuales, apoyando el diagnóstico clínico y la planificación del tratamiento.",
+        "Evaluaciones que identifican aspectos emocionales, conductuales y cognitivos para apoyar el diagnóstico.",
       image: "/images/services/psychological-testing.png",
       fallback: "/placeholder.svg?height=300&width=300",
     },
     {
       title: "TERAPIA OCUPACIONAL",
       description:
-        "Intervención centrada en el desarrollo, mantenimiento o recuperación de funciones físicas, cognitivas y sociales, facilitando la participación activa en actividades significativas.",
+        "Intervención para recuperar o mantener habilidades que permiten participar en actividades significativas.",
       image: "/images/services/occupational-therapy.png",
       fallback: "/placeholder.svg?height=300&width=300",
     },
