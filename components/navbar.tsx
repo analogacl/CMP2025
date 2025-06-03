@@ -107,13 +107,6 @@ const NavbarComponent = () => {
     })
   }, [])
 
-  const isTelemedicineRoute = pathname === "/teleconsulta"
-
-  // Si estamos en la ruta de teleconsulta, no renderizar el navbar
-  if (isTelemedicineRoute) {
-    return null
-  }
-
   return (
     <header
       className={`bg-white border-b border-gray-100 sticky top-0 z-50 transition-shadow duration-300 ${isScrolled ? "shadow-md" : ""}`}
