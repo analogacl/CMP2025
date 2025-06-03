@@ -11,7 +11,7 @@ const teamMembers = [
     slug: "leonor-irarrazaval",
     name: "LEONOR IRARRÁZAVAL",
     role: "Psicóloga",
-    image: "./images/team/leonor-irarrazaval-psicologa.webp",
+    image: "/images/team/leonor-irarrazaval-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f1.png",
     description:
       "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
@@ -33,12 +33,10 @@ const teamMembers = [
       initial: {
         private: "$45.000",
         fonasa: "No atiende",
-       
       },
       followUp: {
         private: "$45.000",
         fonasa: "No atiende",
-       
       },
       online: {
         private: "$45.000",
@@ -385,7 +383,7 @@ const teamMembers = [
     slug: "dr-eduard-heberlein",
     name: "DR. EDUARD HEBERLEIN",
     role: "PSIQUIATRA",
-    image: "/images/team/dr-eduar-heberlein.webp",
+    image: "/images/team/dr-eduard-heberlein.webp",
     fallbackImage: "/images/avatars/avatar-m1.png",
     description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
     fullBio:
@@ -470,7 +468,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-square relative">
                 <Image
-                  src={member.fallbackImage || "/placeholder.svg"}
+                  src={member.image || member.fallbackImage || "/placeholder.svg"}
                   alt={`${member.name} - ${member.role} en Centro Médico Phillips`}
                   fill
                   className="object-cover"
