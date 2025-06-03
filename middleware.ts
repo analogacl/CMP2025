@@ -2,7 +2,6 @@ import { NextResponse } from "next/server"
 import type { NextRequest } from "next/server"
 
 export function middleware(request: NextRequest) {
-  // If the request is for a non-existent page, redirect to the 404 page
   const url = request.nextUrl.clone()
 
   // Check if the path is for a static asset
@@ -10,12 +9,14 @@ export function middleware(request: NextRequest) {
     url.pathname.startsWith("/_next") ||
     url.pathname.startsWith("/images") ||
     url.pathname.startsWith("/fonts") ||
-    url.pathname.includes(".")
+    url.pathname.includes(".") ||
+    url.pathname.startsWith("/api")
   ) {
     return NextResponse.next()
   }
 
-  // For all other paths, let Next.js handle it
+  // For all other paths, let Next.js handle it normally
+  // Next.js will automatically show the not-found.tsx for non-existent routes
   return NextResponse.next()
 }
 
@@ -27,7 +28,8 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      * - images (public images)
+     * - api (API routes)
      */
-    "/((?!_next/static|_next/image|favicon.ico|images).*)",
+    "/((?!_next/static|_next/image|favicon.ico|images|api).*)",
   ],
 }
