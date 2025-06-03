@@ -87,7 +87,7 @@ export default function TeleconsultaClientPage() {
         </header>
 
         {/* Main content */}
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="container mx-auto px-4 sm:px-6 lg:px-8 pb-8">
           <div className="max-w-6xl mx-auto">
             {/* Page header */}
             <div className="text-center mb-8">
