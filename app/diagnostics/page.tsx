@@ -1,31 +1,42 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import IframeDiagnostics from "@/components/iframe-diagnostics"
+import dynamic from "next/dynamic"
 import { Shield, Globe, Wifi, AlertTriangle } from "lucide-react"
+
+// Dynamically import the IframeDiagnostics component to avoid SSR issues
+const IframeDiagnostics = dynamic(() => import("@/components/iframe-diagnostics"), {
+  ssr: false,
+  loading: () => <div className="bg-gray-100 rounded-lg p-4 animate-pulse h-64"></div>,
+})
 
 export default function DiagnosticsPage() {
   const [browserInfo, setBrowserInfo] = useState<any>({})
   const [networkInfo, setNetworkInfo] = useState<any>({})
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    // Gather browser information
-    setBrowserInfo({
-      userAgent: navigator.userAgent,
-      cookieEnabled: navigator.cookieEnabled,
-      language: navigator.language,
-      platform: navigator.platform,
-      onLine: navigator.onLine,
-    })
+    setIsClient(true)
 
-    // Check network information if available
-    if ("connection" in navigator) {
-      const connection = (navigator as any).connection
-      setNetworkInfo({
-        effectiveType: connection?.effectiveType,
-        downlink: connection?.downlink,
-        rtt: connection?.rtt,
+    // Gather browser information only on client side
+    if (typeof window !== "undefined" && typeof navigator !== "undefined") {
+      setBrowserInfo({
+        userAgent: navigator.userAgent,
+        cookieEnabled: navigator.cookieEnabled,
+        language: navigator.language,
+        platform: navigator.platform,
+        onLine: navigator.onLine,
       })
+
+      // Check network information if available
+      if ("connection" in navigator) {
+        const connection = (navigator as any).connection
+        setNetworkInfo({
+          effectiveType: connection?.effectiveType,
+          downlink: connection?.downlink,
+          rtt: connection?.rtt,
+        })
+      }
     }
   }, [])
 
@@ -52,6 +63,67 @@ export default function DiagnosticsPage() {
     },
   ]
 
+  useEffect(() => {
+    if (!isClient) return
+
+    // Test camera and microphone permissions
+    if (typeof navigator !== "undefined" && navigator.mediaDevices) {
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: true })
+        .then(() => {
+          const cameraStatus = document.getElementById("camera-status")
+          const micStatus = document.getElementById("mic-status")
+          if (cameraStatus) cameraStatus.textContent = "✅ Granted"
+          if (micStatus) micStatus.textContent = "✅ Granted"
+        })
+        .catch(() => {
+          const cameraStatus = document.getElementById("camera-status")
+          const micStatus = document.getElementById("mic-status")
+          if (cameraStatus) cameraStatus.textContent = "❌ Denied/Unavailable"
+          if (micStatus) micStatus.textContent = "❌ Denied/Unavailable"
+        })
+    }
+
+    // Test domain connectivity
+    if (typeof fetch !== "undefined") {
+      fetch("https://tokbox.com", { mode: "no-cors" })
+        .then(() => {
+          const tokboxPing = document.getElementById("tokbox-ping")
+          if (tokboxPing) tokboxPing.textContent = "✅ Reachable"
+        })
+        .catch(() => {
+          const tokboxPing = document.getElementById("tokbox-ping")
+          if (tokboxPing) tokboxPing.textContent = "❌ Unreachable"
+        })
+
+      fetch("https://agendamiento.reservo.cl", { mode: "no-cors" })
+        .then(() => {
+          const reservoPing = document.getElementById("reservo-ping")
+          if (reservoPing) reservoPing.textContent = "✅ Reachable"
+        })
+        .catch(() => {
+          const reservoPing = document.getElementById("reservo-ping")
+          if (reservoPing) reservoPing.textContent = "❌ Unreachable"
+        })
+    }
+  }, [isClient])
+
+  // Show loading state until client-side hydration is complete
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-500 border-r-transparent"></div>
+              <p className="mt-4 text-gray-600">Loading diagnostics...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,13 +142,13 @@ export default function DiagnosticsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
                 <p>
-                  <strong>User Agent:</strong> {browserInfo.userAgent}
+                  <strong>User Agent:</strong> {browserInfo.userAgent || "Loading..."}
                 </p>
                 <p>
-                  <strong>Platform:</strong> {browserInfo.platform}
+                  <strong>Platform:</strong> {browserInfo.platform || "Loading..."}
                 </p>
                 <p>
-                  <strong>Language:</strong> {browserInfo.language}
+                  <strong>Language:</strong> {browserInfo.language || "Loading..."}
                 </p>
               </div>
               <div>
@@ -104,7 +176,10 @@ export default function DiagnosticsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
                 <p>
-                  <strong>HTTPS:</strong> {location.protocol === "https:" ? "✅ Secure" : "❌ Not Secure"}
+                  <strong>HTTPS:</strong>{" "}
+                  {typeof window !== "undefined" && window.location?.protocol === "https:"
+                    ? "✅ Secure"
+                    : "❌ Not Secure"}
                 </p>
                 <p>
                   <strong>Third-party Cookies:</strong> Testing...
@@ -163,32 +238,6 @@ export default function DiagnosticsPage() {
           </div>
         </div>
       </div>
-
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-          // Test camera and microphone permissions
-          navigator.mediaDevices?.getUserMedia({ video: true, audio: true })
-            .then(() => {
-              document.getElementById('camera-status').textContent = '✅ Granted';
-              document.getElementById('mic-status').textContent = '✅ Granted';
-            })
-            .catch(() => {
-              document.getElementById('camera-status').textContent = '❌ Denied/Unavailable';
-              document.getElementById('mic-status').textContent = '❌ Denied/Unavailable';
-            });
-
-          // Test domain connectivity
-          fetch('https://tokbox.com', { mode: 'no-cors' })
-            .then(() => document.getElementById('tokbox-ping').textContent = '✅ Reachable')
-            .catch(() => document.getElementById('tokbox-ping').textContent = '❌ Unreachable');
-
-          fetch('https://agendamiento.reservo.cl', { mode: 'no-cors' })
-            .then(() => document.getElementById('reservo-ping').textContent = '✅ Reachable')
-            .catch(() => document.getElementById('reservo-ping').textContent = '❌ Unreachable');
-        `,
-        }}
-      />
     </div>
   )
 }

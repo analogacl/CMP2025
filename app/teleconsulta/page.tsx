@@ -167,40 +167,33 @@ export default function TeleconsultaPage() {
           {/* Video call iframe */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden mt-8">
             <div className="p-6">
-              <div className="flex justify-between items-center mb-4">
-                <div>
-                  <h2 className="text-lg font-semibold text-[#262626]">Sala de Videollamados</h2>
-                  {loadingTime > 0 && <p className="text-sm text-gray-500">Cargado en {loadingTime}ms</p>}
-                  {retryCount > 0 && <p className="text-sm text-orange-600">Intentos de reconexión: {retryCount}</p>}
-                </div>
-                <div className="flex items-center gap-2">
-                  {iframeError && (
-                    <button
-                      onClick={retryIframe}
-                      className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 transition-colors"
-                    >
-                      <RefreshCw className="h-4 w-4" />
-                      Reintentar
-                    </button>
-                  )}
+              <div className="flex justify-end items-center gap-2 mb-4">
+                {iframeError && (
                   <button
-                    onClick={toggleFullscreen}
-                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#015233] bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors"
-                    aria-label={isFullscreen ? "Salir de pantalla completa" : "Ver en pantalla completa"}
+                    onClick={retryIframe}
+                    className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 transition-colors"
                   >
-                    {isFullscreen ? (
-                      <>
-                        <Minimize className="h-4 w-4" />
-                        <span className="hidden sm:inline">Salir de pantalla completa</span>
-                      </>
-                    ) : (
-                      <>
-                        <Maximize className="h-4 w-4" />
-                        <span className="hidden sm:inline">Pantalla completa</span>
-                      </>
-                    )}
+                    <RefreshCw className="h-4 w-4" />
+                    Reintentar
                   </button>
-                </div>
+                )}
+                <button
+                  onClick={toggleFullscreen}
+                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-[#015233] bg-gray-50 border border-gray-200 rounded-lg hover:bg-gray-100 transition-colors"
+                  aria-label={isFullscreen ? "Salir de pantalla completa" : "Ver en pantalla completa"}
+                >
+                  {isFullscreen ? (
+                    <>
+                      <Minimize className="h-4 w-4" />
+                      <span className="hidden sm:inline">Salir de pantalla completa</span>
+                    </>
+                  ) : (
+                    <>
+                      <Maximize className="h-4 w-4" />
+                      <span className="hidden sm:inline">Pantalla completa</span>
+                    </>
+                  )}
+                </button>
               </div>
 
               <div className="flex justify-center">
