@@ -199,7 +199,7 @@ const teamMembers = [
     slug: "cristian-ugarte",
     name: "CRISTIÁN UGARTE",
     role: "Psicólogo",
-    image: "/images/avatars/avatar-m1.png",
+    image: "/images/team/cristian-ugarte-psicologo.webp",
     fallbackImage: "/images/avatars/avatar-m1.png",
     description:
       "Psicólogo clínico con enfoque psicoanalítico y experiencia en psicoterapia y temas laborales, especializado en conflictos personales, familiares y de pareja.",
@@ -309,7 +309,7 @@ const teamMembers = [
     slug: "jose-manuel-gonzalez",
     name: "JOSÉ MANUEL GONZÁLEZ",
     role: "PSICÓLOGO",
-    image: "/images/avatars/avatar-m1.png",
+    image: "/images/team/jose-manuel-gonzalez-psicologo.webp",
     fallbackImage: "/images/avatars/avatar-m1.png",
     description:
       "Psicólogo clínico con 30 años de experiencia, especializado en duelo, trauma y evaluaciones de personalidad desde un enfoque relacional.",

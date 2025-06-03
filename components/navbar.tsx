@@ -154,41 +154,46 @@ const NavbarComponent = () => {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm"
+              className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
               onClick={(e) => handleNavigation(e, "/")}
             >
-              INICIO
+              <span className="relative z-10">Inicio</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/#servicios"
-              className="text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm"
+              className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
               onClick={(e) => handleNavigation(e, "/#servicios")}
             >
-              SERVICIOS
+              <span className="relative z-10">Servicios</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/#equipo"
-              className="text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm"
+              className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
               onClick={(e) => handleNavigation(e, "/#equipo")}
             >
-              EQUIPO
+              <span className="relative z-10">Equipo</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/#testimonios"
-              className="text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm"
+              className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
               onClick={(e) => handleNavigation(e, "/#testimonios")}
             >
-              TESTIMONIOS
+              <span className="relative z-10">Testimonios</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               href="/#contacto"
-              className="text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm"
+              className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
               onClick={(e) => handleNavigation(e, "/#contacto")}
             >
-              CONTACTO
+              <span className="relative z-10">Contacto</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
             </Link>
           </nav>
 

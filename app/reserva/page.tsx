@@ -1,15 +1,15 @@
 "use client"
 
-import { Suspense, useEffect, useState } from "react"
+import { Suspense, useEffect, useState, useCallback } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, AlertCircle, RefreshCw } from "lucide-react"
 
 // Iframe configuration based on service type and modality
 const iframeConfig = {
   psicologia: {
     presencial: "https://agendamiento.reservo.cl/makereserva/agenda/v05ojpT0k0IZPX995971C5y9c6x3YF",
-    online: "https://agendamiento.reservo.cl/makereserva/agenda/n016jNr000zIRw775k41ren9X1t3h",
+    online: "https://agendamiento.reservo.cl/makereserva/agenda/n016jNr000zIRw775k41ren9X1t3hi",
   },
   psiquiatria: {
     presencial: "https://agendamiento.reservo.cl/makereserva/agenda/W0iFHBd0i0XUSK1B5l81pPj9K8t3l4",
@@ -38,6 +38,12 @@ function BookingContent() {
   const [serviceType, setServiceType] = useState<string>("")
   const [modality, setModality] = useState<string>("")
   const [isLoading, setIsLoading] = useState(true)
+  const [iframeLoaded, setIframeLoaded] = useState(false)
+  const [iframeError, setIframeError] = useState(false)
+  const [errorDetails, setErrorDetails] = useState<string>("")
+  const [retryCount, setRetryCount] = useState(0)
+  const [loadingTime, setLoadingTime] = useState(0)
+  const loadStartTime = useState(() => Date.now())[0]
 
   useEffect(() => {
     const tipo = searchParams.get("tipo") || ""
@@ -60,6 +66,51 @@ function BookingContent() {
 
     setIsLoading(false)
   }, [searchParams])
+
+  const handleIframeLoad = useCallback(() => {
+    const endTime = Date.now()
+    setLoadingTime(endTime - loadStartTime)
+    setIframeLoaded(true)
+    setIframeError(false)
+    setErrorDetails("")
+    console.log(`✅ Booking iframe loaded successfully in ${endTime - loadStartTime}ms`)
+  }, [loadStartTime])
+
+  const handleIframeError = useCallback((error: any) => {
+    setIframeError(true)
+    setIframeLoaded(false)
+    const errorMsg = error?.message || error?.type || "Unknown iframe error"
+    setErrorDetails(errorMsg)
+    console.error("❌ Booking iframe failed to load:", error)
+  }, [])
+
+  const retryIframe = useCallback(() => {
+    setRetryCount((prev) => prev + 1)
+    setIframeError(false)
+    setIframeLoaded(false)
+    setErrorDetails("")
+
+    // Force reload by changing src
+    const currentSrc = iframeSrc
+    setIframeSrc("")
+    setTimeout(() => {
+      setIframeSrc(currentSrc)
+    }, 100)
+  }, [iframeSrc])
+
+  // Set loading timeout
+  useEffect(() => {
+    if (iframeSrc) {
+      const timeout = setTimeout(() => {
+        if (!iframeLoaded && !iframeError) {
+          setIframeError(true)
+          setErrorDetails("Iframe loading timeout (30 seconds)")
+        }
+      }, 30000)
+
+      return () => clearTimeout(timeout)
+    }
+  }, [iframeSrc, retryCount, iframeLoaded, iframeError])
 
   const getPageTitle = () => {
     if (serviceType && modality) {
@@ -99,10 +150,12 @@ function BookingContent() {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           {/* Back navigation */}
-          <Link href="/" className="inline-flex items-center text-[#015233] hover:underline mb-8 font-medium">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Volver al inicio
-          </Link>
+          <div className="flex justify-between items-center mb-8">
+            <Link href="/" className="inline-flex items-center text-[#015233] hover:underline font-medium">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Volver al inicio
+            </Link>
+          </div>
 
           {/* Page header */}
           <div className="text-center mb-8">
@@ -123,47 +176,135 @@ function BookingContent() {
 
           {/* Booking iframe */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            {iframeSrc ? (
-              <iframe
-                style={{
-                  borderRadius: "10px",
-                  marginBottom: "20px",
-                  width: "100%",
-                  height: "600px",
-                  border: "none",
-                }}
-                src={iframeSrc}
-                title={`Sistema de Reservas - ${getPageTitle()}`}
-                allowFullScreen
-                loading="lazy"
-              />
-            ) : (
-              <div className="p-8 text-center">
-                <h3 className="text-xl font-semibold text-[#262626] mb-4">Sistema de Reservas No Disponible</h3>
-                <p className="text-gray-600 mb-6">
-                  Lo sentimos, el sistema de reservas para esta combinación no está disponible en este momento.
-                </p>
-                <div className="space-y-4">
-                  <p className="text-sm text-gray-500">
-                    Por favor, selecciona una opción válida o contacta directamente:
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a
-                      href="tel:+5626335519"
-                      className="inline-flex items-center justify-center bg-[#015233] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#015233]/90 transition-colors"
-                    >
-                      Llamar: +5626335519
-                    </a>
-                    <a
-                      href="mailto:info@centromedicophillips.cl"
-                      className="inline-flex items-center justify-center bg-white text-[#015233] border-2 border-[#015233] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-                    >
-                      Enviar Email
-                    </a>
-                  </div>
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-4">
+                <div>
+                  <h2 className="text-lg font-semibold text-[#262626]">Sistema de Reservas</h2>
+                  {loadingTime > 0 && <p className="text-sm text-gray-500">Cargado en {loadingTime}ms</p>}
+                  {retryCount > 0 && <p className="text-sm text-orange-600">Intentos de reconexión: {retryCount}</p>}
                 </div>
+                {iframeError && (
+                  <button
+                    onClick={retryIframe}
+                    className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-red-600 bg-red-50 border border-red-200 rounded-lg hover:bg-red-100 transition-colors"
+                  >
+                    <RefreshCw className="h-4 w-4" />
+                    Reintentar
+                  </button>
+                )}
               </div>
-            )}
+
+              <div className="relative">
+                {/* Loading indicator */}
+                {!iframeLoaded && !iframeError && iframeSrc && (
+                  <div
+                    className="absolute inset-0 flex items-center justify-center bg-gray-100 z-10 rounded-lg"
+                    style={{ height: "600px" }}
+                  >
+                    <div className="text-center">
+                      <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[#015233] border-r-transparent"></div>
+                      <p className="mt-4 text-gray-600">Cargando sistema de reservas...</p>
+                      <p className="text-sm text-gray-500 mt-2">Esto puede tomar unos segundos</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error state */}
+                {iframeError && (
+                  <div
+                    className="flex items-center justify-center bg-gray-100 rounded-lg p-8"
+                    style={{ height: "600px" }}
+                  >
+                    <div className="text-center max-w-md">
+                      <AlertCircle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        Error al cargar el sistema de reservas
+                      </h3>
+                      <p className="text-gray-600 mb-4">No se pudo cargar el sistema de reservas.</p>
+                      {errorDetails && (
+                        <p className="text-sm text-red-600 mb-4 font-mono bg-red-50 p-2 rounded">{errorDetails}</p>
+                      )}
+                      <div className="space-y-3">
+                        <button
+                          onClick={retryIframe}
+                          className="w-full bg-[#015233] text-white px-6 py-2 rounded-lg hover:bg-[#015233]/90 transition-colors"
+                        >
+                          Reintentar conexión
+                        </button>
+                        <div className="flex flex-col sm:flex-row gap-2">
+                          <a
+                            href="tel:+5626335519"
+                            className="flex-1 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-center"
+                          >
+                            Llamar: +5626335519
+                          </a>
+                          <Link
+                            href="/diagnostics"
+                            className="flex-1 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-center"
+                          >
+                            Diagnósticos
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Iframe */}
+                {iframeSrc && (
+                  <iframe
+                    style={{
+                      borderRadius: "10px",
+                      marginBottom: "20px",
+                      width: "100%",
+                      height: "600px",
+                      border: "none",
+                    }}
+                    src={iframeSrc}
+                    title={`Sistema de Reservas - ${getPageTitle()}`}
+                    allowFullScreen
+                    loading="lazy"
+                    onLoad={handleIframeLoad}
+                    onError={handleIframeError}
+                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation"
+                  />
+                )}
+
+                {/* No iframe source */}
+                {!iframeSrc && (
+                  <div
+                    className="flex items-center justify-center bg-gray-100 rounded-lg p-8"
+                    style={{ height: "600px" }}
+                  >
+                    <div className="text-center">
+                      <h3 className="text-xl font-semibold text-[#262626] mb-4">Sistema de Reservas No Disponible</h3>
+                      <p className="text-gray-600 mb-6">
+                        Lo sentimos, el sistema de reservas para esta combinación no está disponible en este momento.
+                      </p>
+                      <div className="space-y-4">
+                        <p className="text-sm text-gray-500">
+                          Por favor, selecciona una opción válida o contacta directamente:
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                          <a
+                            href="tel:+5626335519"
+                            className="inline-flex items-center justify-center bg-[#015233] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#015233]/90 transition-colors"
+                          >
+                            Llamar: +5626335519
+                          </a>
+                          <a
+                            href="mailto:info@centromedicophillips.cl"
+                            className="inline-flex items-center justify-center bg-white text-[#015233] border-2 border-[#015233] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                          >
+                            Enviar Email
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
 
           {/* Additional information */}

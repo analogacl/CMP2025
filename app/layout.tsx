@@ -5,7 +5,7 @@ import { Suspense } from "react"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import ClientLayout from "./client-layout"
-import Footer from "@/components/footer"
+import FooterWrapper from "@/components/footer-wrapper"
 import NavigationHandler from "@/components/navigation-handler"
 
 // Optimize font loading with display:swap and preload
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Centro Médico Phillips" }],
   keywords: ["salud mental", "psicología", "psiquiatría", "terapia", "bienestar", "Santiago", "Chile"],
   robots: "index, follow",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -52,7 +52,7 @@ export default function RootLayout({
             <NavigationHandler />
           </Suspense>
           <ClientLayout>{children}</ClientLayout>
-          <Footer />
+          <FooterWrapper />
         </ThemeProvider>
       </body>
     </html>
