@@ -1,79 +1,91 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import ParticleBackground from "./particle-background"
-import TechSphere from "./tech-sphere"
-import AnimatedTitle from "./animated-title"
-import Link from "next/link"
-import { Inter } from "next/font/google"
+"use client"
 
-const inter = Inter({ subsets: ["latin"] })
+import Image from "next/image"
+import { useRouter } from "next/navigation"
+import { useCallback } from "react"
 
 export default function Hero() {
-  return (
-    <section className="relative h-[calc(100vh-4rem)] flex flex-col items-center justify-center overflow-hidden">
-      {/* Fondo de partículas */}
-      <ParticleBackground />
+  const router = useRouter()
 
-      {/* Gradientes de fondo */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-primary/10 rounded-full blur-[100px] transform -translate-y-1/2" />
-        <div className="absolute bottom-0 right-1/4 w-1/2 h-1/2 bg-blue-500/10 rounded-full blur-[100px] transform translate-y-1/2" />
+  const handleReservaClick = useCallback(() => {
+    router.push("/reserva")
+  }, [router])
+
+  return (
+    <section className="relative h-[85vh] min-h-[700px] flex items-center overflow-hidden">
+      {/* Hero background with new image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-woman-joy.jpg"
+          alt="Mujer joven sonriendo al aire libre - Bienestar y felicidad en Centro Médico Phillips"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+          quality={90}
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+        />
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
       </div>
 
-      <div className="container flex flex-col items-center justify-center h-full py-8 md:py-12 z-10">
-        {/* Contenido principal */}
-        <div className="flex-1 flex flex-col items-center justify-center text-center">
-          <div className="space-y-4 px-4 sm:px-6 max-w-4xl">
-            <AnimatedTitle animatedText="de tu ecommerce">Aumenta las ventas </AnimatedTitle>
-            <p className="relative mx-auto max-w-[42rem] text-base leading-relaxed sm:text-lg md:text-xl lg:text-2xl font-light tracking-tight">
-              <span className="bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                Ayudamos a desarrollar y escalar negocios digitales mediante el uso de tecnología y estrategia de
-                negocios.
-              </span>
-              <span className="absolute -inset-x-6 -inset-y-2 blur-md bg-gradient-to-r from-primary/5 via-blue-500/5 to-primary/5 -z-10 rounded-full"></span>
+      {/* Hero content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl">
+          <div className="text-white">
+            {/* Main heading */}
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg"
+              style={{
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(184, 227, 153, 0.3)",
+                filter: "drop-shadow(0 0 10px rgba(255, 255, 255, 0.2))",
+              }}
+            >
+              BIENESTAR Y FELICIDAD
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed font-medium max-w-3xl">
+              Un equipo multidisciplinario de expertos que te ayudará a mejorar tu calidad de vida.
             </p>
-          </div>
 
-          {/* Elemento visual tecnológico en segundo plano con botones superpuestos */}
-          <div className="relative w-full max-w-md mx-auto mt-4 mb-8">
-            {/* Esfera tecnológica con opacidad reducida */}
-            <div className="opacity-40">
-              <TechSphere />
-            </div>
+            {/* CTA Button */}
+            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-center">
+              <button
+                className="bg-[#015233] hover:bg-[#015233]/90 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                onClick={handleReservaClick}
+                aria-label="Reserva tu hora ahora"
+              >
+                RESERVA TU HORA
+              </button>
 
-            {/* Efecto de brillo */}
-            <div
-              className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-blue-500/20 rounded-full blur-xl opacity-30 animate-pulse"
-              style={{ animationDuration: "4s" }}
-            />
-
-            {/* Botones superpuestos sobre la esfera */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-4 z-20">
-              <Link href="#contact">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-gradient-to-r from-primary to-blue-600 hover:from-primary/90 hover:to-blue-600/90 transition-all duration-300 shadow-lg"
-                >
-                  Conversemos
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link href="#features">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto border-primary/20 backdrop-blur-sm bg-background/30 hover:bg-background/50 transition-all duration-300 shadow-lg"
-                >
-                  Conocer Más
-                </Button>
-              </Link>
+              {/* Additional info */}
+              <div className="flex flex-col text-sm text-white/90">
+                <span className="font-medium">✓ Atención presencial y online</span>
+                <span className="font-medium">✓ FONASA e ISAPRES</span>
+                <span className="font-medium">✓ +30 años de experiencia</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Decoración adicional */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="animate-bounce">
+          <svg
+            className="w-6 h-6 text-white/70"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </div>
+      </div>
     </section>
   )
 }

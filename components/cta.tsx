@@ -1,39 +1,33 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import AnimatedTitle from "@/components/animated-title"
-import { useRouter, usePathname } from "next/navigation"
+import { useRouter } from "next/navigation"
 
 export default function CTA() {
   const router = useRouter()
-  const pathname = usePathname()
 
-  const handleContactClick = () => {
-    if (pathname === "/") {
-      // Ya estamos en la página principal, solo desplazamos al anclaje
-      const element = document.getElementById("contact")
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
-      }
-    } else {
-      // Navegar a la página principal con el hash
-      router.push("/#contact")
-    }
+  const handleReservaClick = () => {
+    router.push("/reserva")
   }
 
   return (
-    <section className="border-t">
-      <div className="container flex flex-col items-center gap-4 py-16 px-4 text-center md:py-24 lg:py-32">
-        <AnimatedTitle className="text-center">¿Estás listo para mejorar tu ecommerce?</AnimatedTitle>
-        <p className="max-w-[42rem] text-sm leading-normal text-muted-foreground sm:text-base md:text-lg lg:text-xl">
-          Auditoría gratis sobre tu ecommerce y recomendaciones personalizadas para mejorar tu tasa de conversión.
-        </p>
-        <Link href="/agendar">
-          <Button size="lg" className="mt-4 w-full sm:w-auto">
-            Solicitar Auditoría
+    <section className="py-16 bg-[#015233]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Comienza tu camino hacia el bienestar hoy mismo
+          </h2>
+          <p className="text-xl text-white/90 mb-8 font-normal leading-relaxed">
+            Nuestro equipo de profesionales está listo para ayudarte a mejorar tu calidad de vida
+          </p>
+          <Button
+            size="lg"
+            className="bg-[#B8E399] text-[#015233] hover:bg-[#B8E399]/90 font-semibold text-base"
+            onClick={handleReservaClick}
+          >
+            RESERVA TU HORA AHORA
           </Button>
-        </Link>
+        </div>
       </div>
     </section>
   )

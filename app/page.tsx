@@ -1,34 +1,23 @@
-import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
-import Partners from "@/components/partners"
-import Features from "@/components/features"
-import ReviewsCarousel from "@/components/reviews-carousel"
-import ContactForm from "@/components/contact-form"
-import CTA from "@/components/cta"
-import Footer from "@/components/footer"
+import BookingForm from "@/components/booking-form"
+import Services from "@/components/services"
+import Team from "@/components/team"
+import Testimonials from "@/components/testimonials"
+import HowToSchedule from "@/components/how-to-schedule"
+import Contact from "@/components/contact"
+import Introduction from "@/components/introduction"
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
-      {/* Background gradients */}
-      <div className="pointer-events-none fixed inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background" />
-        <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
-      </div>
-
-      <div className="relative z-10">
-        <Navbar />
-        <Hero />
-        <Partners />
-        <Features />
-        <ReviewsCarousel />
-        <section id="contact" className="py-16 md:py-24 lg:py-32">
-          <ContactForm />
-        </section>
-        <CTA />
-        <Footer />
-      </div>
+    <div className="flex flex-col min-h-screen">
+      <Hero />
+      <BookingForm />
+      <Introduction />
+      <Services />
+      <Team />
+      <Testimonials />
+      <HowToSchedule />
+      <Contact />
     </div>
   )
 }
