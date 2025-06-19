@@ -341,6 +341,209 @@ const teamMembers = [
       },
     },
   },
+    {
+    slug: "carolina-arnes",
+    name: "CAROLINA ARNÉS",
+    role: "PSICÓLOGA",
+    image: "/images/team/carolina-arnes.webp",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Psicóloga especializada en psicoterapia en personas con problemas de adicciones.",
+    fullBio:
+      "Psicóloga clínica. Académica de la Universidad Autónoma de Chile. Psicoterapeuta con vasta experiencia en el tratamiento de personas con problemas de adicciones -alcohol, drogas legales e ilegales-. Tiene formación en psicoterapia humanista transpersonal y trabaja con este enfoque para ayudar a adolescentes y adultos a retomar su vida sin una adicción.",
+    specialties: ["Adicciones", "Trastornos del Ánimo", "Mindfullnes", "Arte terapia "],
+    education: ["Psicóloga Clínica, Universidad Central", "Magister en Educación Superior", "Especialización: Psicología Clínica, psicoterapia individual"],
+    schedule: "Martes 17:00 a 20:00",
+    modality: "Presencial Phillips 15",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "No",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "No",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "No",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
+    {
+    slug: "liliana-canileo",
+    name: "LILIANA CANILEO",
+    role: "PSICÓLOGA",
+    image: "/images/team/liliana-canileo.webp",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Realiza diagnóstico de salud mental estructurado y psicoterapia con enfoque de género.",
+    fullBio:
+      "Liliana es psicóloga con experiencia en el diagnóstico y tratamiento de diversas problemáticas de salud mental. Su enfoque de trabajo se basa en evaluaciones estructuradas que permiten identificar con claridad las necesidades emocionales y psicológicas de cada persona. Ofrece procesos de psicoterapia individual desde una perspectiva de género, lo que implica comprender cómo las experiencias personales están influenciadas por los contextos sociales, culturales y de género. Su objetivo es acompañar a las personas en un proceso de autoconocimiento, fortalecimiento emocional y desarrollo de herramientas que les permitan afrontar sus desafíos con mayor bienestar y autonomía. Atiende a adolescentes y adultos en un espacio seguro, de respeto y libre de juicios, promoviendo la salud mental desde una mirada integral y empática.",
+    specialties: ["Adicciones", "Trastornos del Ánimo", "Mindfullnes", "Arte terapia "],
+    education: ["Psicóloga, Universidad Católica de Temuco", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
+    schedule: "Viernes 15:00 a 17:00",
+    modality: "Presencial Phillips 15",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
+    {
+    slug: "valentin-farias",
+    name: "VALENTÍN FARÍAS",
+    role: "PSICÓLOGO",
+    image: "/images/team/valentin-farias.webp",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Realiza diagnóstico de salud mental estructurado y psicoterapia basada en el autoconocimiento.",
+    fullBio:
+      "Psicólogo con formación en evaluación clínica y psicoterapia, especializado en el acompañamiento de adolescentes y adultos. Su labor se centra en el diagnóstico estructurado de salud mental, lo que permite orientar de forma precisa el tratamiento según las necesidades de cada persona.
+Su enfoque terapéutico promueve el autoconocimiento como herramienta central del proceso. A través de un espacio seguro y de confianza, Valentín acompaña a sus consultantes en la exploración de sus emociones, pensamientos y experiencias, favoreciendo una mayor comprensión personal y el desarrollo de recursos para enfrentar dificultades emocionales o relacionales.",
+    specialties: ["Pendiente"],
+    education: ["Psicólogo, Universidad Alberto Hurtado", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
+    schedule: "Por confirmar",
+    modality: "Presencial Phillips 15",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
+    {
+    slug: "ignacia-leal",
+    name: "IGNACIA LEAL",
+    role: "PSICÓLOGA",
+    image: "/images/team/ignacia-leal.webp",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Realiza diagnóstico de salud mental estructurado y psicoterapia en todas las etapas de la vida a partir de la adolescencia.",
+    fullBio:
+      "Psicóloga con experiencia en evaluación y psicoterapia para adolescentes, jóvenes y adultos. Su trabajo se basa en el diagnóstico estructurado de salud mental, permitiendo identificar con precisión las necesidades emocionales y conductuales de cada persona, y orientar un tratamiento adecuado.
+Ofrece psicoterapia en distintas etapas de la vida a partir de la adolescencia, adaptando su enfoque a las características y desafíos propios de cada etapa. Su intervención busca acompañar a las personas en sus procesos de cambio, crisis o crecimiento personal, promoviendo el bienestar psicológico y la construcción de herramientas para enfrentar distintas situaciones de la vida cotidiana.",
+    specialties: ["Pendiente"],
+    education: ["Psicóloga, Universidad Autónoma de Chile", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
+    schedule: "Lunes 9:00 - 12:00",
+    modality: "Presencial Phillips 15",
+    iframeSrc: "",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
+    {
+    slug: "ignaciao-rios",
+    name: "IGNACIO RIOS",
+    role: "PSICÓLOGO",
+    image: "/images/team/ignacia-rios.webp",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Realiza diagnóstico de salud mental estructurado y psicoterapia a adolescentes y adultos con enfoque cognitivo conductual y sistémico.",
+    fullBio:
+      "Psicólogo con formación en evaluación clínica y psicoterapia, especializado en la atención de adolescentes y adultos. Su trabajo se basa en diagnósticos estructurados de salud mental, que permiten comprender en profundidad las dificultades emocionales, conductuales o relacionales de cada persona.
+En sus procesos terapéuticos integra dos enfoques complementarios: el cognitivo-conductual, centrado en identificar y modificar patrones de pensamiento y comportamiento poco funcionales; y el sistémico, que considera la influencia de las relaciones y el entorno en el bienestar psicológico. Esta combinación le permite abordar una amplia variedad de problemáticas, desde síntomas de ansiedad y depresión, hasta dificultades en vínculos familiares, sociales o de pareja.",
+    specialties: ["Pendiente"],
+    education: ["Psicólogo, Universidad UNIACC", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual"],
+    schedule: "Por confirmar",
+    modality: "Presencial Phillips 15",
+    iframeSrc: "",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
+    {
+    slug: "alfonso-saldia",
+    name: "ALFONSO SALDÍA",
+    role: "PSICÓLOGO",
+    image: "/images/team/alfonso-saldia.webp",
+    fallbackImage: "/images/avatars/avatar-m1.png",
+    description:
+      "Realiza diagnóstico de salud mental estructurado, evaluaciones cognitivas breves y psicoterapia en todas las etapas de la vida a partir de la adolescencia.",
+    fullBio:
+      "Psicólogo con experiencia en evaluación y acompañamiento terapéutico desde la adolescencia hasta la adultez. Realiza diagnósticos estructurados de salud mental y evaluaciones cognitivas breves, herramientas clave para identificar con precisión las necesidades individuales y orientar el tratamiento de manera efectiva.
+Ofrece psicoterapia adaptada a distintas etapas del ciclo vital, abordando problemáticas emocionales, conductuales y relacionales según las características propias de cada edad. Su enfoque promueve el bienestar psicológico mediante un trabajo empático, profesional y centrado en las fortalezas de cada persona.",
+    specialties: ["Pendiente"],
+    education: ["Psicólogo,  Universidad de Santiago", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual, evaluación neuropsicológica breve."],
+    schedule: "Miércoles 15:00 - 17:00 (online), Jueves 10:00 a 12:00 y 15:00 a 17:00 (Presencial)",
+    modality: "Online y Presencial Phillips 15",
+    iframeSrc: "",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
+
   // Psiquiatras
   {
     slug: "dra-graciela-rojas",
