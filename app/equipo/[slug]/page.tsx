@@ -541,6 +541,41 @@ const teamMembers = [
   },
 
   // Psiquiatras
+   {
+    slug: "dra-alicia-figueroa",
+    name: "DRA. ALICIA FIGUEROA",
+    role: "Psiquiatra",
+    image: "/images/team/dra-alicia-figueroa.webp",
+    fallbackImage: "/images/avatars/avatar-f8.png",
+    description:
+      "Magister en Neurociencias Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
+    fullBio:
+      "Pendiente.",
+    specialties: [
+      "Pendiente",
+    ],
+    education: ["Médico Cirujano, Universidad de Chile", "Magister en Neurociencias, Universidad de Chile", "Psiquiatra adultos, Universidad de Chile", "Especialización: evaluaciones y tratamientos psiquiátricos"],
+    schedule: "Por definir",
+    modality: "Por definir",
+    iframeSrc: "",
+    fees: {
+      initial: {
+        private: "Por definir",
+        fonasa: "Por definir",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$100.000",
+        fonasa: "Bono Fonasa 3: $45.870",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$100.000",
+        fonasa: "Bono Fonasa 3: $45.870",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
   {
     slug: "dra-graciela-rojas",
     name: "DRA. GRACIELA ROJAS",
