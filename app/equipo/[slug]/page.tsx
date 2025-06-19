@@ -360,8 +360,7 @@ const teamMembers = [
       "Trastorno Bipolar",
       "Trastornos cognitivos del adulto mayor",
     ],
-    education: ["Médico, J. W. Goethe Universidad Alemania", "Doctor en Medicina, J. W. Goethe Universidad. Alemania", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos
-"],
+    education: ["Médico, J. W. Goethe Universidad Alemania", "Doctor en Medicina, J. W. Goethe Universidad. Alemania", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos"],
     schedule: "Lunes 8:30 a 12:40, Jueves 9:30 a 12:20 y 15:00 a 18:40, Viernes 15:00 a 16:40",
     modality: "Presencial / Online",
     iframeSrc: "",
