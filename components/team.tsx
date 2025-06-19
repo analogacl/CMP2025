@@ -12,26 +12,16 @@ export default function Team() {
 
   // Team members data
   const team = [
-    // Psicólogas
+    // Psicólogos
     {
-      name: "CRISTIÁN UGARTE",
-      role: "PSICÓLOGO",
-      category: "psicologia",
-      image: "/images/team/cristian-ugarte-psicologo.webp",
-      fallbackImage: "/images/avatars/avatar-m1.png",
-      description:
-        "Psicólogo clínico. Experto en tratamientos psicológicos de adolescentes y adultos con enfoque psicoanalítico. Experto en conflictos laborales.",
-      slug: "cristian-ugarte",
-    },
-    {
-      name: "DENISE GERBER",
+      name: "CAROLINA ARNÉS",
       role: "PSICÓLOGA",
       category: "psicologia",
-      image: "/images/team/denise-gerber-psicologa.webp",
-      fallbackImage: "/images/avatars/avatar-f8.png",
+      image: "/images/team/carolina-arnes.webp",
+      fallbackImage: "/images/avatars/avatar-f3.png",
       description:
-        "Doctora en psicoterapia y Magister en neurociencias. Experta en psicoterapia de adultos con certificación EMDR.",
-      slug: "denise-gerber",
+        "Psicóloga especializada en psicoterapia en personas con problemas de adicciones",
+      slug: "carolina-arnes",
     },
     {
       name: "JOCELYN CALDERÓN CÁCERES",
@@ -42,76 +32,6 @@ export default function Team() {
       description:
         "Psicoterapeuta de adultos, especializada en psicoanálisis relacional.",
       slug: "jocelyn-calderon-caceres",
-    },
-    {
-      name: "JOSÉ MANUEL GONZÁLEZ",
-      role: "PSICÓLOGO",
-      category: "psicologia",
-      image: "/images/team/jose-manuel-gonzalez-psicologo.webp",
-      fallbackImage: "/images/avatars/avatar-m1.png",
-      description:
-        "Psicólogo clínico con 30 años de experiencia, especializado en tratamientos de duelos y traumas con enfoque relacional. Experto en evaluaciones de personalidad.",
-      slug: "jose-manuel-gonzalez",
-    },
-    {
-      name: "LEONOR IRARRÁZAVAL",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/leonor-irarrazaval-psicologa.webp",
-      fallbackImage: "/images/avatars/avatar-f1.png",
-      description:
-        "Doctora en psicoterapia. Experta en tratamientos psicológicos de adultos con enfoque cognitivo social.",
-      slug: "leonor-irarrazaval",
-    },
-    {
-      name: "MAKARENA MORRIS",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/makarena-morris-psicologa.webp",
-      fallbackImage: "/images/avatars/avatar-f6.png",
-      description:
-        "Psicóloga especializada en psicoterapia en todas las etapas de la vida. Realiza evaluaciones neuropsicológicas y de personalidad.",
-      slug: "makarena-morris",
-    },
-    {
-      name: "MARGARITA LOUBAT OYARCE",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/margarita-loubat-psicologa.webp",
-      fallbackImage: "/images/avatars/avatar-f7.png",
-      description:
-        "Doctora en Educación y Psicología, con formación avanzada en psicología clínica para tratamientos psicológicos de adultos y adolescentes.",
-      slug: "margarita-loubat-oyarce",
-    },
-    {
-      name: "SUSANA ROMERO A.",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/susana-romero-psicologa.webp",
-      fallbackImage: "/images/avatars/avatar-f2.png",
-      description:
-        "Magíster en psicología clínica . Experta en tratamientos psicológicos individuales y de pareja con enfoque integrativo.",
-      slug: "susana-romero-a",
-    },
-    {
-      name: "WILSA SZABO LAGOS",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/wilsa-szabo.jpeg",
-      fallbackImage: "/images/avatars/avatar-f3.png",
-      description:
-        "Magíster y doctora en psicoterapia. Experta en psicoterapia de adultos y adolescentes con enfoque cognitivo social.",
-      slug: "wilsa-szabo-lagos",
-    },
-    {
-      name: "CAROLINA ARNÉS",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/carolina-arnes.webp",
-      fallbackImage: "/images/avatars/avatar-f3.png",
-      description:
-        "Psicóloga especializada en psicoterapia en personas con problemas de adicciones",
-      slug: "carolina-arnes",
     },
     {
       name: "LILIANA CANILEO",
@@ -134,14 +54,64 @@ export default function Team() {
       slug: "valentin-frias",
     },
     {
+      name: "DENISE GERBER",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/denise-gerber-psicologa.webp",
+      fallbackImage: "/images/avatars/avatar-f8.png",
+      description:
+        "Doctora en psicoterapia y Magister en neurociencias. Experta en psicoterapia de adultos con certificación EMDR.",
+      slug: "denise-gerber",
+    },
+    {
+      name: "JOSÉ MANUEL GONZÁLEZ",
+      role: "PSICÓLOGO",
+      category: "psicologia",
+      image: "/images/team/jose-manuel-gonzalez-psicologo.webp",
+      fallbackImage: "/images/avatars/avatar-m1.png",
+      description:
+        "Psicólogo clínico con 30 años de experiencia, especializado en tratamientos de duelos y traumas con enfoque relacional. Experto en evaluaciones de personalidad.",
+      slug: "jose-manuel-gonzalez",
+    },
+    {
+      name: "LEONOR IRARRÁZAVAL",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/leonor-irarrazaval-psicologa.webp",
+      fallbackImage: "/images/avatars/avatar-f1.png",
+      description:
+        "Doctora en psicoterapia. Experta en tratamientos psicológicos de adultos con enfoque cognitivo social.",
+      slug: "leonor-irarrazaval",
+    },
+    {
       name: "IGNACIA LEAL",
       role: "PSICÓLOGA",
       category: "psicologia",
-      image: "/images/team/valentin-farias.webp",
+      image: "/images/team/ignacia-leal.webp",
       fallbackImage: "/images/avatars/avatar-f3.png",
       description:
         "Realiza diagnóstico de salud mental estructurado y psicoterapia en todas las etapas de la vida a partir de la adolescencia.",
       slug: "ignacia-leal",
+    },
+    {
+      name: "MARGARITA LOUBAT OYARCE",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/margarita-loubat-psicologa.webp",
+      fallbackImage: "/images/avatars/avatar-f7.png",
+      description:
+        "Doctora en Educación y Psicología, con formación avanzada en psicología clínica para tratamientos psicológicos de adultos y adolescentes.",
+      slug: "margarita-loubat-oyarce",
+    },
+    {
+      name: "MAKARENA MORRIS",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/makarena-morris-psicologa.webp",
+      fallbackImage: "/images/avatars/avatar-f6.png",
+      description:
+        "Psicóloga especializada en psicoterapia en todas las etapas de la vida. Realiza evaluaciones neuropsicológicas y de personalidad.",
+      slug: "makarena-morris",
     },
     {
       name: "IGNACIO RIOS",
@@ -154,6 +124,16 @@ export default function Team() {
       slug: "ignacio-rios",
     },
     {
+      name: "SUSANA ROMERO A.",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/susana-romero-psicologa.webp",
+      fallbackImage: "/images/avatars/avatar-f2.png",
+      description:
+        "Magíster en psicología clínica . Experta en tratamientos psicológicos individuales y de pareja con enfoque integrativo.",
+      slug: "susana-romero-a",
+    },
+    {
       name: "ALFONSO SALDIA",
       role: "PSICÓLOGO",
       category: "psicologia",
@@ -163,7 +143,37 @@ export default function Team() {
         "Realiza diagnóstico de salud mental estructurado y psicoterapia a adolescentes y adultos con enfoque cognitivo conductual y sistémico..",
       slug: "alfonso-saldia",
     },
+    {
+      name: "WILSA SZABO LAGOS",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/wilsa-szabo.jpeg",
+      fallbackImage: "/images/avatars/avatar-f3.png",
+      description:
+        "Magíster y doctora en psicoterapia. Experta en psicoterapia de adultos y adolescentes con enfoque cognitivo social.",
+      slug: "wilsa-szabo-lagos",
+    },
+    {
+      name: "CRISTIÁN UGARTE",
+      role: "PSICÓLOGO",
+      category: "psicologia",
+      image: "/images/team/cristian-ugarte-psicologo.webp",
+      fallbackImage: "/images/avatars/avatar-m1.png",
+      description:
+        "Psicólogo clínico. Experto en tratamientos psicológicos de adolescentes y adultos con enfoque psicoanalítico. Experto en conflictos laborales.",
+      slug: "cristian-ugarte",
+    },
     // Psiquiatras
+    {
+      name: "DRA. ALICIA FIGUEROA",
+      role: "PSIQUIATRA",
+      category: "psiquiatria",
+      image: "/images/team/alicia-figueroa.webp",
+      fallbackImage: "/images/avatars/avatar-f8.png",
+      description:
+        "Magister en Neurociencias Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
+      slug: "dra-alicia-figueroa",
+    },
     {
       name: "DR. EDUARD HEBERLEIN",
       role: "PSIQUIATRA",
@@ -183,16 +193,7 @@ export default function Team() {
         "Doctora en Medicina .Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
       slug: "dra-graciela-rojas",
     },
-    {
-      name: "DRA. ALICIA FIGUEROA",
-      role: "PSIQUIATRA",
-      category: "psiquiatria",
-      image: "/images/team/alicia-figueroa.webp",
-      fallbackImage: "/images/avatars/avatar-f8.png",
-      description:
-        "Magister en Neurociencias Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
-      slug: "dra-alicia-figueroa",
-    },
+    
   ]
 
   // Filter team members based on active filter
