@@ -94,8 +94,7 @@ const teamMembers = [
       "Conflictos Familiares",
       "Trastornos Sexuales",
     ],
-    education: ["Psicóloga, Universidad de Chile.", "Doctorado en Psicoterapia y Magister en Psicología Clínica, Universidad de Chile", "Especialización: Psicología Clínica, psicoterapia individual
-"],
+    education: ["Psicóloga, Universidad de Chile.", "Doctorado en Psicoterapia y Magister en Psicología Clínica, Universidad de Chile", "Especialización: Psicología Clínica, psicoterapia individual"],
     schedule: "Consultar disponibilidad",
     modality: "Consultar modalidad",
     iframeSrc: "",
