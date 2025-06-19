@@ -20,7 +20,7 @@ export default function Team() {
       image: "/images/team/cristian-ugarte-psicologo.webp",
       fallbackImage: "/images/avatars/avatar-m1.png",
       description:
-        "Psicólogo clínico con enfoque psicoanalítico y experiencia en psicoterapia y temas laborales, especializado en conflictos personales, familiares y de pareja.",
+        "Psicólogo clínico. Experto en tratamientos psicológicos de adolescentes y adultos con enfoque psicoanalítico. Experto en conflictos laborales.",
       slug: "cristian-ugarte",
     },
     {
@@ -30,7 +30,7 @@ export default function Team() {
       image: "/images/team/denise-gerber-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f8.png",
       description:
-        "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
+        "Doctora en psicoterapia y Magister en neurociencias. Experta en psicoterapia de adultos con certificación EMDR.",
       slug: "denise-gerber",
     },
     {
@@ -40,7 +40,7 @@ export default function Team() {
       image: "/images/team/jocelyn-calderon-caceres-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f5.png",
       description:
-        "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
+        "Psicoterapeuta de adultos, especializada en psicoanálisis relacional.",
       slug: "jocelyn-calderon-caceres",
     },
     {
@@ -50,7 +50,7 @@ export default function Team() {
       image: "/images/team/jose-manuel-gonzalez-psicologo.webp",
       fallbackImage: "/images/avatars/avatar-m1.png",
       description:
-        "Psicólogo clínico con 30 años de experiencia, especializado en duelo, trauma y evaluaciones de personalidad desde un enfoque relacional.",
+        "Psicólogo clínico con 30 años de experiencia, especializado en tratamientos de duelos y traumas con enfoque relacional. Experto en evaluaciones de personalidad.",
       slug: "jose-manuel-gonzalez",
     },
     {
@@ -60,7 +60,7 @@ export default function Team() {
       image: "/images/team/leonor-irarrazaval-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f1.png",
       description:
-        "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
+        "Doctora en psicoterapia. Experta en tratamientos psicológicos de adultos con enfoque cognitivo social.",
       slug: "leonor-irarrazaval",
     },
     {
@@ -70,7 +70,7 @@ export default function Team() {
       image: "/images/team/makarena-morris-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f6.png",
       description:
-        "Psicóloga especializada en psicoterapia, neuropsicología y evaluación de personalidad, con experiencia en trastornos emocionales, crisis vitales, familiares y parentales.",
+        "Psicóloga especializada en psicoterapia en todas las etapas de la vida. Realiza evaluaciones neuropsicológicas y de personalidad.",
       slug: "makarena-morris",
     },
     {
@@ -80,7 +80,7 @@ export default function Team() {
       image: "/images/team/margarita-loubat-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f7.png",
       description:
-        "Doctora en Educación y Psicología, con formación avanzada en psicología clínica en universidades de Francia y España.",
+        "Doctora en Educación y Psicología, con formación avanzada en psicología clínica para tratamientos psicológicos de adultos y adolescentes.",
       slug: "margarita-loubat-oyarce",
     },
     {
@@ -90,7 +90,7 @@ export default function Team() {
       image: "/images/team/susana-romero-psicologa.webp",
       fallbackImage: "/images/avatars/avatar-f2.png",
       description:
-        "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
+        "Magíster en psicología clínica . Experta en tratamientos psicológicos individuales y de pareja con enfoque integrativo.",
       slug: "susana-romero-a",
     },
     {
@@ -100,8 +100,68 @@ export default function Team() {
       image: "/images/team/wilsa-szabo.jpeg",
       fallbackImage: "/images/avatars/avatar-f3.png",
       description:
-        "Magíster y doctora en psicoterapia, experta en enfoque constructivista cognitivo para tratar trastornos emocionales y promover bienestar en adultos y adolescentes.",
+        "Magíster y doctora en psicoterapia. Experta en psicoterapia de adultos y adolescentes con enfoque cognitivo social.",
       slug: "wilsa-szabo-lagos",
+    },
+    {
+      name: "CAROLINA ARNÉS",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/carolina-arnes.webp",
+      fallbackImage: "/images/avatars/avatar-f3.png",
+      description:
+        "Psicóloga especializada en psicoterapia en personas con problemas de adicciones",
+      slug: "carolina-arnes",
+    },
+    {
+      name: "LILIANA CANILEO",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/liliana-canileo.webp",
+      fallbackImage: "/images/avatars/avatar-f3.png",
+      description:
+        "Realiza diagnóstico de salud mental estructurado y psicoterapia con enfoque de género.",
+      slug: "liliana-canileo",
+    },
+    {
+      name: "VALENTÍN FARÍAS",
+      role: "PSICÓLOGO",
+      category: "psicologia",
+      image: "/images/team/valentin-farias.webp",
+      fallbackImage: "/images/avatars/avatar-f3.png",
+      description:
+        "Realiza diagnóstico de salud mental estructurado y psicoterapia basada en el autoconocimiento.",
+      slug: "valentin-frias",
+    },
+    {
+      name: "IGNACIA LEAL",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/valentin-farias.webp",
+      fallbackImage: "/images/avatars/avatar-f3.png",
+      description:
+        "Realiza diagnóstico de salud mental estructurado y psicoterapia en todas las etapas de la vida a partir de la adolescencia.",
+      slug: "ignacia-leal",
+    },
+    {
+      name: "IGNACIO RIOS",
+      role: "PSICÓLOGO",
+      category: "psicologia",
+      image: "/images/team/ignacio-rios.webp",
+      fallbackImage: "/images/avatars/avatar-f3.png",
+      description:
+        "Realiza diagnóstico de salud mental estructurado y psicoterapia a adolescentes y adultos con enfoque cognitivo conductual y sistémico..",
+      slug: "ignacio-rios",
+    },
+    {
+      name: "ALFONSO SALDIA",
+      role: "PSICÓLOGO",
+      category: "psicologia",
+      image: "/images/team/alfonso-saldia.webp",
+      fallbackImage: "/images/avatars/avatar-f3.png",
+      description:
+        "Realiza diagnóstico de salud mental estructurado y psicoterapia a adolescentes y adultos con enfoque cognitivo conductual y sistémico..",
+      slug: "alfonso-saldia",
     },
     // Psiquiatras
     {
@@ -110,7 +170,7 @@ export default function Team() {
       category: "psiquiatria",
       image: "/images/team/dr-eduard-heberlein.webp",
       fallbackImage: "/images/avatars/avatar-m1.png",
-      description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
+      description: "Experto en diagnósticos y tratamientos psiquiátricos del adulto.",
       slug: "dr-eduard-heberlein",
     },
     {
@@ -120,8 +180,18 @@ export default function Team() {
       image: "/images/team/graciela-rojas.jpeg",
       fallbackImage: "/images/avatars/avatar-f8.png",
       description:
-        "Psiquiatra y doctora en psicoterapia, con enfoque cognitivo-social, especializada en el tratamiento de trastornos psiquiátricos en adultos.",
+        "Doctora en Medicina .Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
       slug: "dra-graciela-rojas",
+    },
+    {
+      name: "DRA. ALICIA FIGUEROA",
+      role: "PSIQUIATRA",
+      category: "psiquiatria",
+      image: "/images/team/alicia-figueroa.webp",
+      fallbackImage: "/images/avatars/avatar-f8.png",
+      description:
+        "Magister en Neurociencias Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
+      slug: "dra-alicia-figueroa",
     },
   ]
 
