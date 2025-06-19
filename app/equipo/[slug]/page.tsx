@@ -120,7 +120,7 @@ const teamMembers = [
     slug: "margarita-loubat-oyarce",
     name: "MARGARITA LOUBAT OYARCE",
     role: "PSICÓLOGA",
-    image: "/images/avatars/margarita-loubat-psicologa.webp",
+    image: "/images/team/margarita-loubat-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f7.png",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/Z07Oo320M0p1wP2l5D91HjL987O3kt",
     description:
@@ -158,7 +158,7 @@ const teamMembers = [
     slug: "jocelyn-calderon-caceres",
     name: "JOCELYN CALDERÓN CÁCERES",
     role: "Psicóloga",
-    image: "/images/team/jocelyn-calderon-psicologa.webp",
+    image: "/images/team/jocelyn-calderon-caceres-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f5.png",
     description:
       "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
@@ -209,7 +209,7 @@ const teamMembers = [
 "Coaching Ejecutivo Profesional, Universidad Complutense de Madrid",
 "Especialización: Psicología Clínica, psicoterapia, Coaching"],
     schedule: "Martes 13:00 a 17:00",
-    modality: "Presencial en Plaza de Amras y Online",
+    modality: "Presencial en Plaza de Armas y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/B0qdh2u0s0Snmf7H5K21xrT93103SD",
     fees: {
       initial: {
@@ -355,7 +355,7 @@ const teamMembers = [
     education: ["Psicóloga Clínica, Universidad Central", "Magister en Educación Superior", "Especialización: Psicología Clínica, psicoterapia individual"],
     schedule: "Martes 17:00 a 20:00",
     modality: "Presencial Phillips 15",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
+    iframeSrc: "",
     fees: {
       initial: {
         private: "$40.000",
@@ -388,7 +388,7 @@ const teamMembers = [
     education: ["Psicóloga, Universidad Católica de Temuco", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
     schedule: "Viernes 15:00 a 17:00",
     modality: "Presencial Phillips 15",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
+    iframeSrc: "",
     fees: {
       initial: {
         private: "$40.000",
@@ -474,10 +474,10 @@ const teamMembers = [
     },
   },
     {
-    slug: "ignaciao-rios",
+    slug: "ignacio-rios",
     name: "IGNACIO RIOS",
     role: "PSICÓLOGO",
-    image: "/images/team/ignacia-rios.webp",
+    image: "/images/team/ignacio-rios.webp",
     fallbackImage: "/images/avatars/avatar-m1.png",
     description:
       "Realiza diagnóstico de salud mental estructurado y psicoterapia a adolescentes y adultos con enfoque cognitivo conductual y sistémico.",
