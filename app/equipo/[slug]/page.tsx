@@ -14,9 +14,9 @@ const teamMembers = [
     image: "/images/team/leonor-irarrazaval-psicologa.webp",
     fallbackImage: "/images/avatars/avatar-f1.png",
     description:
-      "Experta en enfoque cognitivo-social y tratamiento de trastornos psicológicos y psiquiátricos en adultos.",
+      "Doctora en psicoterapia. Experta en tratamientos psicológicos de adultos con enfoque cognitivo social.",
     fullBio:
-      "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Su enfoque es cognitivo-social y se enfoca en el trabajo de las cogniciones. Atiende individualmente a personas adultas con problemas psicológicos —como problemas de la vida cotidiana, incapacidad para resolver problemas, pérdida de seres queridos, problemas de comunicación, estrés, conflictos en las relaciones interpersonales, problemas de autoestima, entre otros— y/o psiquiátricos —trastornos de personalidad, crisis de angustia, agorafobia, duelo patológico, trastorno de pánico, trastorno obsesivo-compulsivo, depresión, bipolaridad, esquizofrenia.",
+      "Doctor en psicoterapia y psicóloga clínica .Académica Escuela Psicología UTEM. Tiene una larga experiencia como psicoterapeuta. Con enfoque cognitivo-social, se centra en el trabajo de las cogniciones. Atiende a personas adultas con problemas psicológicos -como problemas de la vida cotidiana, incapacidad para resolver problemas, pérdida de seres queridos, problemas de comunicación, estrés, conflictos en las relaciones interpersonales, problemas de autoestima, entre otros-y/o psiquiátricos - trastornos de personalidad, crisis de angustia, agorafobia, duelo patológico, trastorno de pánico, trastorno obsesivo-compulsivo, depresión, bipolaridad, esquizofrenia.",
     specialties: [
       "Enfoque Cognitivo-Social",
       "Trastornos de Personalidad",
@@ -25,8 +25,8 @@ const teamMembers = [
       "Depresión",
       "Bipolaridad",
     ],
-    education: ["Doctorado en Psicoterapia", "Licenciatura en Psicología"],
-    schedule: "Lunes 19:30 a 20:30",
+    education: ["Psicóloga, Universidad Central y Universidad Autónoma de Barcelona", "Doctorado en Psicoterapia, Universidad de Heidelberg","Especialización: Psicología Clínica, psicoterapia individual"],
+    schedule: "Lunes 19:30 a 20:15",
     modality: "Online",
     iframeSrc: "",
     fees: {
@@ -53,26 +53,26 @@ const teamMembers = [
     description:
       "Magíster en psicología clínica con enfoque integrativo, experta en el abordaje de ansiedad, crisis personales, duelo, autoestima y conflictos laborales.",
     fullBio:
-      "Magister en psicología clínica y una psicoterapeuta experimentada. Su enfoque es integrativo y se aproxima a la psicología desde más de un modelo teórico. Puede ayudarle a revisar qué aspectos de su forma de vida le generan ansiedad, crisis de pánico, estrés, desánimo y/o relaciones humanas conflictivas. Le puede ayudar a superar sus problemas de autoestima o el dolor que experimenta frente a una pérdida o facilitar su reincorporación laboral luego de su postnatal o de su licencia prolongada. Susana Romero tiene formación en recursos humanos de modo que puede ayudarle a enfrentar sus problemas en su lugar de trabajo.",
+      "Magister en psicología clínica .Psicoterapeuta experimentada con un enfoque integrativo .Le puede ayudar a revisar qué aspectos de su forma de vida le generan ansiedad, estrés, desánimo y/o relaciones humanas conflictivas, así como a superar sus problemas de autoestima o el dolor que experimenta frente a una pérdida o facilitar su reincorporación laboral luego de su postnatal o de su licencia prolongada. Susana Romero tiene formación en recursos humanos de modo que puede ayudarle a enfrentar problemas en su lugar de trabajo.",
     specialties: ["Terapia Integrativa", "Ansiedad", "Crisis de Pánico", "Autoestima", "Duelo", "Conflictos Laborales"],
     education: ["Magister en Psicología Clínica", "Formación en Recursos Humanos"],
-    schedule: "Martes 9:00 y 12:00 a 18:00",
+    schedule: "Martes 9:00 - 12:00 y de 15:00 - 18:00",
     modality: "Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/F0SihxL0b02pX4145n21dOs9t8l3Df",
     fees: {
       initial: {
-        private: "$35.000",
-        fonasa: "Precio especial $25.000",
+        private: "40.000",
+        fonasa: "No atiende",
         isapres: "Reembolsa tarifa particular",
       },
       followUp: {
-        private: "$35.000",
-        fonasa: "Precio especial $25.000",
+        private: "40.000",
+        fonasa: "No atiende",
         isapres: "Reembolsa tarifa particular",
       },
       online: {
-        private: "$35.000",
-        fonasa: "Precio especial $25.000",
+        private: "$4.000",
+        fonasa: "No atiende",
         isapres: "Reembolsa tarifa particular",
       },
     },
@@ -86,7 +86,7 @@ const teamMembers = [
     description:
       "Magíster y doctora en psicoterapia, experta en enfoque constructivista cognitivo para tratar trastornos emocionales y promover bienestar en adultos y adolescentes.",
     fullBio:
-      "Magíster en psicología clínica, doctora en psicoterapia y una psicoterapeuta experimentada. Su enfoque es constructivista cognitivo y se centra en lograr un reordenamiento psicológico frente a situaciones que afectan el curso normal de la existencia. Atiende adultos y adolescentes con síntomas depresivos y/o ansiosos, con trastornos psiquiátricos, con conflictos familiares y de pareja, con trastornos sexuales, dificultades laborales o interpersonales. Acuerda con las personas las metas a alcanzar como revitalización de la esperanza dejando atrás la desmoralización, mejoramiento del funcionamiento cotidiano.",
+      "Doctor en psicoterapia y Magister en psicología clínica. Es académica de la Escuela de Psicología de la USACH y una psicoterapeuta experimentada con un enfoque constructivista cognitivo. Se centra en lograr un reordenamiento psicológico frente a situaciones que afectan el curso normal de la existencia. Atiende adultos y adolescentes con síntomas depresivos y/o ansiosos, con conflictos familiares y de pareja, con trastornos sexuales, dificultades laborales o interpersonales. Acuerda con las personas las metas a alcanzar como revitalización de la esperanza dejando atrás la desmoralización.",
     specialties: [
       "Enfoque Constructivista Cognitivo",
       "Trastornos Depresivos",
@@ -94,7 +94,8 @@ const teamMembers = [
       "Conflictos Familiares",
       "Trastornos Sexuales",
     ],
-    education: ["Doctorado en Psicoterapia", "Magister en Psicología Clínica"],
+    education: ["Psicóloga, Universidad de Chile.", "Doctorado en Psicoterapia y Magister en Psicología Clínica, Universidad de Chile", "Especialización: Psicología Clínica, psicoterapia individual
+"],
     schedule: "Consultar disponibilidad",
     modality: "Consultar modalidad",
     iframeSrc: "",
@@ -126,32 +127,30 @@ const teamMembers = [
     description:
       "Doctora en Educación y Psicología, con formación avanzada en psicología clínica en universidades de Francia y España.",
     fullBio:
-      "Doctora en Educación y Psicología. Universidad Central; Diploma de Estudios en Profundidad (DEA) en Psicología y Educación. Universidad de Granada; DESS en Psicología Clínica y Patológica. Universidad Paris V.; Maestría en Psicología Clínica. Universidad Paris V.; Licenciatura en Psicología. Universidad Paris V. (La Sorbonne).",
-    specialties: ["Psicología Educativa", "Psicología Clínica", "Formación Internacional"],
+      "Doctora en Educación y Psicología con Maestría en Psicología Clínica y Diplomada en Estudios en Profundidad (DEA) en Psicología y Educación. Es académica de la Escuela de Psicología de la USACH. Tiene una larga experiencia en evaluaciones psicológicas y en psicoterapia de personas en distintas etapas de la vida desde la adolescencia. Atiende adultos y adolescentes con síntomas depresivos y/o ansiosos, con trastornos psiquiátricos, con conflictos familiares y de pareja, con trastornos sexuales, dificultades laborales o interpersonales.",
+    specialties: ["Psicología Educativa", "Psicología Clínica", "Evaluación Psicológica"],
     education: [
-      "Doctorado en Educación y Psicología (Universidad Central)",
-      "DEA en Psicología y Educación (Universidad de Granada)",
-      "DESS en Psicología Clínica (Universidad Paris V)",
-      "Maestría en Psicología Clínica (Universidad Paris V)",
-      "Licenciatura en Psicología (Universidad Paris V - La Sorbonne)",
+      "Psicóloga, Universidad La Sorbonne",
+      "Doctora en Educación y Psicología, Universidad Central. Magister en Psicología Clínica, Universidad Paris V",
+      "Especialización: Psicología Clínica, psicoterapia individual",
     ],
     schedule: "Lunes y Jueves 18:00 a 20:00",
     modality: "Presencial / Online",
     iframeSrc: "",
     fees: {
       initial: {
-        private: "$35.000",
-        fonasa: "Tarifa especial $25.000, sin bono.",
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
         isapres: "Reembolso tarifa particular",
       },
       followUp: {
-        private: "$35.000",
-        fonasa: "Tarifa especial $25.000, sin bono.",
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
         isapres: "Reembolso tarifa particular",
       },
       online: {
-        private: "$35.000",
-        fonasa: "Tarifa especial $25.000, sin bono.",
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
         isapres: "Reembolso tarifa particular",
       },
     },
@@ -165,16 +164,17 @@ const teamMembers = [
     description:
       "Especializada en psicoanálisis relacional, enfocada en trastornos emocionales y restaurar el bienestar integral.",
     fullBio:
-      "Psicóloga clínica con postítulo en psicoanálisis relacional. Se especializa en la atención de adolescentes y adultos con abordaje de diagnósticos de trastornos del ánimo, trastornos mixtos de ansiedad y depresión, trastornos ansiosos, trastornos adaptativos, crisis de pánico y trastornos de la personalidad. Realiza intervenciones que devuelven el funcionamiento integral de quien consulta.",
+      "Psicóloga clínica con postítulo en psicoanálisis relacional. Se especializa en la atención de adolescentes y adultos con trastornos del ánimo, trastornos de ansiedad y depresión, crisis de pánico, trastornos de conducta alimentaria, problemas emocionales del puerperio y trastornos de la personalidad. Realiza intervenciones que ayudan a las personas a recuperar sus actividades cotidianas.",
     specialties: [
       "Psicoanálisis Relacional",
       "Trastornos del Ánimo",
       "Trastornos de Ansiedad",
       "Crisis de Pánico",
       "Trastornos de Personalidad",
+      "Trastornos de Conducta Alimentaria",
     ],
-    education: ["Postítulo en Psicoanálisis Relacional", "Licenciatura en Psicología"],
-    schedule: "Lunes 11:00 a 12:30 y 15:00 a 18:30, Martes 16:00 a 20:30",
+    education: ["Psicóloga, Universidad Central", "Especialización: Psicología Clínica, psicoterapia"],
+    schedule: "Lunes 11:00 a 12:30 (On line) y 15:00 a 19:00 (presencial/on line), Miercoles 16:00 a 19:00  (presencial/on line)",
     modality: "Online y Presencial (Escuela Militar)",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/r0Kcl600g0hyNs9Y5F31zZ69i2T3FJ",
     fees: {
@@ -204,26 +204,28 @@ const teamMembers = [
     description:
       "Psicólogo clínico con enfoque psicoanalítico y experiencia en psicoterapia y temas laborales, especializado en conflictos personales, familiares y de pareja.",
     fullBio:
-      "Psicólogo Clínico con amplia experiencia como psicoterapeuta, además cuenta con formación y experiencia en el mundo Laboral/Organizacional y en áreas de RRHH. Trabaja bajo un enfoque Psicoanalítico y atiende principalmente diferentes tipos de problemáticas de la vida cotidiana, conflictos de pareja o familiares, autoestima entre otros, además de temáticas de interacción laboral.",
+      "Psicólogo Clínico con amplia experiencia como psicoterapeuta. Trabaja bajo un enfoque psicoanalítico atendiendo a adolescentes y adultos con problemas en su vida cotidiana -como problemas de pareja y familiares- y conflictos que afectan la salud mental de las personas. Puede ayudar a mejorar la autoestima y la calidad de vida de los usuarios. Tiene formación en recursos humanos y experiencia en apoyar a las personas a enfrentar problemas laborales.",
     specialties: ["Enfoque Psicoanalítico", "Psicología Laboral", "Conflictos de Pareja", "Autoestima", "RRHH"],
-    education: ["Licenciatura en Psicología", "Formación en Psicología Organizacional"],
-    schedule: "MARTES 13:00 a 17:00",
-    modality: "Presencial PH (Bono Fonasa) y Online",
+    education: ["Psicólogo, Universidad Central", "Magíster en Psicología, Clínica Universidad Adolfo Ibáñez",
+"Coaching Ejecutivo Profesional, Universidad Complutense de Madrid",
+"Especialización: Psicología Clínica, psicoterapia, Coaching"],
+    schedule: "Martes 13:00 a 17:00",
+    modality: "Presencial en Plaza de Amras y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/B0qdh2u0s0Snmf7H5K21xrT93103SD",
     fees: {
       initial: {
         private: "$40.000",
-        fonasa: "Si, copago $14.170",
+        fonasa: "Bono Fonasa 3: $14.170",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$40.000",
-        fonasa: "Si, copago $14.170",
+        fonasa: "Bono Fonasa 3: $14.170",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$40.000",
-        fonasa: "Si, copago $14.170",
+        fonasa: "Bono Fonasa 3: $14.170",
         isapres: "Reembolso tarifa particular.",
       },
     },
@@ -237,7 +239,7 @@ const teamMembers = [
     description:
       "Psicóloga especializada en psicoterapia, neuropsicología y evaluación de personalidad, con experiencia en trastornos emocionales, crisis vitales, familiares y parentales.",
     fullBio:
-      "Sus servicios principales abarcan el tratamiento psicoterapéutico y la evaluación de la personalidad y las funciones cognitivas (Neuropsicología). Aborda trastornos del ánimo, ansiedad, estrés, trastornos de personalidad, diversidad funcional psíquica, trastorno de déficit atencional con y sin hiperactividad, violencia intrafamiliar, trastornos alimenticios, procesos de duelo, relaciones y sexualidad. Además, se especializa en abordar crisis del ciclo vital y familiar, así como conflictos y crisis parentales.",
+      "Académica de la Escuela de Psicología de la USACH. Sus servicios principales abarcan el tratamiento psicoterapéutico y la evaluación de la personalidad y las funciones cognitivas (Neuropsicología). Trata trastornos del ánimo, de ansiedad, estrés, trastornos de personalidad, diversidad funcional psíquica, trastorno de déficit atencional con y sin hiperactividad, violencia intrafamiliar, trastornos alimenticios, procesos de duelo, relaciones y sexualidad. Además, se ha especializado en abordar crisis del ciclo vital y familiar, así como conflictos y crisis parentales.",
     specialties: [
       "Neuropsicología",
       "Evaluación de Personalidad",
@@ -245,7 +247,8 @@ const teamMembers = [
       "TDAH",
       "Trastornos Alimenticios",
     ],
-    education: ["Licenciatura en Psicología", "Especialización en Neuropsicología"],
+    education: ["Psicóloga, Universidad de Santiago", "Magíster en Psicología Social Aplicada, Humanidades/Estudios Humanísticos", "Especialización: Psicología Clínica, psicoterapia, evaluaciones neuropsicológicas, test de Rorschach."]
+,
     schedule: "MIÉRCOLES 15:00 a 19:30",
     modality: "Presencial en Kennedy y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/S0RbM2S0F0WeME5e50515hh9X3e302",
@@ -277,12 +280,13 @@ const teamMembers = [
     description:
       "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
     fullBio:
-      "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
-    specialties: ["Psicoterapia", "Neurociencias Cognitivas"],
+      "Doctor en psicoterapia y Magister en neurociencias cognitivas. Es académica de la Universidad Autónoma de Chile. Psicóloga clínica y psicoterapeuta experimentada en la atención de adultos con distintos problemas emocionales e interpersonales y con trastornos mentales comunes como los trastornos afectivos y ansiosos. Tiene formación como terapeuta EMDR en la Asociación Chilena de Terapeutas en EMDR y en Psicotrauma y trabaja principalmente desde este modelo terapéutico.",
+    specialties: ["Psicoterapia", "Neurociencias Cognitivas", "Terapia EMDR"],
     education: [
       "Doctorado en Psicoterapia",
       "Máster en Neurociencias Cognitivas (University College London)",
       "Licenciatura en Psicología (Universidad de Chile)",
+      "Especialización: Terapia EMDR por Asociación Chilena de Terapeutas en EMDR",
     ],
     schedule: "Jueves 16:00",
     modality: "Online",
@@ -314,9 +318,9 @@ const teamMembers = [
     description:
       "Psicólogo clínico con 30 años de experiencia, especializado en duelo, trauma y evaluaciones de personalidad desde un enfoque relacional.",
     fullBio:
-      "Psicólogo Clínico con 30 años de experiencia. Se ha enfocado, desde un enfoque relacional, en atender adolescentes, adultos y familias que han sufrido pérdidas, duelos y que han vivido situaciones traumáticas, donde las señales de alarma y malestar pueden ser cuadros ansiosos, depresivos o físicos. Además, realiza evaluaciones de personalidad a través de test proyectivos, especialmente el test de Rorschach.",
+      "Psicólogo Clínico con 30 años de experiencia. Atiende adolescentes, adultos y familias que han sufrido pérdidas, duelos y que han vivido situaciones traumáticas, donde las señales de alarma y malestar pueden ser cuadros ansiosos, depresivos o sintomatología física. Utiliza un enfoque relacional en la realización de los procesos psicoterapéuticos. Ofrece sus servicios para evaluaciones psicológicas siendo experto en evaluaciones de personalidad a través de test proyectivos, especialmente el test de Rorschach.",
     specialties: ["Enfoque Relacional", "Duelo", "Trauma", "Test de Rorschach", "Evaluaciones de Personalidad"],
-    education: ["Licenciatura en Psicología", "30 años de experiencia clínica"],
+    education: ["Psicólogo, Universidad Diego Portales", "30 años de experiencia clínica", "Especialización: Psicología Clínica, psicoterapia en trauma complejo, evaluaciones de personalidad."],
     schedule: "Miércoles 15:00 a 20:00, Jueves 9:00 a 13:00",
     modality: "Presencial Providencia / Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
@@ -348,33 +352,34 @@ const teamMembers = [
     description:
       "Psiquiatra y doctora en psicoterapia, con enfoque cognitivo-social, especializada en el tratamiento de trastornos psiquiátricos en adultos.",
     fullBio:
-      "Doctorada en psicoterapia y psicóloga clínica con una larga experiencia como psicoterapeuta. Su enfoque es cognitivo-social y se centra en el trabajo de las cogniciones. Atiende individualmente a personas adultas con problemas psicológicos —como problemas de la vida cotidiana, incapacidad para resolver problemas, pérdida de seres queridos, problemas de comunicación, estrés, conflictos en las relaciones interpersonales, problemas de autoestima, entre otros— y/o psiquiátricos —trastornos de personalidad, crisis de angustia, agorafobia, duelo patológico, trastorno de pánico, trastorno obsesivo-compulsivo, depresión, bipolaridad, esquizofrenia.",
+      "Doctor en Medicina. Psiquiatra y Terapeuta Familiar. Académica de la Facultad de Medicina de la Universidad de Chile. Tiene una vasta experiencia en el diagnóstico y tratamiento de los diferentes trastornos psiquiátricos.  Luego del estudio del caso, plantea un plan de tratamiento que puede incluir psicoterapia y farmacoterapia. Trabaja colaborativamente con médicos de otras especialidades y con psicólogos de distinta orientación. Atiende a jóvenes, adultos y personas de la tercera edad.",
     specialties: [
-      "Enfoque Cognitivo-Social",
+      "Trastornos Afectivos",
       "Trastornos de Personalidad",
-      "Trastorno de Pánico",
+      "Trastornos de Ansiedad",
       "Depresión",
-      "Bipolaridad",
-      "Esquizofrenia",
+      "Trastorno Bipolar",
+      "Trastornos cognitivos del adulto mayor",
     ],
-    education: ["Doctorado en Psicoterapia", "Especialidad en Psiquiatría", "Medicina"],
+    education: ["Médico, J. W. Goethe Universidad Alemania", "Doctor en Medicina, J. W. Goethe Universidad. Alemania", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos
+"],
     schedule: "Lunes 8:30 a 12:40, Jueves 9:30 a 12:20 y 15:00 a 18:40, Viernes 15:00 a 16:40",
     modality: "Presencial / Online",
     iframeSrc: "",
     fees: {
       initial: {
         private: "$100.000",
-        fonasa: "Si, copago $45.870",
+        fonasa: "Bono Fonasa 3: $45.870",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$100.000",
-        fonasa: "Si, copago $45.870",
+        fonasa: "Bono Fonasa 3: $45.870",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$100.000",
-        fonasa: "Si, copago $45.870",
+        fonasa: "Bono Fonasa 3: $45.870",
         isapres: "Reembolso tarifa particular.",
       },
     },
@@ -387,7 +392,7 @@ const teamMembers = [
     fallbackImage: "/images/avatars/avatar-m1.png",
     description: "Especialista en Psiquiatría Adultos de la Universidad de Chile.",
     fullBio:
-      "Médico Cirujano y Psiquiatra de la Universidad de Chile, donde ha ejercido su profesión en distintos centros de las regiones Metropolitana y Los Lagos, donde actualmente reside. Atiende a personas adultas con problemas como depresión, crisis de pánico, ansiedad, trastorno afectivo bipolar, trastornos adaptativos, estrés, trastorno de estrés postraumático.",
+      "Médico Cirujano y Psiquiatra.  Atiende a personas adultas. Es experto en diagnóstico clínico y en planificar un buen tratamiento. Puede atender a personas con patología psiquiátrica de distinto grado de severidad: enfermedad depresiva, ansiosa, con crisis de pánico, trastorno afectivo bipolar, trastornos adaptativos, estrés, trastorno de estrés postraumático, esquizofrenia, trastornos de la personalidad, adicciones, alcoholismo, agorafobia, déficit atencional, duelos patológicos, fobias y trastorno de control de impulsos.",
     specialties: [
       "Depresión",
       "Crisis de Pánico",
@@ -395,7 +400,7 @@ const teamMembers = [
       "Trastorno Bipolar",
       "Trastorno de Estrés Postraumático",
     ],
-    education: ["Especialista en Psiquiatría Adultos (Universidad de Chile)", "Médico Cirujano (Universidad de Chile)"],
+    education: ["Médico Cirujano, Universidad de Chile", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos"],
     schedule: "Martes 16:30, Viernes 10:40",
     modality: "Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/8015Xjh0P064oJ385R81GON9R623Ay",
