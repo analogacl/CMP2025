@@ -51,7 +51,7 @@ export default function Team() {
       fallbackImage: "/images/avatars/avatar-f3.png",
       description:
         "Realiza diagnóstico de salud mental estructurado y psicoterapia basada en el autoconocimiento.",
-      slug: "valentin-frias",
+      slug: "valentin-farias",
     },
     {
       name: "DENISE GERBER",
