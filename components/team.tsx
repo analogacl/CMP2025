@@ -97,7 +97,7 @@ export default function Team() {
       name: "MARGARITA LOUBAT OYARCE",
       role: "PSICÓLOGA",
       category: "psicologia",
-      image: "/images/team/margarita-loubat-psicologa.webp",
+      image: "/images/team/margarita-loubat.webp",
       fallbackImage: "/images/avatars/avatar-f7.png",
       description:
         "Doctora en Educación y Psicología, con formación avanzada en psicología clínica para tratamientos psicológicos de adultos y adolescentes.",
