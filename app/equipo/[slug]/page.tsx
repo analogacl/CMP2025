@@ -120,7 +120,7 @@ const teamMembers = [
     slug: "margarita-loubat-oyarce",
     name: "MARGARITA LOUBAT OYARCE",
     role: "PSICÓLOGA",
-    image: "/images/team/margarita-loubat-psicologa.webp",
+    image: "/images/team/margarita-loubat.webp",
     fallbackImage: "/images/avatars/avatar-f7.png",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/Z07Oo320M0p1wP2l5D91HjL987O3kt",
     description:
