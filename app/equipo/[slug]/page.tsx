@@ -28,7 +28,7 @@ const teamMembers = [
     education: ["Psicóloga, Universidad Central y Universidad Autónoma de Barcelona", "Doctorado en Psicoterapia, Universidad de Heidelberg","Especialización: Psicología Clínica, psicoterapia individual"],
     schedule: "Lunes 19:30 a 20:15",
     modality: "Online",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/e0FUlyL0000rdi825k91Vg79e503Mx",
     fees: {
       initial: {
         private: "$45.000",
@@ -58,7 +58,7 @@ const teamMembers = [
     education: ["Magister en Psicología Clínica", "Formación en Recursos Humanos"],
     schedule: "Martes 9:00 - 12:00 y de 15:00 - 18:00",
     modality: "Online",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/F0SihxL0b02pX4145n21dOs9t8l3Df",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/e0ye9Kg0C0KmXd6p5s81XcT9O2F3OJ",
     fees: {
       initial: {
         private: "40.000",
@@ -97,7 +97,7 @@ const teamMembers = [
     education: ["Psicóloga, Universidad de Chile.", "Doctorado en Psicoterapia y Magister en Psicología Clínica, Universidad de Chile", "Especialización: Psicología Clínica, psicoterapia individual"],
     schedule: "Consultar disponibilidad",
     modality: "Consultar modalidad",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/N06lLgy090dYoF5p5f21RQv9B0g3hg",
     fees: {
       initial: {
         private: "$55.000",
@@ -355,7 +355,7 @@ const teamMembers = [
     education: ["Psicóloga Clínica, Universidad Central", "Magister en Educación Superior", "Especialización: Psicología Clínica, psicoterapia individual"],
     schedule: "Martes 17:00 a 20:00",
     modality: "Presencial Phillips 15",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/Y0opc490S0tlQQ3Y5c51pIq9e493M3",
     fees: {
       initial: {
         private: "$40.000",
@@ -388,7 +388,7 @@ const teamMembers = [
     education: ["Psicóloga, Universidad Católica de Temuco", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
     schedule: "Viernes 15:00 a 17:00",
     modality: "Presencial Phillips 15",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/G0V6qif0D0kpgk9T5401YWB9L9y3Jw",
     fees: {
       initial: {
         private: "$40.000",
@@ -421,7 +421,7 @@ const teamMembers = [
     education: ["Psicólogo, Universidad Alberto Hurtado", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
     schedule: "Por confirmar",
     modality: "Presencial Phillips 15",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/P07tOxu0Z0NBeV995691qR79c7Y3Bm",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/d0fAVVP090j3s73W5U11jWt926m384",
     fees: {
       initial: {
         private: "$40.000",
@@ -454,7 +454,7 @@ const teamMembers = [
     education: ["Psicóloga, Universidad Autónoma de Chile", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
     schedule: "Lunes 9:00 - 12:00",
     modality: "Presencial Phillips 15",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/T0fcyXP0J0tn7h1g5y71Zws9F9q3wi",
     fees: {
       initial: {
         private: "$40.000",
@@ -520,7 +520,7 @@ const teamMembers = [
     education: ["Psicólogo,  Universidad de Santiago", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual, evaluación neuropsicológica breve."],
     schedule: "Miércoles 15:00 - 17:00 (online), Jueves 10:00 a 12:00 y 15:00 a 17:00 (Presencial)",
     modality: "Online y Presencial Phillips 15",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/l0pcrQ30s0BWEh6j5S71i3o9H2X3ix",
     fees: {
       initial: {
         private: "$40.000",
