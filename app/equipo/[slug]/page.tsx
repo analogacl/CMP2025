@@ -635,7 +635,7 @@ const teamMembers = [
     education: ["Médico Cirujano, Universidad de Chile", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos"],
     schedule: "Martes 16:30, Viernes 10:40",
     modality: "Online",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/8015Xjh0P064oJ385R81GON9R623Ay",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/g0lnQ830T0pjGW7F5g71Dmq9031334",
     fees: {
       initial: {
         private: "$80.000",
