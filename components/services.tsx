@@ -16,7 +16,7 @@ export default function Services() {
       title: "TERAPIA FAMILIAR",
       description:
         "Mejora la comunicación y los vínculos familiares con apoyo profesional y enfoque sistémico.",
-      image: "/images/services/terapia-familiar.webp",
+      image: "/images/services/terapia-de-familia.webp",
       fallback: "/family-therapy-group.png",
     },
     {
@@ -30,7 +30,7 @@ export default function Services() {
       title: "DIAGNÓSTICO Y TRATAMIENTO PSIQUIÁTRICO",
       description:
         "Evaluación clínica para detectar trastornos mentales y definir un plan terapéutico con o sin fármacos.",
-      image: "/images/services/tratamiento-psiquiatrico.webp",
+      image: "/images/services/tratamiento-psiquiatria.webp",
       fallback: "/placeholder.svg?height=300&width=300",
     },
     {
