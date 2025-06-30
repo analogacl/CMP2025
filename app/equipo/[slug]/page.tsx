@@ -56,7 +56,7 @@ const teamMembers = [
       "Magister en psicología clínica .Psicoterapeuta experimentada con un enfoque integrativo .Le puede ayudar a revisar qué aspectos de su forma de vida le generan ansiedad, estrés, desánimo y/o relaciones humanas conflictivas, así como a superar sus problemas de autoestima o el dolor que experimenta frente a una pérdida o facilitar su reincorporación laboral luego de su postnatal o de su licencia prolongada. Susana Romero tiene formación en recursos humanos de modo que puede ayudarle a enfrentar problemas en su lugar de trabajo.",
     specialties: ["Terapia Integrativa", "Ansiedad", "Crisis de Pánico", "Autoestima", "Duelo", "Conflictos Laborales"],
     education: ["Magister en Psicología Clínica", "Formación en Recursos Humanos"],
-    schedule: "Martes 9:00 - 12:00 y de 15:00 - 18:00",
+    schedule: "Martes 10:00 - 12:00 y de 15:00 - 18:00",
     modality: "Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/e0ye9Kg0C0KmXd6p5s81XcT9O2F3OJ",
     fees: {
@@ -95,7 +95,7 @@ const teamMembers = [
       "Trastornos Sexuales",
     ],
     education: ["Psicóloga, Universidad de Chile.", "Doctorado en Psicoterapia y Magister en Psicología Clínica, Universidad de Chile", "Especialización: Psicología Clínica, psicoterapia individual"],
-    schedule: "Consultar disponibilidad",
+    schedule: "Lunes 21:30, Jueves 8:00, 14:30 y 15:30",
     modality: "Consultar modalidad",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/N06lLgy090dYoF5p5f21RQv9B0g3hg",
     fees: {
@@ -173,7 +173,7 @@ const teamMembers = [
       "Trastornos de Conducta Alimentaria",
     ],
     education: ["Psicóloga, Universidad Central", "Especialización: Psicología Clínica, psicoterapia"],
-    schedule: "Lunes 11:00 a 12:30 (On line) y 15:00 a 19:00 (presencial/on line), Miercoles 16:00 a 19:00  (presencial/on line)",
+    schedule: "Lunes 11:00 a 12:00 (sólo on-line) y 15:00 a 19:00, Miercoles 16:00 a 19:00",
     modality: "Online y Presencial (Escuela Militar)",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/r0Kcl600g0hyNs9Y5F31zZ69i2T3FJ",
     fees: {
@@ -209,7 +209,7 @@ const teamMembers = [
 "Coaching Ejecutivo Profesional, Universidad Complutense de Madrid",
 "Especialización: Psicología Clínica, psicoterapia, Coaching"],
     schedule: "Martes 13:00 a 17:00",
-    modality: "Presencial en Plaza de Armas y Online",
+    modality: " Presencial Phillips 15 (Bono Fonasa 3) y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/B0qdh2u0s0Snmf7H5K21xrT93103SD",
     fees: {
       initial: {
@@ -249,7 +249,7 @@ const teamMembers = [
     education: ["Psicóloga, Universidad de Santiago", "Magíster en Psicología Social Aplicada, Humanidades/Estudios Humanísticos", "Especialización: Psicología Clínica, psicoterapia, evaluaciones neuropsicológicas, test de Rorschach."]
 ,
     schedule: "MIÉRCOLES 15:00 a 19:30",
-    modality: "Presencial en Kennedy y Online",
+    modality: "Presencial Kennedy y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/S0RbM2S0F0WeME5e50515hh9X3e302",
     fees: {
       initial: {
@@ -419,8 +419,8 @@ const teamMembers = [
       "Psicólogo con formación en evaluación clínica y psicoterapia, especializado en el acompañamiento de adolescentes y adultos. Su labor se centra en el diagnóstico estructurado de salud mental, lo que permite orientar de forma precisa el tratamiento según las necesidades de cada persona. Su enfoque terapéutico promueve el autoconocimiento como herramienta central del proceso. A través de un espacio seguro y de confianza, Valentín acompaña a sus consultantes en la exploración de sus emociones, pensamientos y experiencias, favoreciendo una mayor comprensión personal y el desarrollo de recursos para enfrentar dificultades emocionales o relacionales.",
     specialties: ["Pendiente"],
     education: ["Psicólogo, Universidad Alberto Hurtado", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
-    schedule: "Por confirmar",
-    modality: "Presencial Phillips 15",
+    schedule: "Jueves 10:00 - 12:00",
+    modality: "Presencial Phillips 15 y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/d0fAVVP090j3s73W5U11jWt926m384",
     fees: {
       initial: {
@@ -453,7 +453,7 @@ const teamMembers = [
     specialties: ["Pendiente"],
     education: ["Psicóloga, Universidad Autónoma de Chile", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
     schedule: "Lunes 9:00 - 12:00",
-    modality: "Presencial Phillips 15",
+    modality: "Presencial Phillips 15 y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/T0fcyXP0J0tn7h1g5y71Zws9F9q3wi",
     fees: {
       initial: {
@@ -595,8 +595,8 @@ const teamMembers = [
       "Trastornos cognitivos del adulto mayor",
     ],
     education: ["Médico, J. W. Goethe Universidad Alemania", "Doctor en Medicina, J. W. Goethe Universidad. Alemania", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos"],
-    schedule: "Lunes 8:30 a 12:40, Jueves 9:30 a 12:20 y 15:00 a 18:40, Viernes 15:00 a 16:40",
-    modality: "Presencial / Online",
+    schedule: "Lunes 8:40 a 11:00, Jueves 9:00 a 10:40 y 15:00 a 17:00, Viernes 15:00 a 16:40",
+    modality: "Presencial Phillips 15 (Bono Fonasa 3) / Online",
     iframeSrc: "",
     fees: {
       initial: {
