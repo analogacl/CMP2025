@@ -9,42 +9,42 @@ export default function Services() {
       title: "PSICOTERAPIA INDIVIDUAL",
       description:
         "Apoyo personalizado para superar dificultades emocionales y fomentar el autoconocimiento y bienestar.",
-      image: "/images/services/individual-therapy.png",
+      image: "/images/services/terapia-individual.webp",
       fallback: "/therapy-session.png",
     },
     {
       title: "TERAPIA FAMILIAR",
       description:
         "Mejora la comunicación y los vínculos familiares con apoyo profesional y enfoque sistémico.",
-      image: "/images/services/family-therapy.png",
+      image: "/images/services/terapia-familiar.webp",
       fallback: "/family-therapy-group.png",
     },
     {
       title: "TERAPIA DE PAREJA",
       description:
         "Fortalece el vínculo afectivo y resuelve conflictos a través de herramientas comunicacionales.",
-      image: "/images/services/couple-therapy.png",
+      image: "/images/services/terapia-de-pareja.webp",
       fallback: "/couple-therapy-session.png",
     },
     {
       title: "DIAGNÓSTICO Y TRATAMIENTO PSIQUIÁTRICO",
       description:
         "Evaluación clínica para detectar trastornos mentales y definir un plan terapéutico con o sin fármacos.",
-      image: "/images/services/psychiatric-treatment.png",
+      image: "/images/services/tratamiento-psiquiatrico.webp",
       fallback: "/placeholder.svg?height=300&width=300",
     },
     {
       title: "TEST PSICOLÓGICOS",
       description:
         "Evaluaciones que identifican aspectos emocionales, conductuales y cognitivos para apoyar el diagnóstico.",
-      image: "/images/services/psychological-testing.png",
+      image: "/images/services/test-psicologicos.webp",
       fallback: "/placeholder.svg?height=300&width=300",
     },
     {
       title: "TERAPIA OCUPACIONAL",
       description:
         "Intervención para recuperar o mantener habilidades que permiten participar en actividades significativas.",
-      image: "/images/services/occupational-therapy.png",
+      image: "/images/services/terapia-ocupacional.webp",
       fallback: "/placeholder.svg?height=300&width=300",
     },
   ]
