@@ -597,7 +597,7 @@ const teamMembers = [
     education: ["Médico, J. W. Goethe Universidad Alemania", "Doctor en Medicina, J. W. Goethe Universidad. Alemania", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos"],
     schedule: "Lunes 8:40 a 11:00, Jueves 9:00 a 10:40 y 15:00 a 17:00, Viernes 15:00 a 16:40",
     modality: "Presencial Phillips 15 (Bono Fonasa 3) / Online",
-    iframeSrc: "",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/8015Xjh0P064oJ385R81GON9R623Ay",
     fees: {
       initial: {
         private: "$100.000",
