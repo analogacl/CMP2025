@@ -16,7 +16,7 @@ export default function Hero() {
       {/* Hero background with new image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-woman-joy.jpg"
+          src="/images/hero-woman-joy.webp"
           alt="Mujer joven sonriendo al aire libre - Bienestar y felicidad en Centro Médico Phillips"
           fill
           priority
