@@ -545,7 +545,7 @@ const teamMembers = [
     slug: "dra-alicia-figueroa",
     name: "DRA. ALICIA FIGUEROA",
     role: "Psiquiatra",
-    image: "/images/team/dra-alicia-figueroa.webp",
+    image: "/images/team/alicia.png",
     fallbackImage: "/images/avatars/avatar-f8.png",
     description:
       "Magister en Neurociencias Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
