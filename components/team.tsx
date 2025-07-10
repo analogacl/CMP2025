@@ -168,7 +168,7 @@ export default function Team() {
       name: "DRA. ALICIA FIGUEROA",
       role: "PSIQUIATRA",
       category: "psiquiatria",
-      image: "/images/team/alicia.png",
+      image: "/images/team/dra-alicia-figueroa.webp",
       fallbackImage: "/images/avatars/avatar-f8.png",
       description:
         "Magister en Neurociencias Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
