@@ -354,6 +354,26 @@ function BookingContent() {
         </div>
       </div>
     </div>
+    <script>
+function conversion(){
+  gtag('event', 'conversion', {'send_to': 'AW-17292929805'}); 
+}
+</script>
+    <script>
+var eventMethod = window.addEventListener
+? "addEventListener"
+: "attachEvent";
+var eventer = window[eventMethod];
+var messageEvent = eventMethod === "attachEvent"
+? "onmessage"
+: "message";
+eventer(messageEvent, function (e) {
+if (e.data === "conversion_event" || e.message === "conversion_event"){ 
+console.log("Señal de agendamiento enviada por Reservo");
+conversion();
+}
+});
+</script>
   )
 }
 
