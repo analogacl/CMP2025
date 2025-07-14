@@ -46,7 +46,20 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://agendamiento.reservo.cl" />
-        
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17292929805" // ¡REEMPLAZA con tu ID de Google Ads!
+          strategy="afterInteractive" // Carga el script después de que la página se vuelve interactiva
+        />
+
+        {/* Inicialización de dataLayer y configuración de gtag */}
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17292929805'); // ¡REEMPLAZA con tu ID de Google Ads!
+          `}
+        </Script>
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
