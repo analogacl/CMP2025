@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState, useCallback } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, AlertCircle, RefreshCw } from "lucide-react"
+import ConvertAds from "@/components/convertAds"
 
 // Iframe configuration based on service type and modality
 const iframeConfig = {
@@ -359,21 +360,19 @@ function BookingContent() {
 
 export default function ReservaPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-gray-50 pt-8 pb-16">
-          <div className="container mx-auto px-4 sm:px-6">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-8">
-                <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[#015233] border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
-                <p className="mt-4 text-gray-600">Cargando sistema de reservas...</p>
-              </div>
+    <><Suspense
+      fallback={<div className="min-h-screen bg-gray-50 pt-8 pb-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[#015233] border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
+              <p className="mt-4 text-gray-600">Cargando sistema de reservas...</p>
             </div>
           </div>
         </div>
-      }
+      </div>}
     >
       <BookingContent />
-    </Suspense>
+    </Suspense><ConvertAds /></>
   )
 }
