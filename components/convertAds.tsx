@@ -13,7 +13,7 @@ const ConvertAds = () => {
     window.conversion = function () {
       if (typeof window.gtag === "function") {
         window.gtag("event", "conversion", {
-          send_to: "AW-17292929805",
+          send_to: "AW-17292929805/PBraCNm85fAaEI3W9LVA",
         });
       }
     };
