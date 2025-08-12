@@ -146,7 +146,7 @@ const NavbarComponent = () => {
           >
             <Image
               src="/images/logo-optima-salud-beta.png"
-              alt="Centro Médico Phillips"
+              alt="Optima Salud - Centro de Salud Mental"
               width={250}
               height={91}
               className="h-12 w-auto object-contain"
