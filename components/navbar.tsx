@@ -147,8 +147,8 @@ const NavbarComponent = () => {
             <Image
               src="/images/logo-optima-salud-beta.png"
               alt="Centro Médico Phillips"
-              width={165}
-              height={60}
+              width={250}
+              height={91}
               className="h-12 w-auto object-contain"
               priority
             />
