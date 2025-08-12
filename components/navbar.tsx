@@ -152,15 +152,15 @@ const NavbarComponent = () => {
               className="h-12 w-auto object-contain"
               priority
             />
-          /*  <Image 
-           *   src="/images/SmallLogo.jpg"
-           *   alt="Centro Médico Phillips"
-           *   width={180}
-           *   height={60}
-           *   className="h-12 w-auto object-contain"
-           *   priority
-           *  /> 
-           */
+           {/* <Image 
+            src="/images/SmallLogo.jpg"
+            alt="Centro Médico Phillips"
+            width={180}
+            height={60}
+            className="h-12 w-auto object-contain"
+            priority
+          /> 
+        */}
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
