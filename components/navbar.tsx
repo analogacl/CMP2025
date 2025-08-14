@@ -145,7 +145,7 @@ const NavbarComponent = () => {
             aria-label="Centro Médico Phillips - Página de inicio"
           >
             <Image
-              src="/images/logo-optima-salud-beta.png"
+              src="/images/logo-optima-salud-removebg-preview.png"
               alt="Optima Salud - Centro de Salud Mental"
               width={250}
               height={91}
