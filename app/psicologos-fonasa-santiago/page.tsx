@@ -17,10 +17,10 @@ export default function PsicologosFonsaSantiagoPage() {
       <section className="bg-gradient-to-r from-phillips-green to-phillips-green-dark text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Psicólogos FONASA Santiago – Terapia Presencial con Reembolso
+            Psicólogos FONASA Santiago
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            Si buscas atención psicológica de calidad en Santiago, con precios accesibles y la posibilidad de obtener reembolso a través de FONASA, estás en el lugar indicado. Nuestro equipo de psicólogos clínicos certificados te acompaña en tu proceso personal con sesiones presenciales en el corazón de la ciudad.
+            Si buscas atención psicológica de calidad en Santiago, con precios accesibles y la posibilidad de obtener reembolso a través de FONASA, te podeos ayudar. Nuestro equipo de psicólogos clínicos certificados te acompaña en tu proceso personal con sesiones presenciales en el corazón de la ciudad.
           </p>
           <Link href="/reserva">
             <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4">

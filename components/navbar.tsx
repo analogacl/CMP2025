@@ -148,7 +148,7 @@ const NavbarComponent = () => {
               src="/images/logo-optima-salud-removebg-preview.png"
               alt="Optima Salud - Centro de Salud Mental"
               width={250}
-              height={91}
+              height={95}
               className="h-12 w-auto object-contain"
               priority
             />
