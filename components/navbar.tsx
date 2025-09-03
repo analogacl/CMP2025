@@ -144,15 +144,15 @@ const NavbarComponent = () => {
             onClick={(e) => handleNavigation(e, "/")}
             aria-label="Centro Médico Phillips - Página de inicio"
           >
-            <Image
+           /* <Image
               src="/images/logo-optima-salud-removebg-preview.png"
               alt="Optima Salud - Centro de Salud Mental"
               width={250}
               height={95}
               className="h-12 w-auto object-contain"
               priority
-            />
-           {/* <Image 
+            /> */
+           { <Image 
             src="/images/SmallLogo.jpg"
             alt="Centro Médico Phillips"
             width={180}
@@ -160,7 +160,7 @@ const NavbarComponent = () => {
             className="h-12 w-auto object-contain"
             priority
           /> 
-        */}
+        }
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
