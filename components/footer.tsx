@@ -28,7 +28,7 @@ export default function Footer() {
             /> 
             </Link>
             <p className="text-sm text-gray-600 mb-4">
-              Centro Médico Phillips ofrece servicios de salud mental integral con un equipo multidisciplinario de
+              Optima Salud ofrece servicios de salud mental integral con un equipo multidisciplinario de
               expertos.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function Footer() {
         <div className="border-t border-gray-100 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center justify-center md:justify-start text-sm text-gray-500">
-              <p>© {new Date().getFullYear()} Centro Médico Phillips. Todos los derechos reservados.</p>
+              <p>© {new Date().getFullYear()} Optima Salud. Todos los derechos reservados.</p>
             </div>
 
             <div className="flex items-center justify-center md:justify-end gap-2 text-sm text-gray-500">
