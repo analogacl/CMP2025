@@ -11,13 +11,21 @@ export default function Footer() {
           {/* Logo and description */}
           <div className="lg:col-span-1">
             <Link href="/" aria-label="Centro Médico Phillips - Página de inicio">
-              <Image
+              {/*<Image
                 src="/images/SmallLogo.jpg"
                 alt="Centro Médico Phillips"
                 width={180}
                 height={60}
                 className="h-12 w-auto mb-4"
-              />
+              /> */}
+              <Image
+              src="/images/logo-optima-salud-removebg-preview.png"
+              alt="Optima Salud - Centro de Salud Mental"
+              width={250}
+              height={95}
+              className="h-12 w-auto object-contain"
+              priority
+            /> 
             </Link>
             <p className="text-sm text-gray-600 mb-4">
               Centro Médico Phillips ofrece servicios de salud mental integral con un equipo multidisciplinario de
