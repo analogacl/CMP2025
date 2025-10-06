@@ -5,7 +5,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "El tratamiento en Centro Médico Phillips cambió mi vida. Después de años luchando con ansiedad, finalmente encontré las herramientas para manejarla.",
+        "El tratamiento en Optima Salud cambió mi vida. Después de años luchando con ansiedad, finalmente encontré las herramientas para manejarla.",
       author: "Carolina Vega",
       title: "Paciente desde 2021",
     },
