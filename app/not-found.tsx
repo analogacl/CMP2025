@@ -5,30 +5,7 @@ import { Home, ArrowLeft, Search, Phone, Mail } from "lucide-react"
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
-      {/* Header with logo */}
-      <header className="bg-white border-b border-gray-100 shadow-sm">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            <Link href="/" aria-label="Centro Médico Phillips - Página de inicio">
-              <Image
-                src="/images/SmallLogo.jpg"
-                alt="Centro Médico Phillips"
-                width={180}
-                height={60}
-                className="h-12 w-auto object-contain"
-                priority
-              />
-            </Link>
-            <Link
-              href="/"
-              className="flex items-center gap-2 px-4 py-2.5 text-sm font-semibold text-[#015233] bg-white border-2 border-[#015233] rounded-lg hover:bg-[#015233] hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              <span className="hidden sm:inline">VOLVER AL INICIO</span>
-            </Link>
-          </div>
-        </div>
-      </header>
+    
 
       {/* Main content */}
       <main className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
@@ -160,7 +137,7 @@ export default function NotFound() {
                 +56226335519
               </a>
               <a
-                href="mailto:info@centromedicophillips.cl"
+                href="mailto:contacto@optima-salud.cl"
                 className="inline-flex items-center justify-center bg-white text-[#015233] border-2 border-[#015233] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 <Mail className="h-4 w-4 mr-2" />
@@ -175,7 +152,7 @@ export default function NotFound() {
       <footer className="bg-white border-t border-gray-100 py-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-sm text-gray-500">
-            <p>© {new Date().getFullYear()} Centro Médico Phillips. Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} Optima Salud. Todos los derechos reservados.</p>
           </div>
         </div>
       </footer>

@@ -31,15 +31,15 @@ const teamMembers = [
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/e0FUlyL0000rdi825k91Vg79e503Mx",
     fees: {
       initial: {
-        private: "$45.000",
+        private: "$50.000",
         fonasa: "No atiende",
       },
       followUp: {
-        private: "$45.000",
+        private: "$50.000",
         fonasa: "No atiende",
       },
       online: {
-        private: "$45.000",
+        private: "$50.000",
         fonasa: "No atiende",
       },
     },
@@ -135,7 +135,6 @@ const teamMembers = [
     ],
     schedule: "Lunes y Jueves 18:00 a 20:00",
     modality: "Presencial / Online",
-    iframeSrc: "",
     fees: {
       initial: {
         private: "$40.000",
@@ -375,10 +374,10 @@ const teamMembers = [
     },
   },
     {
-    slug: "liliana-canileo",
-    name: "LILIANA CANILEO",
+    slug: "liliana-carileo",
+    name: "LILIANA CARILEO",
     role: "PSICÓLOGA",
-    image: "/images/team/liliana-canileo.webp",
+    image: "/images/team/liliana-carileo.webp",
     fallbackImage: "/images/avatars/avatar-m1.png",
     description:
       "Realiza diagnóstico de salud mental estructurado y psicoterapia con enfoque de género.",
@@ -540,6 +539,39 @@ const teamMembers = [
     },
   },
 
+    {
+    slug: "zulema-guajardo",
+    name: "ZULEMA GUAJARDO",
+    role: "PSICÓLOGA",
+    image: "/images/team/Zulema-Andrea-Guajardo-Riveros.webp",
+    fallbackImage: "/images/avatars/avatar-f8.png",
+    description:
+      "Psicóloga clínica con formación y experiencia en el abordaje terapéutico de adultos y adolescentes. Trabajo desde terapia Breve con un enfoque integrativo.",
+    fullBio:
+      "Soy psicóloga clínica con formación y experiencia en el abordaje terapéutico de adultos y adolescentes. Mi trabajo se basa en un enfoque integrativo, lo que me permite adaptar distintas herramientas y técnicas psicológicas según las necesidades y problemáticas únicas de cada persona que acompaño. Trabajo desde terapia Breve con un enfoque integrativo que combina técnicas y perspectivas de diversas corrientes psicológicas, como enfoque humanista, sistémico y psicodinámico Focal entre otras. Esto me permite realizar un acompañamiento psicológico hecho a tu medida y necesidades, respetando tu historia, emociones y tus propios tiempos en un espacio terapéutico seguro y de confianza. Me especializo en acompañar desde lo terapéutico a personas que enfrentan trastornos de personalidad, trastornos mixtos de ansiedad y depresión,trastornos del ánimo, crisis personales, dificultades relacionales, procesos de duelo, autoestima, separaciones,crisis de pareja  y cambios de etapa entre otros.",
+    specialties: ["Enfoque Integrativo", "Terapia Breve", "Trastornos de Ansiedad", "Trastornos del Ánimo", "Crisis Personales", "Duelos"],
+    education: ["Psicólogo,  Universidad de Santiago", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual, evaluación neuropsicológica breve."],
+    schedule: "Lunes 15:00 - 20:00 (online), Martes 9:00 a 13:00 y 15:00 a 20:00 (Presencial), Miércoles 15:00 a 20:00 (Presencial)",
+    modality: "Online y Presencial Phillips 15",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/A0481w10c0uraC0s5671mNq9Y1l3hJ",
+    fees: {
+      initial: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$40.000",
+        fonasa: "Bono Fonasa 3: $14.170",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
   // Psiquiatras
    {
     slug: "dra-alicia-figueroa",
@@ -650,6 +682,46 @@ const teamMembers = [
       online: {
         private: "$80.000",
         fonasa: "No",
+        isapres: "Reembolso tarifa particular.",
+      },
+    },
+  },
+// Terapia Ocupacional
+  {
+    slug: "rayen-quintulen-gonzalez",
+    name: "Rayén Quintulén González",
+    role: "Terapia Ocupacional",
+    image: "/images/team/Rayen-Quintulen-Gonzalez.webp",
+    fallbackImage: "/images/avatars/avatar-f8.png",
+    description:
+      "Terapeuta Ocupacional con experiencia integral en personas mayores que viven con Alzheimer. Orientación con sus familiares.",
+    fullBio:
+      "Terapeuta Ocupacional egresada de la Universidad de Chile. Experiencia en abordaje de personas que viven con Alzheimer y otras demencias, orientación y acompañamiento de sus familiares; deterioros cognitivos y funcionales, abordaje integral en personas mayores. Trabaja colaborativamente con Neuropsicóloga, Fonoaudióloga, Trabajadora Social, y diversas especialidades médicas.",
+    specialties: [
+      "Alzheimer",
+      "Demencias",
+      "Deterioro Cognitivo",
+      "Personas Mayores",
+      "Orientación Familiar",
+    ],
+    education: ["Diplomado en Demencias: Abordaje Gerontológico Multidimensional, Pontificia Universidad Católica de Chile. ", "Diplomado en Rehabilitación Basada en la Comunidad, Universidad de Chile. ", "Diplomado (c) en Intervención de Terapia Ocupacional con Personas Mayores, Universidad de Chile. ","Certificada en Instrumento de Valoración del Desempeño en Comunidad (IVADEC), Servicio de Salud Metropolitano Sur.","Certificada en Examen de Medicina Preventiva del Adulto Mayor (EMPAM) en la Atención Primaria de Salud."],
+    schedule: "Míercoles 17:30 a 20:00",
+    modality: "Presencial Phillips 15",
+    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/W0DlGy3010ZF503c5u51y4q9h573rh",
+    fees: {
+      initial: {
+        private: "$55.000",
+        fonasa: "Bono Fonasa 3: $45.870",
+        isapres: "Reembolso tarifa particular.",
+      },
+      followUp: {
+        private: "$45.000",
+        fonasa: "Bono Fonasa 3: $45.870",
+        isapres: "Reembolso tarifa particular.",
+      },
+      online: {
+        private: "$55.000",
+        fonasa: "Bono Fonasa 3: $45.870",
         isapres: "Reembolso tarifa particular.",
       },
     },

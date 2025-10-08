@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react"
 
 export default function Team() {
   // State to track the active filter
-  const [activeFilter, setActiveFilter] = useState<"all" | "psicologia" | "psiquiatria">("all")
+  const [activeFilter, setActiveFilter] = useState<"all" | "psicologia" | "psiquiatria" | "terapia-ocupacional">("all")
 
   // Team members data
   const team = [
@@ -34,14 +34,14 @@ export default function Team() {
       slug: "jocelyn-calderon-caceres",
     },
     {
-      name: "LILIANA CANILEO",
+      name: "LILIANA CARILEO",
       role: "PSICÓLOGA",
       category: "psicologia",
-      image: "/images/team/liliana-canileo.webp",
+      image: "/images/team/liliana-carileo.webp",
       fallbackImage: "/images/avatars/avatar-f3.png",
       description:
         "Realiza diagnóstico de salud mental estructurado y psicoterapia con enfoque de género.",
-      slug: "liliana-canileo",
+      slug: "liliana-carileo",
     },
     {
       name: "VALENTÍN FARÍAS",
@@ -163,6 +163,16 @@ export default function Team() {
         "Psicólogo clínico. Experto en tratamientos psicológicos de adolescentes y adultos con enfoque psicoanalítico. Experto en conflictos laborales.",
       slug: "cristian-ugarte",
     },
+       {
+      name: "ZULEMA GUAJARDO",
+      role: "PSICÓLOGA",
+      category: "psicologia",
+      image: "/images/team/Zulema-Andrea-Guajardo-Riveros.webp",
+      fallbackImage: "/images/avatars/avatar-m1.png",
+      description:
+        "Psicóloga clínica con formación y experiencia en el abordaje terapéutico de adultos y adolescentes. Trabajo desde terapia Breve con un enfoque integrativo.",
+      slug: "zulema-guajardo",
+    },
     // Psiquiatras
     {
       name: "DRA. ALICIA FIGUEROA",
@@ -193,6 +203,16 @@ export default function Team() {
         "Doctora en Medicina .Experta en diagnósticos y tratamientos psiquiátricos del adulto.",
       slug: "dra-graciela-rojas",
     },
+    {
+      name: "RAYEN QUINTULÉN GONZÁLEZ",
+      role: "TERAPISTA OCUPACIONAL",
+      category: "terapia-ocupacional",
+      image: "/images/team/Rayen-Quintulen-Gonzalez.webp",
+      fallbackImage: "/images/avatars/avatar-f8.png",
+      description:
+        "Terapeuta Ocupacional con experiencia integral en personas mayores que viven con Alzheimer. Orientación con sus familiares.",
+      slug: "rayen-quintulen-gonzalez",
+    },
     
   ]
 
@@ -202,7 +222,7 @@ export default function Team() {
   // Count professionals by category
   const psicologosCount = team.filter((member) => member.category === "psicologia").length
   const psiquiatrasCount = team.filter((member) => member.category === "psiquiatria").length
-
+  const terapiaOcupacionalCount = team.filter((member) => member.category === "terapia-ocupacional").length
   return (
     <section id="equipo" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -244,6 +264,16 @@ export default function Team() {
               }`}
             >
               Psiquiatras ({psiquiatrasCount})
+            </button>
+            <button
+              onClick={() => setActiveFilter("terapia-ocupacional")}
+              className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                activeFilter === "terapia-ocupacional"
+                  ? "bg-[#015233] text-white shadow-md"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              }`}
+            >
+              Terapia Ocupacional ({terapiaOcupacionalCount})
             </button>
           </div>
         </div>
@@ -349,7 +379,50 @@ export default function Team() {
               ))}
           </div>
         )}
-
+        {/* TERAPISTAS OCUPACIONALES grid - only show in "all" or "terapia-ocupacional" mode */}
+        {(activeFilter === "all" || activeFilter === "terapia-ocupacional") && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredTeam
+              .filter((member) => member.category === "terapia-ocupacional")
+              .map((member, index) => (
+                <Card
+                  key={index}
+                  className="border-none shadow-lg hover:shadow-xl transition-duration-300 overflow-hidden flex flex-col h-full"
+                >
+                  <div className="aspect-square relative overflow-hidden bg-gray-100">
+                    <Image
+                      src={member.image || "/placeholder.svg"}
+                      alt={`${member.name} - ${member.role} en Centro Médico Phillips`}
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      loading={index < 4 ? "eager" : "lazy"}
+                      quality={85}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+                    />
+                  </div>
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-xl font-bold text-[#262626] leading-tight">{member.name}</CardTitle>
+                    <CardDescription className="text-[#015233] font-semibold text-sm uppercase">
+                      {member.role}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-grow">
+                    <p className="text-[#262626] text-sm mb-6 leading-relaxed">{member.description}</p>
+                    <div className="mt-auto pt-4 flex justify-center">
+                      <Link href={`/equipo/${member.slug}`}>
+                        <button className="cta-button-secondary group">
+                          VER MÁS
+                          <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+          </div>
+        )}
         {/* No results message */}
         {filteredTeam.length === 0 && (
           <div className="text-center py-12">

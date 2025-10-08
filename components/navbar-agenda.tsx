@@ -82,10 +82,10 @@ const NavbarReservaComponent = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" onClick={handleBackNavigation} aria-label="Centro Médico Phillips - Página de inicio">
+          <Link href="/" onClick={handleBackNavigation} aria-label="Optima Salud - Página de inicio">
             <Image
-              src="/images/SmallLogo.jpg"
-              alt="Centro Médico Phillips"
+              src="/images/logo-optima-salud-removebg-preview.png"
+              alt="Optima Salud - Centro de Salud mental integral"
               width={180}
               height={60}
               className="h-12 w-auto object-contain"

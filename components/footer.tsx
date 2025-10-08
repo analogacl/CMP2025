@@ -113,9 +113,12 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-[#015233] flex-shrink-0" />
-                <a href="tel:+56226335519" className="text-gray-600 hover:text-[#015233] transition-colors">
-                  +56226335519
-                </a>
+                <a href="tel:+56991595875" className="text-[#262626] hover:text-[#015233] transition-colors">
+                      +56991595875
+                    </a><span> / </span>  
+                    <a href="tel:+56994837223" className="text-[#262626] hover:text-[#015233] transition-colors">
+                      +56994837223
+                    </a>
               </div>
               <div className="flex items-center gap-2">
                 <svg className="h-4 w-4 text-[#015233] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -133,10 +136,10 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-[#015233] flex-shrink-0" />
                 <a
-                  href="mailto:info@centromedicophillips.cl"
+                  href="mailto:contacto@optima-salud.cl"
                   className="text-gray-600 hover:text-[#015233] transition-colors break-all"
                 >
-                  info@centromedicophillips.cl
+                  contacto@optima-salud.cl
                 </a>
               </div>
             </div>

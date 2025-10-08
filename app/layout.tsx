@@ -27,11 +27,11 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: "Centro Médico Phillips | Salud Mental Integral",
+  title: "Optima Salud | Centro de Salud Mental Integral",
   description:
-    "Centro Médico Phillips ofrece servicios de salud mental integral con un equipo multidisciplinario de expertos para mejorar tu calidad de vida.",
-  applicationName: "Centro Médico Phillips",
-  authors: [{ name: "Centro Médico Phillips" }],
+    "Optima Salud ofrece servicios de salud mental integral con un equipo multidisciplinario de expertos para mejorar tu calidad de vida.",
+  applicationName: "Optima Salud",
+  authors: [{ name: "Optima Salud" }],
   keywords: ["salud mental", "psicología", "psiquiatría", "terapia", "bienestar", "Santiago", "Chile"],
   robots: "index, follow",
   generator: "v0.dev",
