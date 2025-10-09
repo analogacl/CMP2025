@@ -381,7 +381,7 @@ export default function Team() {
         )}
         {/* Category headers when filtered */}
         {(activeFilter === "all" || activeFilter === "terapia-ocupacional") && (
-          <div className="mb-8">
+          <div className="mb-8 mt-16">
             <h3 className="text-2xl font-bold text-[#015233] mb-6 text-center">Terapeutas Ocupacionales</h3>
           </div>
         )}
