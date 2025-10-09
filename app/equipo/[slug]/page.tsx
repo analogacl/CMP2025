@@ -706,7 +706,7 @@ const teamMembers = [
     ],
     education: ["Diplomado en Demencias: Abordaje Gerontológico Multidimensional, Pontificia Universidad Católica de Chile. ", "Diplomado en Rehabilitación Basada en la Comunidad, Universidad de Chile. ", "Diplomado (c) en Intervención de Terapia Ocupacional con Personas Mayores, Universidad de Chile. ","Certificada en Instrumento de Valoración del Desempeño en Comunidad (IVADEC), Servicio de Salud Metropolitano Sur.","Certificada en Examen de Medicina Preventiva del Adulto Mayor (EMPAM) en la Atención Primaria de Salud."],
     schedule: "Míercoles 17:30 a 20:00",
-    modality: ["Presencial Phillips 15","Atención Domiciliaria"],
+    modality: ["Presencial Phillips 15",", Atención Domiciliaria"],
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/W0DlGy3010ZF503c5u51y4q9h573rh",
     fees: {
       initial: {
