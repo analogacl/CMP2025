@@ -35,7 +35,7 @@ export default function Contact() {
                     </a>*/}
                     <a href="tel:+56991595875" className="text-[#262626] hover:text-[#015233] transition-colors">
                       +56991595875
-                    </a><span> / </span>
+                    </a><span> / </span>  
                     <a href="tel:+56994837223" className="text-[#262626] hover:text-[#015233] transition-colors">
                       +56994837223
                     </a>

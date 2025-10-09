@@ -205,7 +205,7 @@ export default function Team() {
     },
     {
       name: "RAYEN QUINTULÉN GONZÁLEZ",
-      role: "TERAPISTA OCUPACIONAL",
+      role: "TERAPEUTA OCUPACIONAL",
       category: "terapia-ocupacional",
       image: "/images/team/Rayen-Quintulen-Gonzalez.webp",
       fallbackImage: "/images/avatars/avatar-f8.png",
@@ -377,6 +377,12 @@ export default function Team() {
                   </CardContent>
                 </Card>
               ))}
+          </div>
+        )}
+        {/* Category headers when filtered */}
+        {(activeFilter === "all" || activeFilter === "terapia-ocupacional") && (
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-[#015233] mb-6 text-center">Terapeutas Ocupacionales</h3>
           </div>
         )}
         {/* TERAPISTAS OCUPACIONALES grid - only show in "all" or "terapia-ocupacional" mode */}

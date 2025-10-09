@@ -551,8 +551,8 @@ const teamMembers = [
       "Soy psicóloga clínica con formación y experiencia en el abordaje terapéutico de adultos y adolescentes. Mi trabajo se basa en un enfoque integrativo, lo que me permite adaptar distintas herramientas y técnicas psicológicas según las necesidades y problemáticas únicas de cada persona que acompaño. Trabajo desde terapia Breve con un enfoque integrativo que combina técnicas y perspectivas de diversas corrientes psicológicas, como enfoque humanista, sistémico y psicodinámico Focal entre otras. Esto me permite realizar un acompañamiento psicológico hecho a tu medida y necesidades, respetando tu historia, emociones y tus propios tiempos en un espacio terapéutico seguro y de confianza. Me especializo en acompañar desde lo terapéutico a personas que enfrentan trastornos de personalidad, trastornos mixtos de ansiedad y depresión,trastornos del ánimo, crisis personales, dificultades relacionales, procesos de duelo, autoestima, separaciones,crisis de pareja  y cambios de etapa entre otros.",
     specialties: ["Enfoque Integrativo", "Terapia Breve", "Trastornos de Ansiedad", "Trastornos del Ánimo", "Crisis Personales", "Duelos"],
     education: ["Psicólogo,  Universidad de Santiago", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual, evaluación neuropsicológica breve."],
-    schedule: "Lunes 15:00 - 20:00 (online), Martes 9:00 a 13:00 y 15:00 a 20:00 (Presencial), Miércoles 15:00 a 20:00 (Presencial)",
-    modality: "Online y Presencial Phillips 15",
+    schedule: "Lunes 15:00 - 20:00, Martes 9:00 a 13:00 y 15:00 a 20:00, Miércoles 15:00 a 20:00",
+    modality: "Presencial Phillips 15",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/A0481w10c0uraC0s5671mNq9Y1l3hJ",
     fees: {
       initial: {
@@ -690,7 +690,7 @@ const teamMembers = [
   {
     slug: "rayen-quintulen-gonzalez",
     name: "Rayén Quintulén González",
-    role: "Terapia Ocupacional",
+    role: "Terapeuta Ocupacional",
     image: "/images/team/Rayen-Quintulen-Gonzalez.webp",
     fallbackImage: "/images/avatars/avatar-f8.png",
     description:
@@ -711,17 +711,17 @@ const teamMembers = [
     fees: {
       initial: {
         private: "$55.000",
-        fonasa: "Bono Fonasa 3: $45.870",
+        fonasa: "Bono Fonasa",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$45.000",
-        fonasa: "Bono Fonasa 3: $45.870",
+        fonasa: "Bono Fonasa",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$55.000",
-        fonasa: "Bono Fonasa 3: $45.870",
+        fonasa: "Bono Fonasa",
         isapres: "Reembolso tarifa particular.",
       },
     },
