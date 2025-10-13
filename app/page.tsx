@@ -1,4 +1,5 @@
 import Hero from "@/components/hero"
+import BrandTransition from "@/components/brand-transition"
 import BookingForm from "@/components/booking-form"
 import Services from "@/components/services"
 import Team from "@/components/team"
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Hero />
+      <BrandTransition />
       <BookingForm />
       <Introduction />
       <Services />
