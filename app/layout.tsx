@@ -7,7 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import ClientLayout from "./client-layout"
 import FooterWrapper from "@/components/footer-wrapper"
 import NavigationHandler from "@/components/navigation-handler"
-import Script from 'next/script'
+import Script from "next/script"
+import { getSiteUrl } from "@/lib/site-url"
 
 // Optimize font loading with display:swap and preload
 const inter = Inter({
@@ -27,6 +28,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getSiteUrl()),
   title: "Optima Salud | Centro de Salud Mental Integral",
   description:
     "Optima Salud ofrece servicios de salud mental integral con un equipo multidisciplinario de expertos para mejorar tu calidad de vida.",

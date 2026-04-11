@@ -728,6 +728,8 @@ const teamMembers = [
   },
 ]
 
+export const teamMemberSlugs: string[] = teamMembers.map((member) => member.slug)
+
 // Generate static params for all team members
 export async function generateStaticParams() {
   return teamMembers.map((member) => ({
