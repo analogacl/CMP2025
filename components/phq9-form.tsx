@@ -121,14 +121,7 @@ export default function Phq9Form() {
             </span>
             <span className="font-semibold text-[#015233]">{progressPct}% completado</span>
           </div>
-          <div className="h-2 w-full rounded-full bg-gray-100 overflow-hidden">
-            <div
-              className="h-full bg-[#015233] transition-all duration-300 ease-out"
-              style={{ width: `${progressPct}%` }}
-              aria-hidden
-            />
-          </div>
-          <div className="mt-4 grid grid-cols-9 gap-1.5" aria-hidden>
+          <div className="grid grid-cols-9 gap-1.5" aria-hidden>
             {PHQ9_QUESTIONS.map((_, idx) => {
               const isAnswered = answers[idx] !== null
               const isCurrent = idx === currentIndex

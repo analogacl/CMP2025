@@ -37,19 +37,6 @@ export default function Phq9Page() {
       </div>
 
       <Phq9Form />
-
-      <div className="max-w-2xl mx-auto mt-12 text-center text-sm text-muted-foreground space-y-2">
-        <p>
-          Chile: línea nacional de prevención del suicidio <strong>1419</strong> (llamada) o conversación por chat en{" "}
-          <a href="https://www.sentir.cl" className="text-[#015233] hover:underline" target="_blank" rel="noreferrer">
-            sentir.cl
-          </a>
-          .
-        </p>
-        <p>
-          Salud Responde (Minsal): <strong>600 360 7777</strong>.
-        </p>
-      </div>
     </div>
   )
 }
