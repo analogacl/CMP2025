@@ -12,7 +12,10 @@ const bodySchema = z.object({
 export async function POST(request: Request) {
   if (!phq9StorageAvailable()) {
     return NextResponse.json(
-      { error: "Almacenamiento no configurado. Define DATABASE_URL en el servidor." },
+      {
+        error:
+          "No hay carpeta escribible para la base SQLite. En local se usa `data/cmp2025.sqlite`. En Vercel el proyecto suele ser solo lectura: define `SQLITE_PATH` en una ruta escribible (p. ej. bajo `/tmp`) o despliega en un servidor/Docker con disco persistente.",
+      },
       { status: 503 },
     )
   }
@@ -38,7 +41,7 @@ export async function POST(request: Request) {
   const severity = phq9Severity(total)
 
   try {
-    await insertPhq9Submission(answers, total, severity)
+    insertPhq9Submission(answers, total, severity)
   } catch (e) {
     console.error("phq9 insert", e)
     return NextResponse.json({ error: "No se pudo guardar el resultado" }, { status: 503 })

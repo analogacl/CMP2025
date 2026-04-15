@@ -26,5 +26,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# local PHQ-9 submissions (sin DATABASE_URL)
+# SQLite PHQ-9 y datos locales
 /data/

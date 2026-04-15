@@ -2,6 +2,7 @@ import Link from "next/link"
 import { redirect } from "next/navigation"
 import { isAdminAuthenticated, isAdminPasswordConfigured } from "@/lib/admin-session"
 import { listPhq9Submissions, phq9StorageAvailable } from "@/lib/phq9-store"
+import { getSqlitePath } from "@/lib/sqlite"
 import { Button } from "@/components/ui/button"
 import { logoutAdmin } from "@/app/admin/actions"
 
@@ -27,7 +28,7 @@ export default async function AdminTestsPage() {
     redirect("/admin/login")
   }
 
-  const rows = await listPhq9Submissions()
+  const rows = listPhq9Submissions()
   const storageOk = phq9StorageAvailable()
 
   return (
@@ -47,12 +48,21 @@ export default async function AdminTestsPage() {
       </div>
 
       {!storageOk && (
-        <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-          En producción debes configurar <code className="font-mono">DATABASE_URL</code> (p. ej. base PostgreSQL en{" "}
-          <a href="https://neon.tech" className="underline" target="_blank" rel="noreferrer">
-            Neon
-          </a>
-          ). Sin eso no se guardan envíos en el servidor.
+        <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900 space-y-2">
+          <p>
+            No se puede escribir la base de datos SQLite en esta máquina (intento en la carpeta del archivo de base
+            de datos). Los resultados del PHQ-9 no se guardarán hasta que haya una ruta escribible.
+          </p>
+          <p>
+            Por defecto el archivo es <code className="font-mono break-all">{getSqlitePath()}</code>. Puedes fijar
+            otra ruta con la variable de entorno <code className="font-mono">SQLITE_PATH</code>.
+          </p>
+          <p className="text-amber-950/90">
+            En <strong>Vercel</strong> el código del deploy suele ser solo lectura: muchas veces hace falta definir{" "}
+            <code className="font-mono">SQLITE_PATH=/tmp/cmp2025.sqlite</code> (los datos pueden perderse al redeploy o
+            entre instancias). Para algo estable sin terceros, lo habitual es un <strong>VPS</strong> o{" "}
+            <strong>Docker</strong> con volumen y ejecutar <code className="font-mono">next start</code> ahí.
+          </p>
         </div>
       )}
 
