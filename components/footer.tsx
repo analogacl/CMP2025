@@ -69,6 +69,12 @@ export default function Footer() {
                   Reservar Hora
                 </Link>
               </li>
+              <li className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#015233]/40"></div>
+                <Link href="/tests" className="text-gray-600 hover:text-[#015233] transition-colors">
+                  Tests de autocuidado
+                </Link>
+              </li>
             </ul>
           </div>
 

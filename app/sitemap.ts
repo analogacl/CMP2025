@@ -10,6 +10,8 @@ const staticPaths = [
   "/agenda",
   "/equipo",
   "/psicologos-fonasa-santiago",
+  "/tests",
+  "/tests/phq-9",
 ] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
