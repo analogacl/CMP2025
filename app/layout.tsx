@@ -9,6 +9,7 @@ import FooterWrapper from "@/components/footer-wrapper"
 import NavigationHandler from "@/components/navigation-handler"
 import Script from "next/script"
 import { getSiteUrl } from "@/lib/site-url"
+import StructuredData from "@/components/structured-data"
 
 // Optimize font loading with display:swap and preload
 const inter = Inter({
@@ -64,6 +65,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
+        <StructuredData />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Suspense fallback={null}>
             <NavigationHandler />
