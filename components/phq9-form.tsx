@@ -10,11 +10,16 @@ const initialAnswers = (): (number | null)[] => Array(9).fill(null)
 
 export default function Phq9Form() {
   const [answers, setAnswers] = useState<(number | null)[]>(initialAnswers)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [done, setDone] = useState<{ total: number; severity: string } | null>(null)
 
   const allAnswered = answers.every((a) => a !== null && a >= 0 && a <= 3)
+  const answeredCount = answers.filter((a) => a !== null).length
+  const progressPct = Math.round((answeredCount / PHQ9_QUESTIONS.length) * 100)
+  const currentAnswer = answers[currentIndex]
+  const isLastQuestion = currentIndex === PHQ9_QUESTIONS.length - 1
 
   const setQ = (index: number, value: number) => {
     setAnswers((prev) => {
@@ -24,6 +29,11 @@ export default function Phq9Form() {
     })
     setError(null)
     setDone(null)
+
+    // Auto-advance for a smoother "slider-like" flow.
+    if (index < PHQ9_QUESTIONS.length - 1) {
+      setCurrentIndex(index + 1)
+    }
   }
 
   const submit = async () => {
@@ -58,6 +68,7 @@ export default function Phq9Form() {
 
   const reset = () => {
     setAnswers(initialAnswers())
+    setCurrentIndex(0)
     setDone(null)
     setError(null)
   }
@@ -91,7 +102,7 @@ export default function Phq9Form() {
   }
 
   return (
-    <div className="max-w-3xl mx-auto space-y-8">
+    <div className="max-w-3xl mx-auto space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="text-xl text-[#262626]">Instrucciones</CardTitle>
@@ -102,56 +113,104 @@ export default function Phq9Form() {
         </CardHeader>
       </Card>
 
-      <div className="space-y-8">
-        {PHQ9_QUESTIONS.map((question, i) => (
-          <Card key={i} className="border-gray-200">
-            <CardHeader className="pb-2">
-              <CardTitle id={`phq9-q-${i}`} className="text-base font-semibold text-[#262626]">
-                {i + 1}. {question}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3" role="radiogroup" aria-labelledby={`phq9-q-${i}`}>
-                {PHQ9_OPTIONS.map((opt) => (
-                  <label
-                    key={opt.value}
-                    htmlFor={`q${i}-v${opt.value}`}
-                    className="flex items-center gap-3 cursor-pointer rounded-md border border-transparent px-2 py-1.5 hover:bg-gray-50 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-[#015233]/30"
-                  >
-                    <input
-                      type="radio"
-                      id={`q${i}-v${opt.value}`}
-                      name={`phq9-q-${i}`}
-                      value={opt.value}
-                      checked={answers[i] === opt.value}
-                      onChange={() => setQ(i, opt.value)}
-                      className="h-4 w-4 accent-[#015233] shrink-0"
-                    />
-                    <span className="text-sm text-[#262626]">{opt.label}</span>
-                  </label>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <Card className="border-gray-200 overflow-hidden">
+        <div className="px-5 pt-5 pb-3 sm:px-6">
+          <div className="flex items-center justify-between gap-2 text-sm mb-3">
+            <span className="text-muted-foreground">
+              Pregunta {currentIndex + 1} de {PHQ9_QUESTIONS.length}
+            </span>
+            <span className="font-semibold text-[#015233]">{progressPct}% completado</span>
+          </div>
+          <div className="h-2 w-full rounded-full bg-gray-100 overflow-hidden">
+            <div
+              className="h-full bg-[#015233] transition-all duration-300 ease-out"
+              style={{ width: `${progressPct}%` }}
+              aria-hidden
+            />
+          </div>
+          <div className="mt-4 grid grid-cols-9 gap-1.5" aria-hidden>
+            {PHQ9_QUESTIONS.map((_, idx) => {
+              const isAnswered = answers[idx] !== null
+              const isCurrent = idx === currentIndex
+              return (
+                <div
+                  key={idx}
+                  className={`h-1.5 rounded-full transition-colors ${
+                    isCurrent ? "bg-[#015233]" : isAnswered ? "bg-[#015233]/60" : "bg-gray-200"
+                  }`}
+                />
+              )
+            })}
+          </div>
+        </div>
+
+        <CardHeader className="pt-3">
+          <CardTitle id={`phq9-q-${currentIndex}`} className="text-base sm:text-lg font-semibold text-[#262626]">
+            {currentIndex + 1}. {PHQ9_QUESTIONS[currentIndex]}
+          </CardTitle>
+        </CardHeader>
+
+        <CardContent>
+          <div className="space-y-3" role="radiogroup" aria-labelledby={`phq9-q-${currentIndex}`}>
+            {PHQ9_OPTIONS.map((opt) => (
+              <label
+                key={opt.value}
+                htmlFor={`q${currentIndex}-v${opt.value}`}
+                className={`flex items-center gap-3 cursor-pointer rounded-lg border px-3 py-2.5 transition-colors ${
+                  currentAnswer === opt.value ? "border-[#015233]/40 bg-[#015233]/5" : "border-gray-200 hover:bg-gray-50"
+                } has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-[#015233]/30`}
+              >
+                <input
+                  type="radio"
+                  id={`q${currentIndex}-v${opt.value}`}
+                  name={`phq9-q-${currentIndex}`}
+                  value={opt.value}
+                  checked={currentAnswer === opt.value}
+                  onChange={() => setQ(currentIndex, opt.value)}
+                  className="h-4 w-4 accent-[#015233] shrink-0"
+                />
+                <span className="text-sm sm:text-base text-[#262626]">{opt.label}</span>
+              </label>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-col-reverse sm:flex-row gap-3 sm:justify-between">
+            <Button
+              type="button"
+              variant="outline"
+              disabled={currentIndex === 0}
+              onClick={() => setCurrentIndex((v) => Math.max(0, v - 1))}
+            >
+              Anterior
+            </Button>
+            {!isLastQuestion ? (
+              <Button
+                type="button"
+                className="bg-[#015233] hover:bg-[#015233]/90"
+                disabled={currentAnswer === null}
+                onClick={() => setCurrentIndex((v) => Math.min(PHQ9_QUESTIONS.length - 1, v + 1))}
+              >
+                Siguiente
+              </Button>
+            ) : (
+              <Button
+                type="button"
+                className="bg-[#015233] hover:bg-[#015233]/90"
+                disabled={!allAnswered || submitting}
+                onClick={submit}
+              >
+                {submitting ? "Enviando…" : "Enviar respuestas"}
+              </Button>
+            )}
+          </div>
+        </CardContent>
+      </Card>
 
       {error && (
         <p className="text-sm text-red-600 text-center" role="alert">
           {error}
         </p>
       )}
-
-      <div className="flex justify-center pb-12">
-        <Button
-          type="button"
-          className="min-w-[200px] bg-[#015233] hover:bg-[#015233]/90"
-          disabled={!allAnswered || submitting}
-          onClick={submit}
-        >
-          {submitting ? "Enviando…" : "Enviar respuestas"}
-        </Button>
-      </div>
     </div>
   )
 }
