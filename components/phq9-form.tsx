@@ -11,6 +11,7 @@ const initialAnswers = (): (number | null)[] => Array(9).fill(null)
 export default function Phq9Form() {
   const [answers, setAnswers] = useState<(number | null)[]>(initialAnswers)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [direction, setDirection] = useState<"forward" | "backward">("forward")
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [done, setDone] = useState<{ total: number; severity: string } | null>(null)
@@ -32,6 +33,7 @@ export default function Phq9Form() {
 
     // Auto-advance for a smoother "slider-like" flow.
     if (index < PHQ9_QUESTIONS.length - 1) {
+      setDirection("forward")
       setCurrentIndex(index + 1)
     }
   }
@@ -68,6 +70,7 @@ export default function Phq9Form() {
 
   const reset = () => {
     setAnswers(initialAnswers())
+    setDirection("forward")
     setCurrentIndex(0)
     setDone(null)
     setError(null)
@@ -103,7 +106,7 @@ export default function Phq9Form() {
 
   return (
     <div className="max-w-3xl mx-auto space-y-6">
-      <Card>
+      <Card className="border-[#015233]/10 shadow-sm">
         <CardHeader>
           <CardTitle className="text-xl text-[#262626]">Instrucciones</CardTitle>
           <CardDescription className="text-base leading-relaxed">
@@ -113,13 +116,13 @@ export default function Phq9Form() {
         </CardHeader>
       </Card>
 
-      <Card className="border-gray-200 overflow-hidden">
+      <Card className="border-[#015233]/10 shadow-sm overflow-hidden bg-gradient-to-b from-white to-[#f8fcfa]">
         <div className="px-5 pt-5 pb-3 sm:px-6">
           <div className="flex items-center justify-between gap-2 text-sm mb-3">
             <span className="text-muted-foreground">
               Pregunta {currentIndex + 1} de {PHQ9_QUESTIONS.length}
             </span>
-            <span className="font-semibold text-[#015233]">{progressPct}% completado</span>
+            <span className="font-semibold text-[#015233] tracking-tight">{progressPct}% completado</span>
           </div>
           <div className="grid grid-cols-9 gap-1.5" aria-hidden>
             {PHQ9_QUESTIONS.map((_, idx) => {
@@ -128,8 +131,8 @@ export default function Phq9Form() {
               return (
                 <div
                   key={idx}
-                  className={`h-1.5 rounded-full transition-colors ${
-                    isCurrent ? "bg-[#015233]" : isAnswered ? "bg-[#015233]/60" : "bg-gray-200"
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    isCurrent ? "bg-[#015233] scale-y-125" : isAnswered ? "bg-[#015233]/55" : "bg-gray-200"
                   }`}
                 />
               )
@@ -137,20 +140,30 @@ export default function Phq9Form() {
           </div>
         </div>
 
-        <CardHeader className="pt-3">
+        <CardHeader className="pt-3 pb-2">
+          <p className="text-xs uppercase tracking-[0.12em] text-[#015233]/70 font-medium">PHQ-9</p>
           <CardTitle id={`phq9-q-${currentIndex}`} className="text-base sm:text-lg font-semibold text-[#262626]">
             {currentIndex + 1}. {PHQ9_QUESTIONS[currentIndex]}
           </CardTitle>
         </CardHeader>
 
         <CardContent>
-          <div className="space-y-3" role="radiogroup" aria-labelledby={`phq9-q-${currentIndex}`}>
+          <div
+            key={currentIndex}
+            className={`space-y-3 animate-in duration-300 ${
+              direction === "forward" ? "fade-in slide-in-from-right-3" : "fade-in slide-in-from-left-3"
+            }`}
+            role="radiogroup"
+            aria-labelledby={`phq9-q-${currentIndex}`}
+          >
             {PHQ9_OPTIONS.map((opt) => (
               <label
                 key={opt.value}
                 htmlFor={`q${currentIndex}-v${opt.value}`}
-                className={`flex items-center gap-3 cursor-pointer rounded-lg border px-3 py-2.5 transition-colors ${
-                  currentAnswer === opt.value ? "border-[#015233]/40 bg-[#015233]/5" : "border-gray-200 hover:bg-gray-50"
+                className={`group flex items-center gap-3 cursor-pointer rounded-xl border px-3.5 py-3 transition-all duration-200 ${
+                  currentAnswer === opt.value
+                    ? "border-[#015233]/45 bg-[#015233]/7 shadow-sm"
+                    : "border-gray-200 hover:bg-white hover:border-gray-300 hover:shadow-sm"
                 } has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-[#015233]/30`}
               >
                 <input
@@ -163,6 +176,7 @@ export default function Phq9Form() {
                   className="h-4 w-4 accent-[#015233] shrink-0"
                 />
                 <span className="text-sm sm:text-base text-[#262626]">{opt.label}</span>
+                {currentAnswer === opt.value && <span className="ml-auto text-xs text-[#015233] font-medium">Elegido</span>}
               </label>
             ))}
           </div>
@@ -172,23 +186,29 @@ export default function Phq9Form() {
               type="button"
               variant="outline"
               disabled={currentIndex === 0}
-              onClick={() => setCurrentIndex((v) => Math.max(0, v - 1))}
+              onClick={() => {
+                setDirection("backward")
+                setCurrentIndex((v) => Math.max(0, v - 1))
+              }}
             >
               Anterior
             </Button>
             {!isLastQuestion ? (
               <Button
                 type="button"
-                className="bg-[#015233] hover:bg-[#015233]/90"
+                className="bg-[#015233] hover:bg-[#015233]/90 shadow-sm"
                 disabled={currentAnswer === null}
-                onClick={() => setCurrentIndex((v) => Math.min(PHQ9_QUESTIONS.length - 1, v + 1))}
+                onClick={() => {
+                  setDirection("forward")
+                  setCurrentIndex((v) => Math.min(PHQ9_QUESTIONS.length - 1, v + 1))
+                }}
               >
                 Siguiente
               </Button>
             ) : (
               <Button
                 type="button"
-                className="bg-[#015233] hover:bg-[#015233]/90"
+                className="bg-[#015233] hover:bg-[#015233]/90 shadow-sm"
                 disabled={!allAnswered || submitting}
                 onClick={submit}
               >

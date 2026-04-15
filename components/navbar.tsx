@@ -196,14 +196,14 @@ const NavbarComponent = () => {
               <span className="relative z-10">Testimonios</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link
+            {/* <Link
               href="/tests"
               className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
               onClick={(e) => handleNavigation(e, "/tests")}
             >
               <span className="relative z-10">Tests</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            </Link> */}
             <Link
               href="/#contacto"
               className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
@@ -270,13 +270,13 @@ const NavbarComponent = () => {
             >
               TESTIMONIOS
             </Link>
-            <Link
+            {/* <Link
               href="/tests"
               className="block text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm py-2"
               onClick={(e) => handleNavigation(e, "/tests")}
             >
               TESTS
-            </Link>
+            </Link> */}
             <Link
               href="/#contacto"
               className="block text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm py-2"
