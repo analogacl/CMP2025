@@ -270,44 +270,6 @@ const teamMembers = [
     },
   },
   {
-    slug: "denise-gerber",
-    name: "DENISE GERBER",
-    role: "PSICÓLOGA",
-    image: "/images/team/denise-gerber-psicologa.webp",
-    fallbackImage: "/images/avatars/avatar-f8.png",
-    description:
-      "Psicóloga titulada de la Universidad de Chile, Doctorada en Psicoterapia y un Máster en neurociencias cognitivas en la University College London.",
-    fullBio:
-      "Doctor en psicoterapia y Magister en neurociencias cognitivas. Es académica de la Universidad Autónoma de Chile. Psicóloga clínica y psicoterapeuta experimentada en la atención de adultos con distintos problemas emocionales e interpersonales y con trastornos mentales comunes como los trastornos afectivos y ansiosos. Tiene formación como terapeuta EMDR en la Asociación Chilena de Terapeutas en EMDR y en Psicotrauma y trabaja principalmente desde este modelo terapéutico.",
-    specialties: ["Psicoterapia", "Neurociencias Cognitivas", "Terapia EMDR"],
-    education: [
-      "Doctorado en Psicoterapia",
-      "Máster en Neurociencias Cognitivas (University College London)",
-      "Licenciatura en Psicología (Universidad de Chile)",
-      "Especialización: Terapia EMDR por Asociación Chilena de Terapeutas en EMDR",
-    ],
-    schedule: "Jueves 16:00",
-    modality: "Online",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/k0JQq280402GUV7K5y51Fmu9K5c3nz",
-    fees: {
-      initial: {
-        private: "$40.000",
-        fonasa: "No",
-        isapres: "Reembolso Tarifa Particular.",
-      },
-      followUp: {
-        private: "$40.000",
-        fonasa: "No",
-        isapres: "Reembolso Tarifa Particular.",
-      },
-      online: {
-        private: "$40.000",
-        fonasa: "No",
-        isapres: "Reembolso Tarifa Particular.",
-      },
-    },
-  },
-  {
     slug: "jose-manuel-gonzalez",
     name: "JOSÉ MANUEL GONZÁLEZ",
     role: "PSICÓLOGO",
@@ -374,39 +336,6 @@ const teamMembers = [
     },
   },
     {
-    slug: "liliana-carileo",
-    name: "LILIANA CARILEO",
-    role: "PSICÓLOGA",
-    image: "/images/team/liliana-carileo.webp",
-    fallbackImage: "/images/avatars/avatar-m1.png",
-    description:
-      "Realiza diagnóstico de salud mental estructurado y psicoterapia con enfoque de género.",
-    fullBio:
-      "Liliana es psicóloga con experiencia en el diagnóstico y tratamiento de diversas problemáticas de salud mental. Su enfoque de trabajo se basa en evaluaciones estructuradas que permiten identificar con claridad las necesidades emocionales y psicológicas de cada persona. Ofrece procesos de psicoterapia individual desde una perspectiva de género, lo que implica comprender cómo las experiencias personales están influenciadas por los contextos sociales, culturales y de género. Su objetivo es acompañar a las personas en un proceso de autoconocimiento, fortalecimiento emocional y desarrollo de herramientas que les permitan afrontar sus desafíos con mayor bienestar y autonomía. Atiende a adolescentes y adultos en un espacio seguro, de respeto y libre de juicios, promoviendo la salud mental desde una mirada integral y empática.",
-    specialties: ["Adicciones", "Trastornos del Ánimo", "Mindfullnes", "Arte terapia "],
-    education: ["Psicóloga, Universidad Católica de Temuco", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
-    schedule: "Viernes 15:00 a 17:00",
-    modality: "Presencial Phillips 15",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/G0V6qif0D0kpgk9T5401YWB9L9y3Jw",
-    fees: {
-      initial: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      followUp: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      online: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-    },
-  },
-    {
     slug: "valentin-farias",
     name: "VALENTÍN FARÍAS",
     role: "PSICÓLOGO",
@@ -421,72 +350,6 @@ const teamMembers = [
     schedule: "Jueves 10:00 - 12:00",
     modality: "Presencial Phillips 15 y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/d0fAVVP090j3s73W5U11jWt926m384",
-    fees: {
-      initial: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      followUp: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      online: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-    },
-  },
-    {
-    slug: "ignacia-leal",
-    name: "IGNACIA LEAL",
-    role: "PSICÓLOGA",
-    image: "/images/team/ignacia-leal.webp",
-    fallbackImage: "/images/avatars/avatar-m1.png",
-    description:
-      "Realiza diagnóstico de salud mental estructurado y psicoterapia en todas las etapas de la vida a partir de la adolescencia.",
-    fullBio:
-      "Psicóloga con experiencia en evaluación y psicoterapia para adolescentes, jóvenes y adultos. Su trabajo se basa en el diagnóstico estructurado de salud mental, permitiendo identificar con precisión las necesidades emocionales y conductuales de cada persona, y orientar un tratamiento adecuado. Ofrece psicoterapia en distintas etapas de la vida a partir de la adolescencia, adaptando su enfoque a las características y desafíos propios de cada etapa. Su intervención busca acompañar a las personas en sus procesos de cambio, crisis o crecimiento personal, promoviendo el bienestar psicológico y la construcción de herramientas para enfrentar distintas situaciones de la vida cotidiana.",
-    specialties: ["Pendiente"],
-    education: ["Psicóloga, Universidad Autónoma de Chile", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
-    schedule: "Lunes 9:00 - 12:00",
-    modality: "Presencial Phillips 15 y Online",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/T0fcyXP0J0tn7h1g5y71Zws9F9q3wi",
-    fees: {
-      initial: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      followUp: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      online: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-    },
-  },
-    {
-    slug: "ignacio-rios",
-    name: "IGNACIO RIOS",
-    role: "PSICÓLOGO",
-    image: "/images/team/ignacio-rios.webp",
-    fallbackImage: "/images/avatars/avatar-m1.png",
-    description:
-      "Realiza diagnóstico de salud mental estructurado y psicoterapia a adolescentes y adultos con enfoque cognitivo conductual y sistémico.",
-    fullBio:
-      "Psicólogo con formación en evaluación clínica y psicoterapia, especializado en la atención de adolescentes y adultos. Su trabajo se basa en diagnósticos estructurados de salud mental, que permiten comprender en profundidad las dificultades emocionales, conductuales o relacionales de cada persona. En sus procesos terapéuticos integra dos enfoques complementarios: el cognitivo-conductual, centrado en identificar y modificar patrones de pensamiento y comportamiento poco funcionales; y el sistémico, que considera la influencia de las relaciones y el entorno en el bienestar psicológico. Esta combinación le permite abordar una amplia variedad de problemáticas, desde síntomas de ansiedad y depresión, hasta dificultades en vínculos familiares, sociales o de pareja.",
-    specialties: ["Pendiente"],
-    education: ["Psicólogo, Universidad UNIACC", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual"],
-    schedule: "Por confirmar",
-    modality: "Presencial Phillips 15",
-    iframeSrc: "",
     fees: {
       initial: {
         private: "$40.000",

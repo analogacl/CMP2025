@@ -34,16 +34,6 @@ export default function Team() {
       slug: "jocelyn-calderon-caceres",
     },
     {
-      name: "LILIANA CARILEO",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/liliana-carileo.webp",
-      fallbackImage: "/images/avatars/avatar-f3.png",
-      description:
-        "Realiza diagnóstico de salud mental estructurado y psicoterapia con enfoque de género.",
-      slug: "liliana-carileo",
-    },
-    {
       name: "VALENTÍN FARÍAS",
       role: "PSICÓLOGO",
       category: "psicologia",
@@ -52,16 +42,6 @@ export default function Team() {
       description:
         "Realiza diagnóstico de salud mental estructurado y psicoterapia basada en el autoconocimiento.",
       slug: "valentin-farias",
-    },
-    {
-      name: "DENISE GERBER",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/denise-gerber-psicologa.webp",
-      fallbackImage: "/images/avatars/avatar-f8.png",
-      description:
-        "Doctora en psicoterapia y Magister en neurociencias. Experta en psicoterapia de adultos con certificación EMDR.",
-      slug: "denise-gerber",
     },
     {
       name: "JOSÉ MANUEL GONZÁLEZ",
@@ -84,16 +64,6 @@ export default function Team() {
       slug: "leonor-irarrazaval",
     },
     {
-      name: "IGNACIA LEAL",
-      role: "PSICÓLOGA",
-      category: "psicologia",
-      image: "/images/team/ignacia-leal.webp",
-      fallbackImage: "/images/avatars/avatar-f3.png",
-      description:
-        "Realiza diagnóstico de salud mental estructurado y psicoterapia en todas las etapas de la vida a partir de la adolescencia.",
-      slug: "ignacia-leal",
-    },
-    {
       name: "MARGARITA LOUBAT OYARCE",
       role: "PSICÓLOGA",
       category: "psicologia",
@@ -112,16 +82,6 @@ export default function Team() {
       description:
         "Psicóloga especializada en psicoterapia en todas las etapas de la vida. Realiza evaluaciones neuropsicológicas y de personalidad.",
       slug: "makarena-morris",
-    },
-    {
-      name: "IGNACIO RIOS",
-      role: "PSICÓLOGO",
-      category: "psicologia",
-      image: "/images/team/ignacio-rios.webp",
-      fallbackImage: "/images/avatars/avatar-f3.png",
-      description:
-        "Realiza diagnóstico de salud mental estructurado y psicoterapia a adolescentes y adultos con enfoque cognitivo conductual y sistémico..",
-      slug: "ignacio-rios",
     },
     {
       name: "SUSANA ROMERO A.",
