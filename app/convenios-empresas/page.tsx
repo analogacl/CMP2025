@@ -19,9 +19,7 @@ export const metadata: Metadata = {
 }
 
 const offerItems = [
-  "+300 terapeutas certificados",
-  "+30 tratamientos para reducir ansiedad, estres y depresion",
-  "Atencion en diferentes idiomas",
+  "Tratamientos para reducir ansiedad, estres y depresion",
   "Workshops y talleres para fortalecer equipos",
   "Atencion online y presencial",
 ]
@@ -93,20 +91,6 @@ export default function ConveniosEmpresasPage() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <Card className="max-w-4xl mx-auto border-0 shadow-xl bg-gradient-to-r from-phillips-lightGreen to-white">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl md:text-3xl text-gray-800">Personas cubiertas</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center">
-              <p className="text-5xl md:text-6xl font-bold text-phillips-green mb-4">400.000</p>
-              <p className="text-lg text-gray-600">colaboradores impactados por programas de salud mental</p>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
