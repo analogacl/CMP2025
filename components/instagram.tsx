@@ -12,11 +12,11 @@ export default function InstagramComponent() {
               <p className="text-gray-600">Mantente al día con nuestras últimas noticias y eventos</p>
             </div>
             <Link
-              href="https://www.instagram.com/centromedicophillips"
+              href="https://www.instagram.com/centrooptimasalud/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 flex items-center"
-              aria-label="Síguenos en Instagram @centromedicophillips"
+              aria-label="Síguenos en Instagram @centrooptimasalud"
             >
               <Instagram className="h-5 w-5 mr-2" />
               @centromedicophillips
