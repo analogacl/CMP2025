@@ -11,6 +11,7 @@ const staticPaths = [
   "/equipo",
   "/psicologos-fonasa-santiago",
   "/psicologos-fonasa-online",
+  "/convenios-empresas",
   "/tests",
   "/tests/phq-9",
 ] as const
