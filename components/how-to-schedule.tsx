@@ -3,11 +3,13 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { CalendarDays, Search, ClipboardCheck, Video } from "lucide-react"
 import { useRouter } from "next/navigation"
+import { trackAgendarClick } from "@/lib/analytics"
 
 export default function HowToSchedule() {
   const router = useRouter()
 
   const handleReservaClick = () => {
+    trackAgendarClick({ link_url: "/reserva", source: "how_to_schedule" })
     router.push("/reserva")
   }
 

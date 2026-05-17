@@ -6,6 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { useRouter, usePathname } from "next/navigation"
+import { trackAgendarClick } from "@/lib/analytics"
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -88,6 +89,7 @@ const NavbarComponent = () => {
   const handleReservaNavigation = useCallback(
     (e: React.MouseEvent) => {
       e.preventDefault()
+      trackAgendarClick({ link_url: "/reserva", source: "navbar_cta" })
       router.push("/reserva")
     },
     [router],

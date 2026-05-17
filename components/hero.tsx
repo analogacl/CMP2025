@@ -3,11 +3,13 @@
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import { useCallback } from "react"
+import { trackAgendarClick } from "@/lib/analytics"
 
 export default function Hero() {
   const router = useRouter()
 
   const handleReservaClick = useCallback(() => {
+    trackAgendarClick({ link_url: "/reserva", source: "hero_cta" })
     router.push("/reserva")
   }, [router])
 

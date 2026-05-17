@@ -10,6 +10,8 @@ import NavigationHandler from "@/components/navigation-handler"
 import Script from "next/script"
 import { getSiteUrl } from "@/lib/site-url"
 import StructuredData from "@/components/structured-data"
+import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/google-tag-manager"
+import { GOOGLE_ADS_ID, isAnalyticsEnabled } from "@/lib/analytics"
 
 // Optimize font loading with display:swap and preload
 const inter = Inter({
@@ -49,22 +51,27 @@ export default function RootLayout({
     <html lang="es" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://agendamiento.reservo.cl" />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17292929805" // ¡REEMPLAZA con tu ID de Google Ads!
-          strategy="afterInteractive" // Carga el script después de que la página se vuelve interactiva
-        />
-
-        {/* Inicialización de dataLayer y configuración de gtag */}
-        <Script id="google-ads-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17292929805'); // ¡REEMPLAZA con tu ID de Google Ads!
-          `}
-        </Script>
+        {isAnalyticsEnabled() && <link rel="preconnect" href="https://www.googletagmanager.com" />}
+        <GoogleTagManager />
+        {isAnalyticsEnabled() && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-ads-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GOOGLE_ADS_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
+        <GoogleTagManagerNoScript />
         <StructuredData />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Suspense fallback={null}>

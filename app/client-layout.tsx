@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { Suspense } from "react"
 import Navbar from "@/components/navbar"
 import NavbarReserva from "@/components/navbar-agenda"
+import AnalyticsEvents from "@/components/analytics-events"
 
 // Simple loading component for Suspense
 function NavLoading() {
@@ -17,6 +18,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
   return (
     <>
+      <AnalyticsEvents />
       <Suspense fallback={<NavLoading />}>{isAgendaPage ? <NavbarReserva /> : <Navbar />}</Suspense>
       {children}
     </>

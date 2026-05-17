@@ -4,7 +4,6 @@ import { Suspense, useEffect, useState, useCallback } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, AlertCircle, RefreshCw } from "lucide-react"
-import ConvertAds from "@/components/convertAds"
 
 // Iframe configuration based on service type and modality
 const iframeConfig = {
@@ -373,6 +372,6 @@ export default function ReservaPage() {
       </div>}
     >
       <BookingContent />
-    </Suspense><ConvertAds /></>
+    </Suspense></>
   )
 }

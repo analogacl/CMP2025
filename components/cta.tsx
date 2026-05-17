@@ -2,11 +2,13 @@
 
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
+import { trackAgendarClick } from "@/lib/analytics"
 
 export default function CTA() {
   const router = useRouter()
 
   const handleReservaClick = () => {
+    trackAgendarClick({ link_url: "/reserva", source: "cta_section" })
     router.push("/reserva")
   }
 
