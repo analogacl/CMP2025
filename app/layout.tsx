@@ -11,7 +11,7 @@ import Script from "next/script"
 import { getSiteUrl } from "@/lib/site-url"
 import StructuredData from "@/components/structured-data"
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/google-tag-manager"
-import { GOOGLE_ADS_ID, isAnalyticsEnabled } from "@/lib/analytics"
+import { GA4_MEASUREMENT_ID, GOOGLE_ADS_ID, isAnalyticsEnabled } from "@/lib/analytics"
 
 // Optimize font loading with display:swap and preload
 const inter = Inter({
@@ -56,15 +56,16 @@ export default function RootLayout({
         {isAnalyticsEnabled() && (
           <>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID || GOOGLE_ADS_ID}`}
               strategy="afterInteractive"
             />
-            <Script id="google-ads-init" strategy="afterInteractive">
+            <Script id="google-tags-init" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
                 gtag('config', '${GOOGLE_ADS_ID}');
+                ${GA4_MEASUREMENT_ID ? `gtag('config', '${GA4_MEASUREMENT_ID}');` : ""}
               `}
             </Script>
           </>
