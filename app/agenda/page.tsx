@@ -2,11 +2,15 @@ import { Suspense } from "react"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
+import { buildPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Reserva tu Hora | Centro Médico Phillips",
-  description: "Agenda tu cita con nuestros profesionales de salud mental. Sistema de reservas online fácil y rápido.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "Agenda tu Cita",
+  description:
+    "Reserva tu hora con el equipo de Optima Salud en Santiago. Agenda online con psicólogos y psiquiatras, presencial u online, con confirmación inmediata.",
+  path: "/agenda",
+  keywords: ["agendar cita psicólogo", "agenda salud mental Santiago", "reservar consulta psiquiatría"],
+})
 
 function BookingIframe() {
   return (

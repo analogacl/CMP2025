@@ -1,13 +1,15 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, Laptop, Shield, CheckCircle, Clock, Video } from "lucide-react"
 import Link from "next/link"
+import { buildPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Psicólogos FONASA Online | Terapia en Línea y Reembolso FONASA",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Psicólogos FONASA Online",
   description:
-    "Accede a psicólogos FONASA online desde cualquier lugar de Chile. Atención por videollamada, horarios flexibles y opción de reembolso FONASA.",
+    "Psicólogos FONASA online en todo Chile: videollamada con Optima Salud, horarios flexibles y opción de reembolso. Comienza tu proceso terapéutico desde casa.",
+  path: "/psicologos-fonasa-online",
   keywords: [
     "psicólogos FONASA online",
     "terapia online",
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
     "salud mental",
     "teleconsulta",
   ],
-}
+})
 
 export default function PsicologosFonasaOnlinePage() {
   return (

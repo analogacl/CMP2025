@@ -2,12 +2,15 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ClipboardList } from "lucide-react"
+import { buildPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Tests de autocuidado | Optima Salud",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Tests de autocuidado",
   description:
-    "Cuestionarios gratuitos con fines educativos. No sustituyen evaluación clínica. PHQ-9 de depresión.",
-}
+    "Cuestionarios gratuitos de autocuidado con fines educativos. PHQ-9 de depresión y más herramientas. No sustituyen evaluación clínica profesional.",
+  path: "/tests",
+  keywords: ["test depresión", "PHQ-9", "autocuidado salud mental", "cuestionario bienestar"],
+})
 
 export default function TestsHubPage() {
   return (

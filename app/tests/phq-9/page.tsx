@@ -1,12 +1,15 @@
 import Link from "next/link"
 import type { Metadata } from "next"
 import Phq9Form from "@/components/phq9-form"
+import { buildPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "PHQ-9 (depresión) — test gratuito | Optima Salud",
+export const metadata: Metadata = buildPageMetadata({
+  title: "PHQ-9 — test de depresión",
   description:
-    "Cuestionario PHQ-9 sobre las últimas 2 semanas. Uso educativo; no es diagnóstico. Basado en el instrumento de referencia clínica.",
-}
+    "Cuestionario PHQ-9 gratuito sobre las últimas 2 semanas. Uso educativo; no es diagnóstico clínico. Basado en el instrumento de referencia validado.",
+  path: "/tests/phq-9",
+  keywords: ["PHQ-9", "test depresión", "cuestionario salud mental", "screening depresión"],
+})
 
 export default function Phq9Page() {
   return (

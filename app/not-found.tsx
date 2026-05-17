@@ -1,6 +1,15 @@
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Home, ArrowLeft, Search, Phone, Mail } from "lucide-react"
+import { buildPageMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Página no encontrada",
+  description: "La página que buscas no existe en Optima Salud. Vuelve al inicio o reserva tu hora con nuestro equipo de salud mental.",
+  path: "/404",
+  noIndex: true,
+})
 
 export default function NotFound() {
   return (

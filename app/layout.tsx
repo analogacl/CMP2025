@@ -8,7 +8,7 @@ import ClientLayout from "./client-layout"
 import FooterWrapper from "@/components/footer-wrapper"
 import NavigationHandler from "@/components/navigation-handler"
 import Script from "next/script"
-import { getSiteUrl } from "@/lib/site-url"
+import { getDefaultSiteMetadata } from "@/lib/seo"
 import StructuredData from "@/components/structured-data"
 import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/google-tag-manager"
 import { GA4_MEASUREMENT_ID, GOOGLE_ADS_ID, isAnalyticsEnabled } from "@/lib/analytics"
@@ -30,17 +30,7 @@ export const viewport: Viewport = {
   themeColor: "#015233",
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
-  title: "Optima Salud | Centro de Salud Mental Integral",
-  description:
-    "Optima Salud ofrece servicios de salud mental integral con un equipo multidisciplinario de expertos para mejorar tu calidad de vida.",
-  applicationName: "Optima Salud",
-  authors: [{ name: "Optima Salud" }],
-  keywords: ["salud mental", "psicología", "psiquiatría", "terapia", "bienestar", "Santiago", "Chile"],
-  robots: "index, follow",
-  generator: "v0.dev",
-}
+export const metadata: Metadata = getDefaultSiteMetadata()
 
 export default function RootLayout({
   children,

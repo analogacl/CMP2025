@@ -1,14 +1,17 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, MapPin, Users, Heart, Shield, Clock, CheckCircle } from "lucide-react"
 import Link from "next/link"
+import { buildPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Psicólogos FONASA en Santiago | Terapia Presencial y Reembolso FONASA",
-  description: "Encuentra psicólogos FONASA en Santiago. Atención presencial, fácil acceso, precios asequibles y reembolso FONASA. Agenda tu primera sesión hoy mismo.",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Psicólogos FONASA en Santiago",
+  description:
+    "Psicólogos con atención FONASA en Santiago: terapia presencial en Optima Salud, reembolso FONASA y equipo con más de 30 años de experiencia. Agenda tu primera sesión.",
+  path: "/psicologos-fonasa-santiago",
   keywords: ["psicólogos FONASA", "Santiago", "terapia presencial", "reembolso FONASA", "salud mental", "psicología clínica"],
-}
+})
 
 export default function PsicologosFonsaSantiagoPage() {
   return (

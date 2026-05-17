@@ -1,13 +1,15 @@
-import { Metadata } from "next"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Briefcase, Users, HeartHandshake, Activity, Calendar, Building2, GraduationCap } from "lucide-react"
+import { buildPageMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Convenios para Empresas | Salud Mental para Organizaciones",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Convenios para Empresas",
   description:
-    "Implementa convenios de salud mental para empresas, startups, universidades y comunidades. Programas con terapeutas certificados, atención online/presencial y talleres para equipos.",
+    "Convenios de salud mental para empresas, startups y universidades: terapeutas certificados, atención presencial u online y talleres de bienestar para equipos.",
+  path: "/convenios-empresas",
   keywords: [
     "convenios empresas",
     "salud mental laboral",
@@ -16,7 +18,7 @@ export const metadata: Metadata = {
     "bienestar organizacional",
     "workshops salud mental",
   ],
-}
+})
 
 const offerItems = [
   "Tratamientos para reducir ansiedad, estres y depresion",

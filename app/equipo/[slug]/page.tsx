@@ -1,8 +1,10 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Clock, MapPin, CreditCard } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { buildPageMetadata } from "@/lib/seo"
 
 // Team members data with updated professional photos and dynamic iframe sources
 const teamMembers = [
@@ -603,6 +605,31 @@ export async function generateStaticParams() {
 // Function to get team member data
 function getTeamMember(slug: string) {
   return teamMembers.find((member) => member.slug === slug)
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const member = getTeamMember(slug)
+
+  if (!member) {
+    return buildPageMetadata({
+      title: "Profesional no encontrado",
+      description: "El perfil solicitado no está disponible en Optima Salud.",
+      path: `/equipo/${slug}`,
+      noIndex: true,
+    })
+  }
+
+  const roleLabel = member.role.charAt(0) + member.role.slice(1).toLowerCase()
+
+  return buildPageMetadata({
+    title: `${member.name} — ${roleLabel}`,
+    description: `${member.description} Agenda tu hora con ${member.name} en Optima Salud, Santiago.`,
+    path: `/equipo/${slug}`,
+    keywords: [member.name, member.role, "salud mental Santiago", "agendar hora psicólogo"],
+    ogImage: member.image || member.fallbackImage,
+    ogType: "profile",
+  })
 }
 
 export default async function TeamMemberPage({ params }: { params: Promise<{ slug: string }> }) {
