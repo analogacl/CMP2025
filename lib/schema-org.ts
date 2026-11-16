@@ -139,3 +139,36 @@ export function getProfessionalProfileSchema(p: ProfessionalProfile) {
     },
   }
 }
+
+export type ArticleSchemaInput = {
+  slug: string
+  title: string
+  description: string
+  datePublished: string
+  dateModified: string
+  author: { type: "team"; name: string; slug: string } | { type: "org"; name: string }
+}
+
+/** Article (MedicalWebPage como tipo adicional) para los artículos del blog */
+export function getArticleSchema(a: ArticleSchemaInput) {
+  const base = getSiteUrl()
+  const url = `${base}/blog/${a.slug}`
+  return {
+    "@context": "https://schema.org",
+    "@type": ["Article", "MedicalWebPage"],
+    "@id": `${url}#article`,
+    url,
+    mainEntityOfPage: url,
+    headline: a.title,
+    description: a.description,
+    inLanguage: "es-CL",
+    datePublished: a.datePublished,
+    dateModified: a.dateModified,
+    author:
+      a.author.type === "team"
+        ? { "@type": "Person", "@id": `${base}/equipo/${a.author.slug}#person`, name: a.author.name, url: `${base}/equipo/${a.author.slug}` }
+        : { "@id": `${base}/#organization` },
+    publisher: { "@id": `${base}/#organization` },
+    image: `${base}/images/hero-woman-joy.webp`,
+  }
+}

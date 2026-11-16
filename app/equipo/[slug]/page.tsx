@@ -4,8 +4,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Clock, MapPin, CreditCard } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { notFound } from "next/navigation"
 import { buildPageMetadata, formatPersonName } from "@/lib/seo"
 import JsonLd from "@/components/json-ld"
+import { blogPosts } from "@/lib/blog"
 import { getBreadcrumbSchema, getProfessionalProfileSchema } from "@/lib/schema-org"
 
 // Team members data with updated professional photos and dynamic iframe sources
@@ -597,6 +599,9 @@ const teamMembers = [
 
 export const teamMemberSlugs: string[] = teamMembers.map((member) => member.slug)
 
+// Solo existen las fichas listadas: cualquier otro slug responde 404 real (no "soft 404")
+export const dynamicParams = false
+
 // Generate static params for all team members
 export async function generateStaticParams() {
   return teamMembers.map((member) => ({
@@ -646,16 +651,9 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
   const member = getTeamMember(slug)
 
   if (!member) {
-    return (
-      <div className="container mx-auto px-4 py-20 text-center">
-        <h1 className="text-3xl font-bold mb-4">Profesional no encontrado</h1>
-        <p className="mb-8">Lo sentimos, no pudimos encontrar el profesional que estás buscando.</p>
-        <Button asChild>
-          <Link href="/equipo">Volver al equipo</Link>
-        </Button>
-      </div>
-    )
+    notFound()
   }
+
 
   const displayName = formatPersonName(member.name)
 
@@ -772,6 +770,24 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                   </li>
                 ))}
               </ul>
+
+              {(() => {
+                const articles = blogPosts.filter((p) => p.author.type === "team" && p.author.slug === member.slug)
+                return articles.length ? (
+                  <>
+                    <h2 className="text-xl font-bold text-[#262626] mb-4">Artículos</h2>
+                    <ul className="list-disc pl-5 mb-8 space-y-1">
+                      {articles.map((p) => (
+                        <li key={p.slug}>
+                          <Link href={`/blog/${p.slug}`} className="text-[#015233] hover:underline">
+                            {p.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : null
+              })()}
 
               <h2 className="text-xl font-bold text-[#262626] mb-4">Formación Académica</h2>
               <ul className="list-disc pl-5 mb-8 space-y-1">

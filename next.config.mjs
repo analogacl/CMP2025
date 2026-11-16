@@ -1,3 +1,5 @@
+import { legacyRedirects } from "./lib/legacy-redirects.mjs"
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   serverExternalPackages: ["better-sqlite3"],
@@ -30,6 +32,7 @@ const nextConfig = {
     return [
       // /agenda era una versión antigua de /reserva; se unifican para no competir en buscadores
       { source: "/agenda", destination: "/reserva", permanent: true },
+      ...legacyRedirects,
     ]
   },
 }

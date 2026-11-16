@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import { getSiteUrl } from "@/lib/site-url"
 import { teamMemberSlugs } from "@/app/equipo/[slug]/page"
+import { blogPosts } from "@/lib/blog"
 
 /**
  * Fecha de la última modificación real del contenido de cada página.
@@ -14,6 +15,7 @@ const staticPages: { path: string; lastModified: string; priority: number }[] = 
   { path: "/equipo", lastModified: "2026-11-16", priority: 0.8 },
   { path: "/convenios-empresas", lastModified: "2026-11-16", priority: 0.8 },
   { path: "/reserva", lastModified: "2026-11-16", priority: 0.7 },
+  { path: "/blog", lastModified: "2026-11-16", priority: 0.7 },
   { path: "/tests", lastModified: "2026-05-16", priority: 0.6 },
   { path: "/tests/phq-9", lastModified: "2026-05-16", priority: 0.6 },
 ]
@@ -38,5 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticEntries, ...teamEntries]
+  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${base}/blog/${post.slug}`,
+    lastModified: post.dateModified,
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }))
+
+  return [...staticEntries, ...teamEntries, ...blogEntries]
 }
