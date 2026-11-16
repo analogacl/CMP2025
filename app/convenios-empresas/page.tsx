@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Briefcase, Users, HeartHandshake, Activity, Mail, MessageCircle, Building2, GraduationCap } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo"
+import JsonLd from "@/components/json-ld"
+import { getBreadcrumbSchema } from "@/lib/schema-org"
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Convenios para Empresas",
@@ -58,6 +60,7 @@ const organizationTypes = [
 export default function ConveniosEmpresasPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <JsonLd data={getBreadcrumbSchema([{ name: "Convenios para empresas", path: "/convenios-empresas" }])} />
       <section className="bg-gradient-to-r from-phillips-green to-phillips-green-dark text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Convenios para empresas</h1>

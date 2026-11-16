@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import Team from "@/components/team"
 import { buildPageMetadata } from "@/lib/seo"
+import JsonLd from "@/components/json-ld"
+import { getBreadcrumbSchema } from "@/lib/schema-org"
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Nuestro Equipo",
@@ -13,6 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function TeamPage() {
   return (
     <div className="min-h-screen">
+      <JsonLd data={getBreadcrumbSchema([{ name: "Equipo", path: "/equipo" }])} />
       <Team headingLevel="h1" />
     </div>
   )

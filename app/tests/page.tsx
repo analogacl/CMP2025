@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ClipboardList } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo"
+import JsonLd from "@/components/json-ld"
+import { getBreadcrumbSchema } from "@/lib/schema-org"
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Tests de autocuidado",
@@ -15,6 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function TestsHubPage() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-3xl">
+      <JsonLd data={getBreadcrumbSchema([{ name: "Tests de autocuidado", path: "/tests" }])} />
       <h1 className="text-3xl font-bold text-[#262626] mb-2">Tests de autocuidado</h1>
       <p className="text-gray-600 mb-10">
         Herramientas gratuitas para reflexionar sobre tu bienestar. Los resultados son orientativos y{" "}

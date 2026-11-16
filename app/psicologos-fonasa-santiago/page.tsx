@@ -4,6 +4,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Calendar, MapPin, Users, Heart, Shield, Clock, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { buildPageMetadata } from "@/lib/seo"
+import JsonLd from "@/components/json-ld"
+import { getBreadcrumbSchema } from "@/lib/schema-org"
 
 export const metadata: Metadata = buildPageMetadata({
   title: "Psicólogos FONASA en Santiago",
@@ -16,6 +18,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function PsicologosFonsaSantiagoPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <JsonLd data={getBreadcrumbSchema([{ name: "Psicólogos FONASA en Santiago", path: "/psicologos-fonasa-santiago" }])} />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-phillips-green to-phillips-green-dark text-white py-20">
         <div className="container mx-auto px-4 text-center">

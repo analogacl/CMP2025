@@ -4,7 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Clock, MapPin, CreditCard } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { buildPageMetadata } from "@/lib/seo"
+import { buildPageMetadata, formatPersonName } from "@/lib/seo"
+import JsonLd from "@/components/json-ld"
+import { getBreadcrumbSchema, getProfessionalProfileSchema } from "@/lib/schema-org"
 
 // Team members data with updated professional photos and dynamic iframe sources
 const teamMembers = [
@@ -620,11 +622,18 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     })
   }
 
-  const roleLabel = member.role.charAt(0) + member.role.slice(1).toLowerCase()
+  const displayName = formatPersonName(member.name)
+  const roleLabel = member.role.toLocaleLowerCase("es-CL")
+  // Ej.: "Leonor Irarrázaval, psicóloga online" / "Alicia Figueroa, psiquiatra en Santiago"
+  const modality = String(member.modality).toLowerCase()
+  const isOnlineOnly = modality.includes("online") && !modality.includes("presencial")
+  const place = isOnlineOnly ? "online" : "en Santiago"
+  const fullTitle = `${displayName}, ${roleLabel} ${place}`
+  const title = fullTitle.length > 45 ? `${displayName}, ${roleLabel}` : fullTitle
 
   return buildPageMetadata({
-    title: `${member.name} — ${roleLabel}`,
-    description: `${member.description} Agenda tu hora con ${member.name} en Optima Salud, Santiago.`,
+    title,
+    description: `${member.description} Agenda tu hora con ${displayName} en Optima Salud.`,
     path: `/equipo/${slug}`,
     keywords: [member.name, member.role, "salud mental Santiago", "agendar hora psicólogo"],
     ogImage: member.image || member.fallbackImage,
@@ -648,8 +657,27 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
     )
   }
 
+  const displayName = formatPersonName(member.name)
+
   return (
     <div className="container mx-auto px-4 py-12">
+      <JsonLd
+        data={getProfessionalProfileSchema({
+          slug: member.slug,
+          name: displayName,
+          jobTitle: formatPersonName(member.role),
+          description: member.description,
+          image: member.image,
+          specialties: member.specialties,
+          education: member.education,
+        })}
+      />
+      <JsonLd
+        data={getBreadcrumbSchema([
+          { name: "Equipo", path: "/equipo" },
+          { name: displayName, path: `/equipo/${member.slug}` },
+        ])}
+      />
       <Link href="/equipo" className="inline-flex items-center text-[#015233] hover:underline mb-8 font-medium">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -670,7 +698,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
               <div className="aspect-square relative">
                 <Image
                   src={member.image || member.fallbackImage || "/placeholder.svg"}
-                  alt={`${member.name} - ${member.role} en Centro Médico Phillips`}
+                  alt={`${formatPersonName(member.name)} - ${member.role} en Optima Salud`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 33vw"
@@ -681,7 +709,7 @@ export default async function TeamMemberPage({ params }: { params: Promise<{ slu
                 />
               </div>
               <div className="p-6">
-                <h1 className="text-2xl font-bold text-[#262626] mb-2">{member.name}</h1>
+                <h1 className="text-2xl font-bold text-[#262626] mb-2 uppercase">{displayName}</h1>
                 <p className="text-[#015233] font-semibold text-sm uppercase mb-4">{member.role}</p>
                 <div className="space-y-4">
                   <div className="flex items-start">

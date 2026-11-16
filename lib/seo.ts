@@ -125,3 +125,17 @@ export function getDefaultSiteMetadata(): Metadata {
     },
   }
 }
+
+const LOWERCASE_WORDS = new Set(["de", "del", "la", "las", "los", "y"])
+
+/** "DRA. ALICIA FIGUEROA" → "Dra. Alicia Figueroa"; respeta tildes y conectores. */
+export function formatPersonName(raw: string): string {
+  return raw
+    .trim()
+    .toLocaleLowerCase("es-CL")
+    .split(/\s+/)
+    .map((word, i) =>
+      i > 0 && LOWERCASE_WORDS.has(word) ? word : word.charAt(0).toLocaleUpperCase("es-CL") + word.slice(1),
+    )
+    .join(" ")
+}

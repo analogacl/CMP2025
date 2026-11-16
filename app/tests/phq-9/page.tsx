@@ -2,6 +2,8 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import Phq9Form from "@/components/phq9-form"
 import { buildPageMetadata } from "@/lib/seo"
+import JsonLd from "@/components/json-ld"
+import { getBreadcrumbSchema } from "@/lib/schema-org"
 
 export const metadata: Metadata = buildPageMetadata({
   title: "PHQ-9 — test de depresión",
@@ -14,6 +16,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function Phq9Page() {
   return (
     <div className="bg-gray-50 min-h-screen py-12 px-4">
+      <JsonLd data={getBreadcrumbSchema([{ name: "Tests de autocuidado", path: "/tests" }, { name: "PHQ-9", path: "/tests/phq-9" }])} />
       <div className="max-w-3xl mx-auto mb-10 text-center">
         <p className="text-sm text-muted-foreground mb-2">
           <Link href="/tests" className="text-[#015233] hover:underline">
