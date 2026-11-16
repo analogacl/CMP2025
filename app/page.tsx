@@ -8,6 +8,7 @@ import Testimonials from "@/components/testimonials"
 import HowToSchedule from "@/components/how-to-schedule"
 import Contact from "@/components/contact"
 import Introduction from "@/components/introduction"
+import FonasaHighlight from "@/components/fonasa-highlight"
 import { buildPageMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = buildPageMetadata({
@@ -33,6 +34,7 @@ export default function Home() {
       <BookingForm />
       <Introduction />
       <Services />
+      <FonasaHighlight />
       <Team />
       <Testimonials />
       <HowToSchedule />

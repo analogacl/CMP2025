@@ -25,7 +25,7 @@ export default function PsicologosFonasaOnlinePage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <section className="bg-gradient-to-r from-phillips-green to-phillips-green-dark text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Psicólogos FONASA Online</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Psicólogos FONASA online, en todo Chile</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
             Recibe atención psicológica online de calidad, con psicólogos clínicos certificados y la posibilidad de
             obtener reembolso a través de FONASA. Agenda tu sesión por videollamada de forma rápida y segura.
@@ -164,6 +164,24 @@ export default function PsicologosFonasaOnlinePage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enlazado interno: landing hermana + equipo */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <Link href="/psicologos-fonasa-santiago" className="block rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
+              <p className="text-sm uppercase tracking-wide text-gray-500 mb-1">¿Prefieres una sesión presencial?</p>
+              <p className="text-lg font-semibold text-phillips-green">Psicólogos FONASA en Santiago →</p>
+              <p className="text-gray-600 mt-2">Atención en nuestra consulta de Santiago, Pasaje Phillips 15.</p>
+            </Link>
+            <Link href="/equipo" className="block rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
+              <p className="text-sm uppercase tracking-wide text-gray-500 mb-1">Conoce a quienes te atenderán</p>
+              <p className="text-lg font-semibold text-phillips-green">Nuestro equipo de psicólogos y psiquiatras →</p>
+              <p className="text-gray-600 mt-2">Revisa la formación y enfoque de cada profesional antes de agendar.</p>
+            </Link>
           </div>
         </div>
       </section>

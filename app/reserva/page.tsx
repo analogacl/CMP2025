@@ -136,6 +136,7 @@ function BookingContent() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#262626] mb-6">Reserva tu Hora</h1>
               <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[#015233] border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
               <p className="mt-4 text-gray-600">Cargando sistema de reservas...</p>
             </div>
@@ -238,12 +239,12 @@ function BookingContent() {
                           >
                             Llamar: +5626335519
                           </a>
-                          <Link
-                            href="/diagnostics"
+                          <a
+                            href="mailto:contacto@optima-salud.cl"
                             className="flex-1 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-center"
                           >
-                            Diagnósticos
-                          </Link>
+                            Enviar email
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -293,7 +294,7 @@ function BookingContent() {
                             Llamar: +5626335519
                           </a>
                           <a
-                            href="mailto:info@centromedicophillips.cl"
+                            href="mailto:contacto@optima-salud.cl"
                             className="inline-flex items-center justify-center bg-white text-[#015233] border-2 border-[#015233] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
                           >
                             Enviar Email
@@ -313,8 +314,7 @@ function BookingContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-gray-600">
               <div>
                 <h4 className="font-medium text-[#262626] mb-2">Horarios de Atención</h4>
-                <p>Lunes a Viernes: 9:00 - 18:00</p>
-                <p>Sábados: 9:00 - 13:00</p>
+                <p>Lunes a Viernes: 9:00 - 20:00 hrs</p>
               </div>
               <div>
                 <h4 className="font-medium text-[#262626] mb-2">Modalidades</h4>
@@ -344,7 +344,7 @@ function BookingContent() {
                 Llamar: +5626335519
               </a>
               <a
-                href="mailto:info@centromedicophillips.cl"
+                href="mailto:contacto@optima-salud.cl"
                 className="inline-flex items-center justify-center bg-white text-[#015233] border-2 border-[#015233] px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Enviar Email
@@ -364,6 +364,7 @@ export default function ReservaPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8">
+              <h1 className="text-3xl md:text-4xl font-bold text-[#262626] mb-6">Reserva tu Hora</h1>
               <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-[#015233] border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"></div>
               <p className="mt-4 text-gray-600">Cargando sistema de reservas...</p>
             </div>

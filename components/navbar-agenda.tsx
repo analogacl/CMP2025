@@ -95,7 +95,7 @@ const NavbarReservaComponent = () => {
 
           {/* Page title - centered */}
           <div className="hidden md:block">
-            <h1 className="text-xl font-bold text-[#262626]">Reserva tu Hora</h1>
+            <p className="text-xl font-bold text-[#262626]">Reserva tu Hora</p>
           </div>
 
           {/* Back button */}

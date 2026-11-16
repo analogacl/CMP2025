@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Logo and description */}
           <div className="lg:col-span-1">
-            <Link href="/" aria-label="Centro Médico Phillips - Página de inicio">
+            <Link href="/" aria-label="Optima Salud - Página de inicio">
               {/*<Image
                 src="/images/SmallLogo.jpg"
                 alt="Centro Médico Phillips"
@@ -103,6 +103,24 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#015233]/40"></div>
                 <span className="text-gray-600">Test Psicológicos</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#015233]/40"></div>
+                <Link href="/psicologos-fonasa-santiago" className="text-gray-600 hover:text-[#015233] transition-colors">
+                  Psicólogos FONASA en Santiago
+                </Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#015233]/40"></div>
+                <Link href="/psicologos-fonasa-online" className="text-gray-600 hover:text-[#015233] transition-colors">
+                  Psicólogos FONASA online
+                </Link>
+              </li>
+              <li className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#015233]/40"></div>
+                <Link href="/convenios-empresas" className="text-gray-600 hover:text-[#015233] transition-colors">
+                  Convenios para empresas
+                </Link>
               </li>
             </ul>
           </div>

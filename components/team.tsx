@@ -6,7 +6,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-export default function Team() {
+export default function Team({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" }) {
+  const Heading = headingLevel
   // State to track the active filter
   const [activeFilter, setActiveFilter] = useState<"all" | "psicologia" | "psiquiatria" | "terapia-ocupacional">("all")
 
@@ -187,7 +188,9 @@ export default function Team() {
     <section id="equipo" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#262626] mb-4">NUESTRO EQUIPO</h2>
+          <Heading className="text-3xl md:text-4xl font-bold text-[#262626] mb-4">
+            {headingLevel === "h1" ? "Psicólogos y psiquiatras en Santiago: nuestro equipo" : "NUESTRO EQUIPO"}
+          </Heading>
           <p className="text-gray-600 mb-8">
             Contamos con un equipo multidisciplinario de profesionales altamente calificados y comprometidos con tu
             bienestar mental y emocional.

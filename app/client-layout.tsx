@@ -14,7 +14,7 @@ function NavLoading() {
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
-  const isAgendaPage = pathname === "/agenda" || pathname === "/reserva"
+  const isAgendaPage = pathname === "/reserva"
 
   return (
     <>

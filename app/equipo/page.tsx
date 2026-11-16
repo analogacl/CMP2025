@@ -13,7 +13,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function TeamPage() {
   return (
     <div className="min-h-screen">
-      <Team />
+      <Team headingLevel="h1" />
     </div>
   )
 }

@@ -144,7 +144,7 @@ const NavbarComponent = () => {
           <Link
             href="/"
             onClick={(e) => handleNavigation(e, "/")}
-            aria-label="Centro Médico Phillips - Página de inicio"
+            aria-label="Optima Salud - Página de inicio"
           >
              <Image
               src="/images/logo-optima-salud-removebg-preview.png"
@@ -188,6 +188,14 @@ const NavbarComponent = () => {
               onClick={(e) => handleNavigation(e, "/#equipo")}
             >
               <span className="relative z-10">Equipo</span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            <Link
+              href="/psicologos-fonasa-santiago"
+              className="text-[#262626] hover:text-[#015233] font-medium transition-all duration-300 text-sm tracking-wide uppercase relative group"
+              onClick={(e) => handleNavigation(e, "/psicologos-fonasa-santiago")}
+            >
+              <span className="relative z-10">FONASA</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#015233] transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
@@ -264,6 +272,13 @@ const NavbarComponent = () => {
               onClick={(e) => handleNavigation(e, "/#equipo")}
             >
               EQUIPO
+            </Link>
+            <Link
+              href="/psicologos-fonasa-santiago"
+              className="block text-[#262626] hover:text-[#015233] font-semibold transition-colors text-sm py-2"
+              onClick={(e) => handleNavigation(e, "/psicologos-fonasa-santiago")}
+            >
+              FONASA
             </Link>
             <Link
               href="/#testimonios"

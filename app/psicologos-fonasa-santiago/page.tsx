@@ -20,10 +20,10 @@ export default function PsicologosFonsaSantiagoPage() {
       <section className="bg-gradient-to-r from-phillips-green to-phillips-green-dark text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Psicólogos FONASA Santiago
+            Psicólogos FONASA en Santiago: atención presencial
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
-            Si buscas atención psicológica de calidad en Santiago, con precios accesibles y la posibilidad de obtener reembolso a través de FONASA, te podeos ayudar. Nuestro equipo de psicólogos clínicos certificados te acompaña en tu proceso personal con sesiones presenciales en el corazón de la ciudad.
+            Si buscas atención psicológica de calidad en Santiago, con precios accesibles y la posibilidad de obtener reembolso a través de FONASA, te podemos ayudar. Nuestro equipo de psicólogos clínicos certificados te acompaña en tu proceso personal con sesiones presenciales en el corazón de la ciudad.
           </p>
           <Link href="/reserva">
             <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4">
@@ -164,6 +164,24 @@ export default function PsicologosFonsaSantiagoPage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enlazado interno: landing hermana + equipo */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+            <Link href="/psicologos-fonasa-online" className="block rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
+              <p className="text-sm uppercase tracking-wide text-gray-500 mb-1">¿Prefieres atenderte desde casa?</p>
+              <p className="text-lg font-semibold text-phillips-green">Psicólogos FONASA online →</p>
+              <p className="text-gray-600 mt-2">Sesiones por videollamada desde cualquier región de Chile.</p>
+            </Link>
+            <Link href="/equipo" className="block rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow">
+              <p className="text-sm uppercase tracking-wide text-gray-500 mb-1">Conoce a quienes te atenderán</p>
+              <p className="text-lg font-semibold text-phillips-green">Nuestro equipo de psicólogos y psiquiatras →</p>
+              <p className="text-gray-600 mt-2">Revisa la formación y enfoque de cada profesional antes de agendar.</p>
+            </Link>
           </div>
         </div>
       </section>

@@ -5,9 +5,7 @@ import { teamMemberSlugs } from "@/app/equipo/[slug]/page"
 const staticPaths = [
   "",
   "/teleconsulta",
-  "/diagnostics",
   "/reserva",
-  "/agenda",
   "/equipo",
   "/psicologos-fonasa-santiago",
   "/psicologos-fonasa-online",

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useCallback } from "react"
 import { trackAgendarClick } from "@/lib/analytics"
@@ -19,13 +20,12 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/hero-woman-joy.webp"
-          alt="Mujer joven sonriendo al aire libre - Bienestar y felicidad en Centro Médico Phillips"
+          alt="Mujer joven sonriendo al aire libre - Bienestar y felicidad en Optima Salud"
           fill
           priority
           className="object-cover"
           sizes="100vw"
           quality={90}
-           priority 
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
@@ -38,8 +38,11 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl">
           <div className="text-white">
-            {/* Main heading */}
-            <h1
+            {/* H1 con la intención principal de la home; el eslogan queda como titular visual */}
+            <h1 className="text-base md:text-lg font-semibold uppercase tracking-widest text-white/90 mb-4 drop-shadow">
+              Psicólogos y psiquiatras en Santiago
+            </h1>
+            <p
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg"
               style={{
                 textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px rgba(184, 227, 153, 0.3)",
@@ -47,7 +50,7 @@ export default function Hero() {
               }}
             >
               BIENESTAR Y FELICIDAD
-            </h1>
+            </p>
 
             {/* Subtitle */}
             <p className="text-xl md:text-2xl lg:text-3xl mb-8 leading-relaxed font-medium max-w-3xl">
@@ -67,7 +70,13 @@ export default function Hero() {
               {/* Additional info */}
               <div className="flex flex-col text-sm text-white/90">
                 <span className="font-medium">✓ Atención presencial y online</span>
-                <span className="font-medium">✓ FONASA e ISAPRES</span>
+                <span className="font-medium">
+                  ✓{" "}
+                  <Link href="/psicologos-fonasa-santiago" className="underline underline-offset-2 hover:text-white">
+                    FONASA
+                  </Link>{" "}
+                  e ISAPRES
+                </span>
                 <span className="font-medium">✓ +30 años de experiencia</span>
               </div>
             </div>
