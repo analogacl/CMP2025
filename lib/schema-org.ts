@@ -147,6 +147,7 @@ export type ArticleSchemaInput = {
   datePublished: string
   dateModified: string
   author: { type: "team"; name: string; slug: string } | { type: "org"; name: string }
+  image?: string
 }
 
 /** Article (MedicalWebPage como tipo adicional) para los artículos del blog */
@@ -169,6 +170,6 @@ export function getArticleSchema(a: ArticleSchemaInput) {
         ? { "@type": "Person", "@id": `${base}/equipo/${a.author.slug}#person`, name: a.author.name, url: `${base}/equipo/${a.author.slug}` }
         : { "@id": `${base}/#organization` },
     publisher: { "@id": `${base}/#organization` },
-    image: `${base}/images/hero-woman-joy.webp`,
+    image: `${base}${a.image ?? "/images/hero-woman-joy.webp"}`,
   }
 }

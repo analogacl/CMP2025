@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { buildPageMetadata } from "@/lib/seo"
@@ -33,7 +34,23 @@ export default function BlogIndexPage() {
       <section className="py-12">
         <div className="container mx-auto px-4 max-w-4xl grid gap-6">
           {posts.map((post) => (
-            <article key={post.slug} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
+            <article
+              key={post.slug}
+              className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow md:flex md:gap-6"
+            >
+              {post.image ? (
+                <Link href={`/blog/${post.slug}`} className="block shrink-0 mb-4 md:mb-0 md:w-56" tabIndex={-1} aria-hidden="true">
+                  <Image
+                    src={post.image.src}
+                    alt=""
+                    width={post.image.width}
+                    height={post.image.height}
+                    sizes="(max-width: 768px) 100vw, 224px"
+                    className="w-full h-40 md:h-full object-cover rounded-lg"
+                  />
+                </Link>
+              ) : null}
+              <div>
               <p className="text-sm text-gray-500 mb-2">
                 {post.author.name} · {formatPostDate(post.datePublished)}
               </p>
@@ -46,6 +63,7 @@ export default function BlogIndexPage() {
               <Link href={`/blog/${post.slug}`} className="inline-flex items-center text-[#015233] font-semibold">
                 Leer artículo <ArrowRight className="w-4 h-4 ml-1" aria-hidden="true" />
               </Link>
+              </div>
             </article>
           ))}
         </div>

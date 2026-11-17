@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { buildPageMetadata } from "@/lib/seo"
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.description,
     path: `/blog/${post.slug}`,
     ogType: "article",
+    ...(post.image ? { ogImage: post.image.src } : {}),
   })
 }
 
@@ -40,6 +42,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           datePublished: post.datePublished,
           dateModified: post.dateModified,
           author: post.author,
+          image: post.image?.src,
         })}
       />
       <JsonLd
@@ -76,6 +79,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             Publicado originalmente el {formatPostDate(post.datePublished)} en el blog de Centro Médico Phillips.
           </p>
         </div>
+
+        {post.image ? (
+          <Image
+            src={post.image.src}
+            alt={post.image.alt}
+            width={post.image.width}
+            height={post.image.height}
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="w-full h-auto rounded-xl mb-6"
+          />
+        ) : null}
 
         <ArticleBody body={post.body} />
 

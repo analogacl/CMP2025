@@ -15,6 +15,8 @@ export type BlogAuthor =
 
 export type BlogSource = { label: string; url?: string }
 
+export type BlogImage = { src: string; alt: string; width: number; height: number }
+
 export type BlogPost = {
   slug: string
   title: string
@@ -28,6 +30,8 @@ export type BlogPost = {
   /** Fecha de la última actualización del contenido en este sitio */
   dateModified: string
   body: string
+  /** Imagen destacada recuperada del blog anterior (opcional) */
+  image?: BlogImage
   sources?: BlogSource[]
   /** Páginas relacionadas del sitio para enlazado interno */
   related: { label: string; href: string }[]
@@ -45,6 +49,7 @@ const EQUIPO: BlogAuthor = { type: "org", name: "Equipo Optima Salud" }
 export const blogPosts: BlogPost[] = [
   {
     slug: "depresion-diagnostico-y-tratamiento",
+    image: { src: "/images/blog/depresion-diagnostico-tratamiento.webp", alt: "Hombre con las manos en la cabeza, en actitud de agobio", width: 1200, height: 803 },
     title: "Depresión: diagnóstico y tratamiento",
     seoTitle: "Depresión: síntomas, diagnóstico y tratamiento",
     description:
@@ -100,6 +105,7 @@ A pesar de la evidencia acumulada sobre la efectividad de los tratamientos antid
   },
   {
     slug: "depresion-posparto",
+    image: { src: "/images/blog/depresion-posparto.webp", alt: "Madre con expresión cansada sosteniendo a su bebé", width: 850, height: 565 },
     title: "Depresión posparto: diagnóstico y tratamiento",
     seoTitle: "Depresión posparto: síntomas, riesgos y tratamiento",
     description:
@@ -168,6 +174,7 @@ El tratamiento de la depresión posparto es muy importante no solo por la salud 
   },
   {
     slug: "depresion-en-la-tercera-edad",
+    image: { src: "/images/blog/depresion-tercera-edad.webp", alt: "Mujer mayor sentada, con expresión seria", width: 640, height: 425 },
     title: "Depresión en la tercera edad",
     seoTitle: "Depresión en la tercera edad: señales y tratamiento",
     description:
