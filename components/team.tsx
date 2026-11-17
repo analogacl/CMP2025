@@ -35,16 +35,6 @@ export default function Team({ headingLevel = "h2" }: { headingLevel?: "h1" | "h
       slug: "jocelyn-calderon-caceres",
     },
     {
-      name: "VALENTÍN FARÍAS",
-      role: "PSICÓLOGO",
-      category: "psicologia",
-      image: "/images/team/valentin-farias.webp",
-      fallbackImage: "/images/avatars/avatar-f3.png",
-      description:
-        "Realiza diagnóstico de salud mental estructurado y psicoterapia basada en el autoconocimiento.",
-      slug: "valentin-farias",
-    },
-    {
       name: "JOSÉ MANUEL GONZÁLEZ",
       role: "PSICÓLOGO",
       category: "psicologia",

@@ -10,9 +10,9 @@ import { blogPosts } from "@/lib/blog"
  */
 const staticPages: { path: string; lastModified: string; priority: number }[] = [
   { path: "/", lastModified: "2026-11-16", priority: 1 },
-  { path: "/psicologos-fonasa-santiago", lastModified: "2026-11-16", priority: 0.9 },
-  { path: "/psicologos-fonasa-online", lastModified: "2026-11-16", priority: 0.9 },
-  { path: "/equipo", lastModified: "2026-11-16", priority: 0.8 },
+  { path: "/psicologos-fonasa-santiago", lastModified: "2026-11-17", priority: 0.9 },
+  { path: "/psicologos-fonasa-online", lastModified: "2026-11-17", priority: 0.9 },
+  { path: "/equipo", lastModified: "2026-11-17", priority: 0.8 },
   { path: "/convenios-empresas", lastModified: "2026-11-16", priority: 0.8 },
   { path: "/reserva", lastModified: "2026-11-16", priority: 0.7 },
   { path: "/blog", lastModified: "2026-11-16", priority: 0.7 },
@@ -21,7 +21,7 @@ const staticPages: { path: string; lastModified: string; priority: number }[] = 
 ]
 
 /** Fichas del equipo: actualizar al editar datos en app/equipo/[slug]/page.tsx */
-const TEAM_LAST_MODIFIED = "2026-11-16"
+const TEAM_LAST_MODIFIED = "2026-11-17"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl()

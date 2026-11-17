@@ -106,17 +106,17 @@ const teamMembers = [
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/N06lLgy090dYoF5p5f21RQv9B0g3hg",
     fees: {
       initial: {
-        private: "$55.000",
+        private: "$60.000",
         fonasa: "No atiende",
         isapres: "Reembolsa tarifa particular",
       },
       followUp: {
-        private: "$55.000",
+        private: "$60.000",
         fonasa: "No atiende",
         isapres: "Reembolsa tarifa particular",
       },
       online: {
-        private: "$55.000",
+        private: "$60.000",
         fonasa: "No atiende",
         isapres: "Reembolsa tarifa particular",
       },
@@ -144,17 +144,17 @@ const teamMembers = [
     fees: {
       initial: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular",
       },
       followUp: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular",
       },
       online: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular",
       },
     },
@@ -214,22 +214,22 @@ const teamMembers = [
 "Coaching Ejecutivo Profesional, Universidad Complutense de Madrid",
 "Especialización: Psicología Clínica, psicoterapia, Coaching"],
     schedule: "Martes 13:00 a 17:00",
-    modality: " Presencial Phillips 15 (Bono Fonasa 3) y Online",
+    modality: "Presencial Phillips 15 y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/B0qdh2u0s0Snmf7H5K21xrT93103SD",
     fees: {
       initial: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA solo online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA solo online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA solo online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
     },
@@ -321,55 +321,22 @@ const teamMembers = [
     specialties: ["Adicciones", "Trastornos del Ánimo", "Mindfullnes", "Arte terapia "],
     education: ["Psicóloga Clínica, Universidad Central", "Magister en Educación Superior", "Especialización: Psicología Clínica, psicoterapia individual"],
     schedule: "Martes 17:00 a 20:00",
-    modality: "Presencial Phillips 15",
+    modality: "Presencial Phillips 15 y Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/Y0opc490S0tlQQ3Y5c51pIq9e493M3",
     fees: {
       initial: {
         private: "$40.000",
-        fonasa: "No",
+        fonasa: "Bono FONASA solo online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$40.000",
-        fonasa: "No",
+        fonasa: "Bono FONASA solo online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$40.000",
-        fonasa: "No",
-        isapres: "Reembolso tarifa particular.",
-      },
-    },
-  },
-    {
-    slug: "valentin-farias",
-    name: "VALENTÍN FARÍAS",
-    role: "PSICÓLOGO",
-    image: "/images/team/valentin-farias.webp",
-    fallbackImage: "/images/avatars/avatar-m1.png",
-    description:
-      "Realiza diagnóstico de salud mental estructurado y psicoterapia basada en el autoconocimiento.",
-    fullBio:
-      "Psicólogo con formación en evaluación clínica y psicoterapia, especializado en el acompañamiento de adolescentes y adultos. Su labor se centra en el diagnóstico estructurado de salud mental, lo que permite orientar de forma precisa el tratamiento según las necesidades de cada persona. Su enfoque terapéutico promueve el autoconocimiento como herramienta central del proceso. A través de un espacio seguro y de confianza, Valentín acompaña a sus consultantes en la exploración de sus emociones, pensamientos y experiencias, favoreciendo una mayor comprensión personal y el desarrollo de recursos para enfrentar dificultades emocionales o relacionales.",
-    specialties: ["Pendiente"],
-    education: ["Psicólogo, Universidad Alberto Hurtado", "Especialización: diagnóstico estructurado de salud mental, psicoterapia individual."],
-    schedule: "Jueves 10:00 - 12:00",
-    modality: "Presencial Phillips 15 y Online",
-    iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/d0fAVVP090j3s73W5U11jWt926m384",
-    fees: {
-      initial: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      followUp: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
-        isapres: "Reembolso tarifa particular.",
-      },
-      online: {
-        private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA solo online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
     },
@@ -392,17 +359,17 @@ const teamMembers = [
     fees: {
       initial: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
     },
@@ -426,17 +393,17 @@ const teamMembers = [
     fees: {
       initial: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$40.000",
-        fonasa: "Bono Fonasa 3: $14.170",
+        fonasa: "Bono FONASA presencial: $14.420 / online: $12.250",
         isapres: "Reembolso tarifa particular.",
       },
     },
@@ -496,23 +463,23 @@ const teamMembers = [
       "Trastornos cognitivos del adulto mayor",
     ],
     education: ["Médico, J. W. Goethe Universidad Alemania", "Doctor en Medicina, J. W. Goethe Universidad. Alemania", "Psiquiatra adultos, Universidad de Chile","Especialización: evaluaciones y tratamientos psiquiátricos"],
-    schedule: "Lunes 8:40 a 11:00, Jueves 9:00 a 10:40 y 15:00 a 17:00, Viernes 15:00 a 16:40",
-    modality: "Presencial Phillips 15 (Bono Fonasa 3) / Online",
+    schedule: "Jueves 8:30 a 11:30 y 15:00 a 18:00, Viernes 15:00 a 16:40",
+    modality: "Presencial Phillips 15 / Online",
     iframeSrc: "https://agendamiento.reservo.cl/makereserva/agenda/8015Xjh0P064oJ385R81GON9R623Ay",
     fees: {
       initial: {
         private: "$100.000",
-        fonasa: "Bono Fonasa 3: $45.870",
+        fonasa: "Bono FONASA: $32.100",
         isapres: "Reembolso tarifa particular.",
       },
       followUp: {
         private: "$100.000",
-        fonasa: "Bono Fonasa 3: $45.870",
+        fonasa: "Bono FONASA: $32.100",
         isapres: "Reembolso tarifa particular.",
       },
       online: {
         private: "$100.000",
-        fonasa: "Bono Fonasa 3: $45.870",
+        fonasa: "Bono FONASA: $32.100",
         isapres: "Reembolso tarifa particular.",
       },
     },

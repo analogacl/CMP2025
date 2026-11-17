@@ -11,7 +11,7 @@ const options = [
     href: "/psicologos-fonasa-santiago",
     icon: MapPin,
     title: "Psicólogos FONASA en Santiago",
-    text: "Sesiones presenciales en nuestra consulta de Santiago, con opción de reembolso FONASA.",
+    text: "Sesiones presenciales en nuestra consulta de Santiago, pagando con bono FONASA.",
     cta: "Ver atención presencial",
   },
   {
