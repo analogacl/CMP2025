@@ -6,36 +6,98 @@ import { useCallback, useEffect } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 
 export default function Testimonials() {
+  // Reseñas de encuestas de satisfacción de pacientes. Solo primer nombre y fecha (sin datos personales).
+  // Ordenadas de la más reciente a la más antigua.
   const testimonials = [
     {
+      quote: "Es muy agradable llegar a la consulta, te reciben muy bien… y la doctora es lo máximo",
+      author: "Ana",
+      date: "05-11-2026",
+    },
+    {
+      quote: "Es un grupo de trabajo comprometido y cálido.",
+      author: "Solange",
+      date: "03-11-2026",
+    },
+    {
+      quote: "Excelente atención, muchas gracias",
+      author: "Hugo",
+      date: "29-10-2026",
+    },
+    {
+      quote: "Excelente atención",
+      author: "Víctor",
+      date: "23-10-2026",
+    },
+    {
+      quote: "Ustedes nos brindan un apoyo único.",
+      author: "Rosario",
+      date: "11-10-2026",
+    },
+    {
+      quote: "Excelente atención y sin esperas",
+      author: "Etelvina",
+      date: "11-09-2026",
+    },
+    {
+      quote: "La atención es súper cercana y profesional, desde las chicas de la recepción que son muy amables y comprensivas.",
+      author: "Rodrigo",
+      date: "07-08-2026",
+    },
+    {
+      quote: "Mi psicóloga es lo máximo, Zulema Guajardo la mejor, gracias. Ella me ha enseñado a descubrir mi mejor versión, gracias",
+      author: "Marcela",
+      date: "04-08-2026",
+    },
+    {
+      quote: "Todo muy cordial y cercano",
+      author: "Rosa",
+      date: "18-07-2026",
+    },
+    {
+      quote: "Buenísima atención y compromiso.",
+      author: "Josefina",
+      date: "27-06-2026",
+    },
+    {
+      quote: "Sólo agradecer a mi hermosa psiquiatra Graciela!!! La adoro, y a la secretaria por siempre ser tan atenta",
+      author: "Victoria",
+      date: "04-06-2026",
+    },
+    {
+      quote: "A pesar de ser mi primera vez ahí, encontré la atención, el ambiente y la ubicación de mi entera satisfacción",
+      author: "Ricardo",
+      date: "27-05-2026",
+    },
+    {
+      quote: "Excelente atención, la Dra. Graciela es una excelente profesional",
+      author: "Elizabeth",
+      date: "26-02-2026",
+    },
+    {
+      quote: "Excelente atención, la doctora Graciela Rojas fenómeno, y Carolina su asistente también atenta, rápida, buena y soluciona cualquier problema. Gracias miles, saludos",
+      author: "Javier",
+      date: "26-02-2026",
+    },
+    {
+      quote: "Siempre tienen muy buena disposición para lo que una necesita, muy profesionales todos.",
+      author: "Paula",
+      date: "13-02-2026",
+    },
+    {
+      quote: "Muy agradecida de la atención de la profesional y del personal administrativo",
+      author: "Verónica",
+      date: "27-06-2025",
+    },
+    {
       quote: "Atención de excelencia la atención de la profesional de muy buen trato y calidez, la secretaria maravillosamente atenta y buena voluntad",
-      author: "Ana Maria O.",
+      author: "Ana María",
       date: "12-06-2025",
     },
     {
       quote: "Excelentes profesionales, desde las secretarias a los doctores",
-      author: "Claudia F.",
+      author: "Claudia",
       date: "23-05-2025",
-    },
-    {
-      quote: "Muy buena atención, 💯 recomendable 🥰",
-      author: "Daniela",
-      date: "02-12-2024",
-    },
-    {
-      quote: "Excelente atención muchas gracias por escucharme",
-      author: "Hugo C",
-      date: "28-07-2025",
-    },
-    {
-      quote: "Estoy muy agradecida por su atención. Fué dentro del horario estipulado y en todo momento me sentí muy cómoda. Muchas gracias 😊",
-      author: "María Angelica",
-      date: "05-11-2024",
-    },
-    {
-      quote: "Todos en el centro me han hecho sentir segura y acogida. Se nota el interés y la preocupación real por sus pacientes. No tengo más que elogios y gratitud por todos.",
-      author: "María José A",
-      date: "19-11-2024",
     },
     {
       quote: "Excelente desde la secretaria, hasta los profesionales.",
@@ -46,21 +108,6 @@ export default function Testimonials() {
       quote: "Agradecida de encontrar escucha, contención, en un ambiente distendido.",
       author: "Patricia",
       date: "23-01-2025",
-    },
-    {
-      quote: "Excelentes profesionales tiempo dedicado atenciones escucha y explicacion realmemte apoyo y ayuda al paciente",
-      author: "Psicilla F.",
-      date: "07-11-2024",
-    },
-    {
-      quote: "Mis comentarios solo pueden ser favorables. La atención ha sido valiosa y oportuna. Y la dedicación y preocupación de las profesionales que me han atendido ha sido invaluable.",
-      author: "Rosa",
-      date: "30-12-2024",
-    },
-    {
-      quote: "Muy agradecida de la atención de la profesional y del personal administrativo",
-      author: "Veronica G",
-      date: "27-06-2025",
     },
   ]
 
