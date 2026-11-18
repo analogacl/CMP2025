@@ -1,279 +1,240 @@
 "use client"
 
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react"
-import { useCallback, useEffect } from "react"
-import useEmblaCarousel from "embla-carousel-react"
+import { useState } from "react"
+import { Star, ChevronDown, Quote } from "lucide-react"
+
+type Testimonial = { quote: string; author: string; date: string }
+
+// Reseñas de encuestas de satisfacción de pacientes. Solo primer nombre y fecha (sin datos personales).
+// Ordenadas de la más reciente a la más antigua.
+const testimonials: Testimonial[] = [
+  {
+    quote: "Es muy agradable llegar a la consulta, te reciben muy bien… y la doctora es lo máximo",
+    author: "Ana",
+    date: "05-11-2026",
+  },
+  {
+    quote: "Es un grupo de trabajo comprometido y cálido.",
+    author: "Solange",
+    date: "03-11-2026",
+  },
+  {
+    quote: "Excelente atención, muchas gracias",
+    author: "Hugo",
+    date: "29-10-2026",
+  },
+  {
+    quote: "Excelente atención",
+    author: "Víctor",
+    date: "23-10-2026",
+  },
+  {
+    quote: "Ustedes nos brindan un apoyo único.",
+    author: "Rosario",
+    date: "11-10-2026",
+  },
+  {
+    quote: "Excelente atención y sin esperas",
+    author: "Etelvina",
+    date: "11-09-2026",
+  },
+  {
+    quote: "La atención es súper cercana y profesional, desde las chicas de la recepción que son muy amables y comprensivas.",
+    author: "Rodrigo",
+    date: "07-08-2026",
+  },
+  {
+    quote: "Mi psicóloga es lo máximo, Zulema Guajardo la mejor, gracias. Ella me ha enseñado a descubrir mi mejor versión, gracias",
+    author: "Marcela",
+    date: "04-08-2026",
+  },
+  {
+    quote: "Todo muy cordial y cercano",
+    author: "Rosa",
+    date: "18-07-2026",
+  },
+  {
+    quote: "Buenísima atención y compromiso.",
+    author: "Josefina",
+    date: "27-06-2026",
+  },
+  {
+    quote: "Sólo agradecer a mi hermosa psiquiatra Graciela!!! La adoro, y a la secretaria por siempre ser tan atenta",
+    author: "Victoria",
+    date: "04-06-2026",
+  },
+  {
+    quote: "A pesar de ser mi primera vez ahí, encontré la atención, el ambiente y la ubicación de mi entera satisfacción",
+    author: "Ricardo",
+    date: "27-05-2026",
+  },
+  {
+    quote: "Excelente atención, la Dra. Graciela es una excelente profesional",
+    author: "Elizabeth",
+    date: "26-02-2026",
+  },
+  {
+    quote: "Excelente atención, la doctora Graciela Rojas fenómeno, y Carolina su asistente también atenta, rápida, buena y soluciona cualquier problema. Gracias miles, saludos",
+    author: "Javier",
+    date: "26-02-2026",
+  },
+  {
+    quote: "Siempre tienen muy buena disposición para lo que una necesita, muy profesionales todos.",
+    author: "Paula",
+    date: "13-02-2026",
+  },
+  {
+    quote: "Muy agradecida de la atención de la profesional y del personal administrativo",
+    author: "Verónica",
+    date: "27-06-2025",
+  },
+  {
+    quote: "Atención de excelencia la atención de la profesional de muy buen trato y calidez, la secretaria maravillosamente atenta y buena voluntad",
+    author: "Ana María",
+    date: "12-06-2025",
+  },
+  {
+    quote: "Excelentes profesionales, desde las secretarias a los doctores",
+    author: "Claudia",
+    date: "23-05-2025",
+  },
+  {
+    quote: "Excelente desde la secretaria, hasta los profesionales.",
+    author: "Mónica",
+    date: "31-03-2025",
+  },
+  {
+    quote: "Agradecida de encontrar escucha, contención, en un ambiente distendido.",
+    author: "Patricia",
+    date: "23-01-2025",
+  },
+]
+
+const RATING = 4.9
+const TOTAL_REVIEWS = 266
+const INITIAL_VISIBLE = 9 // escritorio
+const INITIAL_VISIBLE_MOBILE = 4
+
+const MONTHS = [
+  "enero", "febrero", "marzo", "abril", "mayo", "junio",
+  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+]
+
+// "dd-mm-yyyy" -> "agosto de 2026"
+function formatMonth(date: string) {
+  const [, mm, yyyy] = date.split("-")
+  return `${MONTHS[Number(mm) - 1]} de ${yyyy}`
+}
+
+const AVATAR_COLORS = [
+  "bg-[#015233] text-white",
+  "bg-[#e6f0eb] text-[#015233]",
+  "bg-amber-100 text-amber-800",
+  "bg-sky-100 text-sky-800",
+  "bg-rose-100 text-rose-800",
+]
+
+function Avatar({ name, index, className = "" }: { name: string; index: number; className?: string }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`inline-flex items-center justify-center rounded-full font-semibold ${AVATAR_COLORS[index % AVATAR_COLORS.length]} ${className}`}
+    >
+      {name.charAt(0)}
+    </span>
+  )
+}
+
+function Stars({ className = "w-4 h-4" }: { className?: string }) {
+  return (
+    <span className="flex gap-0.5" aria-hidden="true">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <Star key={i} className={`${className} fill-yellow-400 text-yellow-400`} />
+      ))}
+    </span>
+  )
+}
 
 export default function Testimonials() {
-  // Reseñas de encuestas de satisfacción de pacientes. Solo primer nombre y fecha (sin datos personales).
-  // Ordenadas de la más reciente a la más antigua.
-  const testimonials = [
-    {
-      quote: "Es muy agradable llegar a la consulta, te reciben muy bien… y la doctora es lo máximo",
-      author: "Ana",
-      date: "05-11-2026",
-    },
-    {
-      quote: "Es un grupo de trabajo comprometido y cálido.",
-      author: "Solange",
-      date: "03-11-2026",
-    },
-    {
-      quote: "Excelente atención, muchas gracias",
-      author: "Hugo",
-      date: "29-10-2026",
-    },
-    {
-      quote: "Excelente atención",
-      author: "Víctor",
-      date: "23-10-2026",
-    },
-    {
-      quote: "Ustedes nos brindan un apoyo único.",
-      author: "Rosario",
-      date: "11-10-2026",
-    },
-    {
-      quote: "Excelente atención y sin esperas",
-      author: "Etelvina",
-      date: "11-09-2026",
-    },
-    {
-      quote: "La atención es súper cercana y profesional, desde las chicas de la recepción que son muy amables y comprensivas.",
-      author: "Rodrigo",
-      date: "07-08-2026",
-    },
-    {
-      quote: "Mi psicóloga es lo máximo, Zulema Guajardo la mejor, gracias. Ella me ha enseñado a descubrir mi mejor versión, gracias",
-      author: "Marcela",
-      date: "04-08-2026",
-    },
-    {
-      quote: "Todo muy cordial y cercano",
-      author: "Rosa",
-      date: "18-07-2026",
-    },
-    {
-      quote: "Buenísima atención y compromiso.",
-      author: "Josefina",
-      date: "27-06-2026",
-    },
-    {
-      quote: "Sólo agradecer a mi hermosa psiquiatra Graciela!!! La adoro, y a la secretaria por siempre ser tan atenta",
-      author: "Victoria",
-      date: "04-06-2026",
-    },
-    {
-      quote: "A pesar de ser mi primera vez ahí, encontré la atención, el ambiente y la ubicación de mi entera satisfacción",
-      author: "Ricardo",
-      date: "27-05-2026",
-    },
-    {
-      quote: "Excelente atención, la Dra. Graciela es una excelente profesional",
-      author: "Elizabeth",
-      date: "26-02-2026",
-    },
-    {
-      quote: "Excelente atención, la doctora Graciela Rojas fenómeno, y Carolina su asistente también atenta, rápida, buena y soluciona cualquier problema. Gracias miles, saludos",
-      author: "Javier",
-      date: "26-02-2026",
-    },
-    {
-      quote: "Siempre tienen muy buena disposición para lo que una necesita, muy profesionales todos.",
-      author: "Paula",
-      date: "13-02-2026",
-    },
-    {
-      quote: "Muy agradecida de la atención de la profesional y del personal administrativo",
-      author: "Verónica",
-      date: "27-06-2025",
-    },
-    {
-      quote: "Atención de excelencia la atención de la profesional de muy buen trato y calidez, la secretaria maravillosamente atenta y buena voluntad",
-      author: "Ana María",
-      date: "12-06-2025",
-    },
-    {
-      quote: "Excelentes profesionales, desde las secretarias a los doctores",
-      author: "Claudia",
-      date: "23-05-2025",
-    },
-    {
-      quote: "Excelente desde la secretaria, hasta los profesionales.",
-      author: "Mónica",
-      date: "31-03-2025",
-    },
-    {
-      quote: "Agradecida de encontrar escucha, contención, en un ambiente distendido.",
-      author: "Patricia",
-      date: "23-01-2025",
-    },
-  ]
-
-  // Dividir testimonios en dos filas
-  const rowSize = Math.ceil(testimonials.length / 2)
-  const firstRow = testimonials.slice(0, rowSize)
-  const secondRow = testimonials.slice(rowSize)
-
-  // Configurar carrusel
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
-    loop: true, 
-    align: "start",
-    slidesToScroll: 1,
-  })
-
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev()
-  }, [emblaApi])
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext()
-  }, [emblaApi])
-
-  // Auto-scroll effect
-  useEffect(() => {
-    if (!emblaApi) return
-
-    const autoplay = setInterval(() => {
-      emblaApi.scrollNext()
-    }, 4000)
-
-    return () => clearInterval(autoplay)
-  }, [emblaApi])
-
-  // Renderizar estrellas
-  const renderStars = (rating: number) => {
-    const stars = []
-    const fullStars = Math.floor(rating)
-    const hasHalfStar = rating % 1 !== 0
-
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(
-        <Star key={`full-${i}`} className="w-6 h-6 md:w-8 md:h-8 fill-yellow-400 text-yellow-400" />
-      )
-    }
-
-    if (hasHalfStar) {
-      stars.push(
-        <div key="half" className="relative">
-          <Star className="w-6 h-6 md:w-8 md:h-8 text-yellow-400" />
-          <div className="absolute top-0 left-0 overflow-hidden w-1/2">
-            <Star className="w-6 h-6 md:w-8 md:h-8 fill-yellow-400 text-yellow-400" />
-          </div>
-        </div>
-      )
-    }
-
-    const emptyStars = 5 - Math.ceil(rating)
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(
-        <Star key={`empty-${i}`} className="w-6 h-6 md:w-8 md:h-8 text-yellow-400" />
-      )
-    }
-
-    return stars
-  }
+  const [expanded, setExpanded] = useState(false)
+  const visible = expanded ? testimonials : testimonials.slice(0, INITIAL_VISIBLE)
 
   return (
-    <section id="testimonios" className="py-12 md:py-20 bg-white">
+    <section id="testimonios" className="py-14 md:py-20 bg-gray-50" aria-labelledby="testimonios-title">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header con título */}
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#262626] mb-6 md:mb-8">TESTIMONIOS</h2>
-          
-          {/* Rating Section */}
-          <div className="flex flex-col items-center justify-center gap-3 md:gap-4 mb-8 md:mb-12">
-            <div className="flex items-center gap-1 md:gap-2">
-              {renderStars(4.9)}
+        {/* Resumen: calificación + volumen de pacientes */}
+        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+          <h2 id="testimonios-title" className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#262626] mb-6">
+            Lo que dicen nuestros pacientes
+          </h2>
+
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white rounded-2xl shadow-sm border border-gray-100 px-6 py-5">
+            <div className="flex items-center gap-3">
+              <span className="text-4xl md:text-5xl font-bold text-[#015233]">{RATING.toString().replace(".", ",")}</span>
+              <div className="text-left">
+                <Stars className="w-5 h-5" />
+                <p className="text-sm text-gray-600 mt-1">de 5 estrellas</p>
+              </div>
             </div>
-            <div className="text-center">
-              <p className="text-3xl md:text-4xl font-bold text-[#015233]">4.9/5</p>
-              <p className="text-base md:text-lg text-[#262626]/70 mt-2">
-                Basado en <span className="font-semibold text-[#015233]">266 evaluaciones</span>
+
+            <div className="hidden sm:block w-px h-12 bg-gray-200" aria-hidden="true" />
+
+            <div className="flex items-center gap-3">
+              <div className="flex -space-x-2">
+                {testimonials.slice(0, 5).map((t, i) => (
+                  <Avatar key={t.author + t.date} name={t.author} index={i} className="w-9 h-9 text-sm ring-2 ring-white" />
+                ))}
+              </div>
+              <p className="text-left text-sm text-gray-700 leading-tight">
+                <span className="block text-lg font-bold text-[#262626] whitespace-nowrap">{TOTAL_REVIEWS} evaluaciones</span>
+                de pacientes atendidos
               </p>
             </div>
           </div>
         </div>
 
-        {/* Carousel Container */}
-        <div className="relative">
-          {/* Navigation Buttons */}
-          <button
-            onClick={scrollPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 md:p-3 transition-all duration-300 hover:scale-110 -ml-2 md:-ml-6"
-            aria-label="Previous testimonials"
-          >
-            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-[#015233]" />
-          </button>
-
-          <button
-            onClick={scrollNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full p-2 md:p-3 transition-all duration-300 hover:scale-110 -mr-2 md:-mr-6"
-            aria-label="Next testimonials"
-          >
-            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-[#015233]" />
-          </button>
-
-          {/* Embla Carousel */}
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
-              {/* Crear slides - cada slide contiene 2 filas */}
-              {firstRow.map((_, slideIndex) => (
-                <div
-                  key={slideIndex}
-                  className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-4"
-                >
-                  {/* Grid de 2 filas */}
-                  <div className="grid grid-rows-2 gap-4 md:gap-6">
-                    {/* Fila 1 */}
-                    {firstRow[slideIndex] && (
-                      <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 h-full min-h-[200px] md:min-h-[240px] flex flex-col">
-                        <CardHeader className="pb-3">
-                          <Quote className="h-6 w-6 md:h-8 md:w-8 text-[#015233]/30" />
-                        </CardHeader>
-                        <CardContent className="flex-grow pb-3">
-                          <p className="text-[#262626] italic leading-relaxed text-sm md:text-base line-clamp-3 md:line-clamp-4">
-                            "{firstRow[slideIndex].quote}"
-                          </p>
-                        </CardContent>
-                        <CardFooter className="flex flex-col items-start pt-3">
-                          <p className="font-bold text-[#262626] text-sm md:text-base">{firstRow[slideIndex].author}</p>
-                          <p className="text-xs md:text-sm text-[#262626]/70">{firstRow[slideIndex].date}</p>
-                        </CardFooter>
-                      </Card>
-                    )}
-
-                    {/* Fila 2 */}
-                    {secondRow[slideIndex] && (
-                      <Card className="border-none shadow-lg bg-white hover:shadow-xl transition-shadow duration-300 h-full min-h-[200px] md:min-h-[240px] flex flex-col">
-                        <CardHeader className="pb-3">
-                          <Quote className="h-6 w-6 md:h-8 md:w-8 text-[#015233]/30" />
-                        </CardHeader>
-                        <CardContent className="flex-grow pb-3">
-                          <p className="text-[#262626] italic leading-relaxed text-sm md:text-base line-clamp-3 md:line-clamp-4">
-                            "{secondRow[slideIndex].quote}"
-                          </p>
-                        </CardContent>
-                        <CardFooter className="flex flex-col items-start pt-3">
-                          <p className="font-bold text-[#262626] text-sm md:text-base">{secondRow[slideIndex].author}</p>
-                          <p className="text-xs md:text-sm text-[#262626]/70">{secondRow[slideIndex].date}</p>
-                        </CardFooter>
-                      </Card>
-                    )}
-                  </div>
+        {/* Muro de reseñas: columnas tipo masonry, texto completo y sin movimiento automático */}
+        <ul className="columns-1 md:columns-2 lg:columns-3 gap-5 max-w-6xl mx-auto">
+          {visible.map((t, i) => (
+            <li
+              key={t.author + t.date}
+              className={`break-inside-avoid mb-5 ${!expanded && i >= INITIAL_VISIBLE_MOBILE ? "hidden md:block" : ""}`}
+            >
+              <figure className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 md:p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <Stars />
+                  <Quote className="w-5 h-5 text-[#015233]/20" aria-hidden="true" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
+                <blockquote className="text-[#262626] text-base leading-relaxed">“{t.quote}”</blockquote>
+                <figcaption className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <Avatar name={t.author} index={i} className="w-9 h-9 text-sm" />
+                  <span className="text-sm">
+                    <span className="block font-semibold text-[#262626]">{t.author}</span>
+                    <span className="text-gray-500">Paciente · {formatMonth(t.date)}</span>
+                  </span>
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
 
-        {/* Información adicional */}
-        <div className="text-center mt-12">
-          <p className="text-sm text-[#262626]/60">
-            Testimonios reales de nuestros pacientes
-          </p>
-        </div>
+        {testimonials.length > INITIAL_VISIBLE && (
+          <div className="text-center mt-4">
+            <button
+              type="button"
+              onClick={() => setExpanded((v) => !v)}
+              aria-expanded={expanded}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-[#015233] text-[#015233] font-semibold px-6 py-2.5 hover:bg-[#015233] hover:text-white transition-colors"
+            >
+              {expanded ? "Ver menos reseñas" : "Ver más reseñas"}
+              <ChevronDown className={`w-4 h-4 transition-transform ${expanded ? "rotate-180" : ""}`} aria-hidden="true" />
+            </button>
+          </div>
+        )}
+
+        <p className="text-center text-sm text-gray-500 mt-8">
+          Comentarios reales de encuestas de satisfacción. Publicamos solo el primer nombre de cada paciente.
+        </p>
       </div>
     </section>
   )
