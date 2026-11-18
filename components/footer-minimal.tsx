@@ -23,9 +23,9 @@ export default function FooterMinimal() {
 
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-gray-600">
-            <a href="tel:+56226335519" className="flex items-center gap-2 hover:text-[#015233] transition-colors">
+            <a href="tel:+56991595875" className="flex items-center gap-2 hover:text-[#015233] transition-colors">
               <Phone className="h-4 w-4" />
-              +56226335519
+              +56991595875
             </a>
             <a
               href="mailto:info@centromedicophillips.cl"

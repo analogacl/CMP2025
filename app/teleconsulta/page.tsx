@@ -310,10 +310,10 @@ export default function TeleconsultaPage() {
             <h4 className="font-semibold text-[#262626] mb-3">¿Necesitas ayuda técnica?</h4>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+5626335519"
+                href="tel:+56991595875"
                 className="inline-flex items-center justify-center bg-[#015233] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#015233]/90 transition-colors"
               >
-                Llamar: +5626335519
+                Llamar: +56991595875
               </a>
               <a
                 href="mailto:info@centromedicophillips.cl"

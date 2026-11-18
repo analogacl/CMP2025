@@ -30,8 +30,8 @@ export default function Contact() {
                   <Phone className="h-6 w-6 text-[#015233] mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-[#262626] mb-1">Teléfono</h4>
-                    {/*<a href="tel:+56226335519" className="text-[#262626] hover:text-[#015233] transition-colors">
-                      +56226335519
+                    {/*<a href="tel:+56991595875" className="text-[#262626] hover:text-[#015233] transition-colors">
+                      +56991595875
                     </a>*/}
                     <a href="tel:+56991595875" className="text-[#262626] hover:text-[#015233] transition-colors">
                       +56991595875

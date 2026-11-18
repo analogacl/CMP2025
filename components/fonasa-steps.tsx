@@ -67,10 +67,10 @@ export default function FonasaSteps({ modality }: { modality: "presencial" | "on
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
             <a
-              href="tel:+5626335519"
+              href="tel:+56991595875"
               className="inline-flex items-center justify-center gap-2 bg-phillips-green text-white px-5 py-2.5 rounded-lg font-semibold"
             >
-              <Phone className="w-4 h-4" aria-hidden="true" /> Secretaría: +56 2 6335519
+              <Phone className="w-4 h-4" aria-hidden="true" /> Secretaría: +56 9 9159 5875
             </a>
             <a
               href="https://wa.me/56991595875"

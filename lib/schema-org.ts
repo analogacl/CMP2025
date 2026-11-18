@@ -12,7 +12,7 @@ export const ORG = {
   postalCode: "8320340",
   geo: { latitude: -33.437366, longitude: -70.65194 },
   /** Fijo de la clínica + celulares/WhatsApp */
-  telephones: ["+5626335519", "+56991595875", "+56994837223"] as const,
+  telephones: ["+56991595875", "+56994837223"] as const,
   email: "contacto@optima-salud.cl",
   sameAs: ["https://www.instagram.com/centrooptimasalud/"] as const,
   logoPath: "/images/logo-optima-salud-removebg-preview.png",

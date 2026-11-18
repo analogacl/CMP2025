@@ -234,10 +234,10 @@ function BookingContent() {
                         </button>
                         <div className="flex flex-col sm:flex-row gap-2">
                           <a
-                            href="tel:+5626335519"
+                            href="tel:+56991595875"
                             className="flex-1 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors text-center"
                           >
-                            Llamar: +5626335519
+                            Llamar: +56991595875
                           </a>
                           <a
                             href="mailto:contacto@optima-salud.cl"
@@ -288,10 +288,10 @@ function BookingContent() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                           <a
-                            href="tel:+5626335519"
+                            href="tel:+56991595875"
                             className="inline-flex items-center justify-center bg-[#015233] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#015233]/90 transition-colors"
                           >
-                            Llamar: +5626335519
+                            Llamar: +56991595875
                           </a>
                           <a
                             href="mailto:contacto@optima-salud.cl"
@@ -338,10 +338,10 @@ function BookingContent() {
             <h4 className="font-semibold text-[#262626] mb-3">¿Necesitas ayuda para agendar?</h4>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+5626335519"
+                href="tel:+56991595875"
                 className="inline-flex items-center justify-center bg-[#015233] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#015233]/90 transition-colors"
               >
-                Llamar: +5626335519
+                Llamar: +56991595875
               </a>
               <a
                 href="mailto:contacto@optima-salud.cl"

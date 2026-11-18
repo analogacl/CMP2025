@@ -139,11 +139,11 @@ export default function NotFound() {
             <h4 className="font-semibold text-[#262626] mb-4">¿Necesitas ayuda?</h4>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+56226335519"
+                href="tel:+56991595875"
                 className="inline-flex items-center justify-center bg-[#015233] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#015233]/90 transition-colors"
               >
                 <Phone className="h-4 w-4 mr-2" />
-                +56226335519
+                +56991595875
               </a>
               <a
                 href="mailto:contacto@optima-salud.cl"
