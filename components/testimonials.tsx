@@ -190,7 +190,7 @@ export default function Testimonials() {
             <div className="text-center">
               <p className="text-3xl md:text-4xl font-bold text-[#015233]">4.9/5</p>
               <p className="text-base md:text-lg text-[#262626]/70 mt-2">
-                Basado en <span className="font-semibold text-[#015233]">+200 evaluaciones</span>
+                Basado en <span className="font-semibold text-[#015233]">266 evaluaciones</span>
               </p>
             </div>
           </div>
