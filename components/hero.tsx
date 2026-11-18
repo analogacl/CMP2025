@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import RatingBadge from "@/components/rating-badge"
 import { useRouter } from "next/navigation"
 import { useCallback } from "react"
 import { trackAgendarClick } from "@/lib/analytics"
@@ -80,6 +81,9 @@ export default function Hero() {
                 <span className="font-medium">✓ +30 años de experiencia</span>
               </div>
             </div>
+
+            {/* Prueba social junto al CTA */}
+            <RatingBadge tone="dark" className="mt-6" />
           </div>
         </div>
       </div>

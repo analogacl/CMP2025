@@ -6,6 +6,7 @@ import Link from "next/link"
 import { buildPageMetadata } from "@/lib/seo"
 import FonasaSteps from "@/components/fonasa-steps"
 import JsonLd from "@/components/json-ld"
+import RatingBadge from "@/components/rating-badge"
 import { getBreadcrumbSchema } from "@/lib/schema-org"
 
 export const metadata: Metadata = buildPageMetadata({
@@ -35,10 +36,13 @@ export default function PsicologosFonasaOnlinePage() {
             bono FONASA. Agenda tu sesión por videollamada de forma rápida y segura.
           </p>
           <Link href="/reserva">
-            <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4">
+            <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4 h-auto max-w-full whitespace-normal">
               📅 Agenda tu primera sesión online
             </Button>
           </Link>
+          <div className="mt-6">
+            <RatingBadge tone="dark" />
+          </div>
         </div>
       </section>
 
@@ -155,7 +159,7 @@ export default function PsicologosFonasaOnlinePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/reserva">
-              <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4">
+              <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4 h-auto max-w-full whitespace-normal">
                 Reservar sesión
               </Button>
             </Link>

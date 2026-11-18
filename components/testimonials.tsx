@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Star, ChevronDown, Quote } from "lucide-react"
+import { REVIEWS_SUMMARY, formatRating } from "@/lib/reviews"
 
 type Testimonial = { quote: string; author: string; date: string }
 
@@ -110,8 +111,7 @@ const testimonials: Testimonial[] = [
   },
 ]
 
-const RATING = 4.9
-const TOTAL_REVIEWS = 266
+const { rating: RATING, total: TOTAL_REVIEWS } = REVIEWS_SUMMARY
 const INITIAL_VISIBLE = 9 // escritorio
 const INITIAL_VISIBLE_MOBILE = 4
 
@@ -170,7 +170,7 @@ export default function Testimonials() {
 
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white rounded-2xl shadow-sm border border-gray-100 px-6 py-5">
             <div className="flex items-center gap-3">
-              <span className="text-4xl md:text-5xl font-bold text-[#015233]">{RATING.toString().replace(".", ",")}</span>
+              <span className="text-4xl md:text-5xl font-bold text-[#015233]">{formatRating(RATING)}</span>
               <div className="text-left">
                 <Stars className="w-5 h-5" />
                 <p className="text-sm text-gray-600 mt-1">de 5 estrellas</p>

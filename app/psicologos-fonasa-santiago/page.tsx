@@ -6,6 +6,7 @@ import Link from "next/link"
 import { buildPageMetadata } from "@/lib/seo"
 import FonasaSteps from "@/components/fonasa-steps"
 import JsonLd from "@/components/json-ld"
+import RatingBadge from "@/components/rating-badge"
 import { getBreadcrumbSchema } from "@/lib/schema-org"
 
 export const metadata: Metadata = buildPageMetadata({
@@ -30,10 +31,13 @@ export default function PsicologosFonsaSantiagoPage() {
             Si buscas atención psicológica de calidad en Santiago, pagando con bono FONASA, te podemos ayudar. Nuestro equipo de psicólogos clínicos certificados te acompaña en tu proceso personal con sesiones presenciales en el corazón de la ciudad.
           </p>
           <Link href="/reserva">
-            <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4">
+            <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4 h-auto max-w-full whitespace-normal">
               📅 Reserva aquí tu primera consulta
             </Button>
           </Link>
+          <div className="mt-6">
+            <RatingBadge tone="dark" />
+          </div>
         </div>
       </section>
 
@@ -160,7 +164,7 @@ export default function PsicologosFonsaSantiagoPage() {
               📅 Reserva aquí tu primera consulta – Atención presencial con bono FONASA.
             </p>
             <Link href="/reserva">
-              <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4">
+              <Button size="lg" className="bg-white text-phillips-green hover:bg-gray-100 text-lg px-8 py-4 h-auto max-w-full whitespace-normal">
                 Reservar Ahora
               </Button>
             </Link>

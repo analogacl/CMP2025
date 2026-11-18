@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useState, useCallback } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
+import RatingBadge from "@/components/rating-badge"
 import { ArrowLeft, AlertCircle, RefreshCw } from "lucide-react"
 
 // Iframe configuration based on service type and modality
@@ -162,6 +163,7 @@ function BookingContent() {
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-[#262626] mb-4">{getPageTitle()}</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">{getPageDescription()}</p>
+            <RatingBadge className="mt-5" link={false} />
 
             {serviceType && modality && (
               <div className="mt-6 flex flex-wrap justify-center gap-4">
